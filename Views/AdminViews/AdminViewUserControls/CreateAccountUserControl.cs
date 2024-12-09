@@ -12,9 +12,21 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
 {
     public partial class CreateAccountUserControl : UserControl
     {
+        public event Action BackToSettingsEventHandler;
+
         public CreateAccountUserControl()
         {
             InitializeComponent();
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            BackToSettingsEventHandler?.Invoke();
+        }
+
+        private void CreateAccountButton_Click(object sender, EventArgs e)
+        {
+            BackToSettingsEventHandler?.Invoke();
         }
     }
 }

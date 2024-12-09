@@ -141,6 +141,7 @@
   <ItemGroup>
     <Compile Include="Configurations\ConfigurationLoader.cs" />
     <Compile Include="Configurations\DatabaseConnection.cs" />
+    <Compile Include="Helpers\AdminViewControl.cs" />
     <Compile Include="Helpers\InputValidation.cs" />
     <Compile Include="Helpers\PasswordHashing.cs" />
     <Compile Include="Helpers\ValidateCredentials.cs" />
@@ -232,8 +233,17 @@
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControlContents\MenuUserControl.resx">
       <DependentUpon>MenuUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\CreateAccountUserControl.resx">
+      <DependentUpon>CreateAccountUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\MenuListUserControl.resx">
       <DependentUpon>MenuListUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\SettingsUserControl.resx">
+      <DependentUpon>SettingsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\UpdatePasswordUserControl.resx">
+      <DependentUpon>UpdatePasswordUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Configurations\AppSettings.json" />
     <None Include="packages.config" />

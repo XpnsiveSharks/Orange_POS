@@ -1,4 +1,5 @@
-﻿using Orange_POS.Views.AdminViews.AdminViewUserControls;
+﻿using Orange_POS.Helpers;
+using Orange_POS.Views.AdminViews.AdminViewUserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,25 +14,99 @@ namespace Orange_POS.Views.AdminViews
 {
     public partial class AdminIndexView : Form
     {
-        private CreateAccountUserControl _createAccountUserControl;
-        private DeleteAccountUserControl _deleteAccountUserControl;
-        private InsertProductUserControl _insertProductUserControl;
-        private MenuListUserControl _productListUserControl;
-        private SettingsUserControl _settingsUserControl;
-        private UpdatePasswordUserControl _updatePasswordUserControl;
+        private Dictionary<AdminViewControl, UserControl> _controls;
         public AdminIndexView()
         {
             InitializeComponent();
-            InitializeInstances();
+            InitializeControls();
+            ChangeUserControl();
         }
-        private void InitializeInstances() 
+        private void InitializeControls()
         {
-            _createAccountUserControl = new CreateAccountUserControl();
-            _deleteAccountUserControl = new DeleteAccountUserControl();
-            _insertProductUserControl = new InsertProductUserControl();
-            _productListUserControl = new MenuListUserControl();
-            _settingsUserControl = new SettingsUserControl();
-            _updatePasswordUserControl = new UpdatePasswordUserControl();
+            _controls = new Dictionary<AdminViewControl, UserControl>
+            {
+                { AdminViewControl.ProductList, new MenuListUserControl() },
+                { AdminViewControl.Settings, new SettingsUserControl() },
+                { AdminViewControl.CreateAccount, new CreateAccountUserControl() },
+                { AdminViewControl.UpdatePassword, new UpdatePasswordUserControl() },
+                { AdminViewControl.DeleteAccount, new DeleteAccountUserControl() }
+            };
+        }
+
+        private void LoadUserControl(AdminViewControl controlKey)
+        {
+            if (!_controls.ContainsKey(controlKey))
+                return;
+
+            AdminIndexPanel.Controls.Clear();
+            var userControl = _controls[controlKey];
+            userControl.Dock = DockStyle.Fill;
+            AdminIndexPanel.Controls.Add(userControl);
+        }
+        private void ChangeUserControl()
+        {
+            var eventSubscriptions = new Dictionary<AdminViewControl, Action<UserControl>>
+            {
+                { AdminViewControl.Settings, SubscribeSettingsEvents },
+                { AdminViewControl.CreateAccount, SubscribeCreateAccountEvents },
+                { AdminViewControl.UpdatePassword, SubscribeUpdatePasswordEvents }
+            };
+
+            foreach (var controlKey in _controls.Keys)
+            {
+                if (eventSubscriptions.TryGetValue(controlKey, out var subscriptionAction) &&
+                    _controls.TryGetValue(controlKey, out var userControl))
+                {
+                    subscriptionAction(userControl);
+                }
+            }
+        }
+        private void SubscribeUpdatePasswordEvents(UserControl control)
+        {
+            if (control is UpdatePasswordUserControl updatePasswordControl)
+            {
+                updatePasswordControl.BackToSettingsEventHandler -= OnBackToSettings;
+                updatePasswordControl.BackToSettingsEventHandler += OnBackToSettings;
+            }
+        }
+        private void SubscribeCreateAccountEvents(UserControl control)
+        {
+            if (control is CreateAccountUserControl createAccountControl)
+            {
+                createAccountControl.BackToSettingsEventHandler -= OnBackToSettings;
+                createAccountControl.BackToSettingsEventHandler += OnBackToSettings;
+            }
+        }
+        private void SubscribeSettingsEvents(UserControl control)
+        {
+            if (control is SettingsUserControl settingsControl)
+            {
+                settingsControl.CreateAccountEventHandler -= OnCreateAccount; 
+                settingsControl.CreateAccountEventHandler += OnCreateAccount;
+
+                settingsControl.ChangePasswordEventHandler -= OnChangePasswordAccount;
+                settingsControl.ChangePasswordEventHandler += OnChangePasswordAccount;
+
+                settingsControl.DeleteAccountEventHandler -= OnDeleteAccount;
+                settingsControl.DeleteAccountEventHandler += OnDeleteAccount;
+
+            }
+        }
+        private void OnBackToSettings()
+        {
+            LoadUserControl(AdminViewControl.Settings);
+        }
+        private void OnDeleteAccount()
+        {
+            LoadUserControl(AdminViewControl.DeleteAccount);
+        }
+        private void OnCreateAccount()
+        {
+            LoadUserControl(AdminViewControl.CreateAccount);
+        }
+        private void OnChangePasswordAccount()
+        {
+            LoadUserControl(AdminViewControl.UpdatePassword);
         }
         private void DashboardButton_Click(object sender, EventArgs e)
         {
@@ -40,7 +115,7 @@ namespace Orange_POS.Views.AdminViews
 
         private void ProductButton_Click(object sender, EventArgs e)
         {
-            LoadUserControl(_productListUserControl);
+            LoadUserControl(AdminViewControl.ProductList);
         }
 
         private void OrderListButton_Click(object sender, EventArgs e)
@@ -49,18 +124,12 @@ namespace Orange_POS.Views.AdminViews
 
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-            LoadUserControl(_settingsUserControl);
+            LoadUserControl(AdminViewControl.Settings);
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-
-        }
-        private void LoadUserControl(UserControl userControl)
-        {
-            AdminIndexPanel.Controls.Clear();
-            userControl.Dock = DockStyle.Fill;
-            AdminIndexPanel.Controls.Add(userControl);
+            Application.Exit();
         }
     }
 }
