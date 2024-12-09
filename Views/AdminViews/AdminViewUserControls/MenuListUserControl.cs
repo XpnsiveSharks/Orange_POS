@@ -35,5 +35,10 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                 MenuListFlowLayoutPanel.Controls.Add(control);
             }
         }
+
+        private void MenuListUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

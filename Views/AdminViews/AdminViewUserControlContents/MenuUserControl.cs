@@ -17,6 +17,13 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControlContents
         {
             InitializeComponent();
             AttachClickEvents();
+
+            //panel configuration
+            ProductPanel.BorderColor = ColorTranslator.FromHtml("#e9dfce");
+            ProductPanel.BorderRadius = 20;
+            ProductPanel.MouseHover += ProductPanel_MouseHover;
+            ProductPanel.MouseEnter += ProductPanel_MouseEnter; 
+            ProductPanel.MouseLeave += ProductPanel_MouseLeave;
         }
         public int ProductId { get; set; }
         public Image ProductImage
@@ -50,6 +57,26 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControlContents
         private void NotifyProductClicked(object sender, EventArgs e)
         {
             ProductClicked?.Invoke(this,(ProductId));
+        }
+
+
+
+        private void ProductPanel_MouseHover(object sender, EventArgs e)
+        {
+            ProductPanel.BorderColor = ColorTranslator.FromHtml("#d45c2f");
+            ProductPanel.BorderRadius = 20;
+        }
+
+        private void ProductPanel_MouseEnter(object sender, EventArgs e)
+        {
+            ProductPanel.BorderColor = ColorTranslator.FromHtml("#d45c2f");
+            ProductPanel.BorderRadius = 20;
+        }
+
+        private void ProductPanel_MouseLeave(object sender, EventArgs e)
+        {
+            ProductPanel.BorderColor = ColorTranslator.FromHtml("#e9dfce");
+            ProductPanel.BorderRadius = 20;
         }
     }
 }
