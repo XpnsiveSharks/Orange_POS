@@ -9,11 +9,12 @@ namespace Orange_POS.Helpers
     public enum AdminViewControl
     {
         Dashboard,
-        ProductList,
+        MenutList,
         Settings,
         CreateAccount,
         UpdatePassword,
-        DeleteAccount
+        DeleteAccount,
+        InsertProduct
     }
 
 }

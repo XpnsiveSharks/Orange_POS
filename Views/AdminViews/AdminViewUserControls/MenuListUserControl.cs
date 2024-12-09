@@ -15,17 +15,22 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
     public partial class MenuListUserControl : UserControl
     {
         private ProductViewModel _productViewModel;
-       
+        public event Action InsertMenuEventHandler;
         public MenuListUserControl()
         {
             _productViewModel = new ProductViewModel();
             InitializeComponent();
-            ReloadProducts();
+            LoadMenus();
         }
-        private void ReloadProducts()
+        public void LoadMenus()
         {
             _productViewModel.LoadProductsToUserControl();
             UpdateProductPanel();
+        }
+        public void ReloadMenus()
+        {
+            _productViewModel.LoadProducts();
+            LoadMenus();
         }
         private void UpdateProductPanel()
         {
@@ -36,7 +41,12 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             }
         }
 
-        private void MenuListUserControl_Load(object sender, EventArgs e)
+        private void AddMenuButton_Click(object sender, EventArgs e)
+        {
+            InsertMenuEventHandler?.Invoke();
+        }
+
+        private void EditMenuButton_Click(object sender, EventArgs e)
         {
 
         }

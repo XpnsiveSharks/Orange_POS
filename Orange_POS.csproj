@@ -236,6 +236,9 @@
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\CreateAccountUserControl.resx">
       <DependentUpon>CreateAccountUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\InsertProductUserControl.resx">
+      <DependentUpon>InsertProductUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\MenuListUserControl.resx">
       <DependentUpon>MenuListUserControl.cs</DependentUpon>
     </EmbeddedResource>

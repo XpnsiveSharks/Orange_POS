@@ -101,7 +101,6 @@ namespace Orange_POS.ViewModels
                 Menu = _menu,
                 Product_Name = _productName,
                 Product_Price = _productPrice,
-                Description = _description,
                 Product_Image_File_Path = _productImageFilePath
             };
             _productRepository.AddProduct(newProduct);
@@ -114,7 +113,6 @@ namespace Orange_POS.ViewModels
                 Menu = this._menu,
                 Product_Name = this._productName,
                 Product_Price = this._productPrice,
-                Description = this._description,
                 Product_Image_File_Path = this._productImageFilePath
             };
             _productRepository.UpdateProduct(updatedProduct);

@@ -25,11 +25,12 @@ namespace Orange_POS.Views.AdminViews
         {
             _controls = new Dictionary<AdminViewControl, UserControl>
             {
-                { AdminViewControl.ProductList, new MenuListUserControl() },
+                { AdminViewControl.MenutList, new MenuListUserControl() },
                 { AdminViewControl.Settings, new SettingsUserControl() },
                 { AdminViewControl.CreateAccount, new CreateAccountUserControl() },
                 { AdminViewControl.UpdatePassword, new UpdatePasswordUserControl() },
-                { AdminViewControl.DeleteAccount, new DeleteAccountUserControl() }
+                { AdminViewControl.DeleteAccount, new DeleteAccountUserControl() },
+                { AdminViewControl.InsertProduct, new InsertProductUserControl() }  
             };
         }
 
@@ -49,7 +50,9 @@ namespace Orange_POS.Views.AdminViews
             {
                 { AdminViewControl.Settings, SubscribeSettingsEvents },
                 { AdminViewControl.CreateAccount, SubscribeCreateAccountEvents },
-                { AdminViewControl.UpdatePassword, SubscribeUpdatePasswordEvents }
+                { AdminViewControl.UpdatePassword, SubscribeUpdatePasswordEvents },
+                { AdminViewControl.MenutList, SubscribeMenuListUserEvents },
+                { AdminViewControl.InsertProduct, SubscribeInsertProductUserEvents },
             };
 
             foreach (var controlKey in _controls.Keys)
@@ -61,12 +64,29 @@ namespace Orange_POS.Views.AdminViews
                 }
             }
         }
+        private void SubscribeInsertProductUserEvents(UserControl control)
+        {
+            if (control is InsertProductUserControl insertProductUserControl)
+            {
+                insertProductUserControl.BackToMenuListEventHandler -= OnMenuReload;
+                insertProductUserControl.BackToMenuListEventHandler += OnMenuReload;
+            }
+        }
         private void SubscribeUpdatePasswordEvents(UserControl control)
         {
             if (control is UpdatePasswordUserControl updatePasswordControl)
             {
                 updatePasswordControl.BackToSettingsEventHandler -= OnBackToSettings;
                 updatePasswordControl.BackToSettingsEventHandler += OnBackToSettings;
+            }
+        }
+        
+        private void SubscribeMenuListUserEvents(UserControl control)
+        {
+            if (control is MenuListUserControl menuListUserControl)
+            {
+                menuListUserControl.InsertMenuEventHandler -= OnInsertMenu;
+                menuListUserControl.InsertMenuEventHandler += OnInsertMenu;
             }
         }
         private void SubscribeCreateAccountEvents(UserControl control)
@@ -92,6 +112,18 @@ namespace Orange_POS.Views.AdminViews
 
             }
         }
+        private void OnMenuReload()
+        {
+            if (_controls.TryGetValue(AdminViewControl.MenutList, out var control) && control is MenuListUserControl menuListUserControl)
+            {
+                menuListUserControl.ReloadMenus();
+                LoadUserControl(AdminViewControl.MenutList);
+            }
+        }
+        private void OnInsertMenu()
+        {
+            LoadUserControl(AdminViewControl.InsertProduct);
+        }
         private void OnBackToSettings()
         {
             LoadUserControl(AdminViewControl.Settings);
@@ -115,7 +147,7 @@ namespace Orange_POS.Views.AdminViews
 
         private void ProductButton_Click(object sender, EventArgs e)
         {
-            LoadUserControl(AdminViewControl.ProductList);
+            LoadUserControl(AdminViewControl.MenutList);
         }
 
         private void OrderListButton_Click(object sender, EventArgs e)

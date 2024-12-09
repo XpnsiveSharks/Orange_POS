@@ -25,13 +25,12 @@ namespace Orange_POS.Repositories
             {
                 using (var connection = _databaseConnection.GetConnection())
                 {
-                    var insertQuery = "INSERT INTO products_table (Menu, Product_Name, Product_Price, Description, Product_Image_File_Path) VALUES (@Menu, @Product_Name, @Product_Price, @Description, @Product_Image_File_Path)";
+                    var insertQuery = "INSERT INTO products_table (Menu, Product_Name, Product_Price, Product_Image_File_Path) VALUES (@Menu, @Product_Name, @Product_Price, @Product_Image_File_Path)";
                     connection.Execute(insertQuery, new
                     {
                         Menu = products.Menu,
                         Product_Name = products.Product_Name,
                         Product_Price = products.Product_Price,
-                        Description = products.Description,
                         Product_Image_File_Path = products.Product_Image_File_Path
                     });
                 }
@@ -106,14 +105,13 @@ namespace Orange_POS.Repositories
             {
                 using (var connection = _databaseConnection.GetConnection())
                 {
-                    var updateCategory = "UPDATE Products_Table SET Menu = @Menu, Product_Name = @Product_Name, Product_Price = @Product_Price, Description = @Description, Product_Image_File_Path = @Product_Image_File_Path WHERE Product_Id = @Product_Id";
+                    var updateCategory = "UPDATE Products_Table SET Menu = @Menu, Product_Name = @Product_Name, Product_Price = @Product_Price, Product_Image_File_Path = @Product_Image_File_Path WHERE Product_Id = @Product_Id";
                     connection.Execute(updateCategory, new
                     {
                         Product_Id = products.Product_Id,
                         Menu = products.Menu,
                         Product_Name = products.Product_Name,
                         Product_Price = products.Product_Price,
-                        Description = products.Description,
                         Product_Image_File_Path = products.Product_Image_File_Path
                     });
                 }
