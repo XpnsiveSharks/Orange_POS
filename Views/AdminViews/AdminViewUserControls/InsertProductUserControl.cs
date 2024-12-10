@@ -26,6 +26,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             InitializeComponent();
             InitializeDataBindings();
             IsProductUpdating();
+            PopulateComboBoxItems();
             ProductPriceTextBox.KeyPress += ProductPriceTextBox_KeyPress;
             ProductPriceTextBox.TextChanged += ProductPriceTextBox_TextChanged;
         }
@@ -36,6 +37,12 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             ProductPriceTextBox.DataBindings.Add("Text", productViewModel, nameof(productViewModel.ProductPrice), true, DataSourceUpdateMode.OnPropertyChanged);
             ProductMenuComboBox.DataBindings.Add("SelectedItem", productViewModel, nameof(productViewModel.Menu), true, DataSourceUpdateMode.OnPropertyChanged);
         }
+        private void PopulateComboBoxItems()
+        {
+            ProductMenuComboBox.Items.Clear();
+            ProductMenuComboBox.Items.AddRange(new[] { "Ulam", "Drinks", "Desserts" });
+        }
+
         public void InitializeControl()
         {
             if (IsUpdate)

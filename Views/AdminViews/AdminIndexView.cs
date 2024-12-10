@@ -87,6 +87,9 @@ namespace Orange_POS.Views.AdminViews
             {
                 menuListUserControl.InsertMenuEventHandler -= OnInsertMenu;
                 menuListUserControl.InsertMenuEventHandler += OnInsertMenu;
+
+                menuListUserControl.UpdateMenuEventHandler -= OnUpdateMenu;
+                menuListUserControl.UpdateMenuEventHandler += OnUpdateMenu;
             }
         }
         private void SubscribeCreateAccountEvents(UserControl control)
@@ -120,6 +123,18 @@ namespace Orange_POS.Views.AdminViews
                 LoadUserControl(AdminViewControl.MenutList);
             }
         }
+        private void OnUpdateMenu(int productId)
+        {
+            if (_controls.TryGetValue(AdminViewControl.InsertProduct, out var control) &&
+                control is InsertProductUserControl insertProductUserControl)
+            {
+                insertProductUserControl.ProductId = productId;
+                insertProductUserControl.IsUpdate = true;
+                insertProductUserControl.InitializeControl(); 
+                LoadUserControl(AdminViewControl.InsertProduct);
+            }
+        }
+
         private void OnInsertMenu()
         {
             LoadUserControl(AdminViewControl.InsertProduct);

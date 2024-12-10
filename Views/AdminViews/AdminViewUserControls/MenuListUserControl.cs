@@ -10,8 +10,9 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
     {
         private ProductViewModel _productViewModel;
         public event Action InsertMenuEventHandler;
-        public event Action<int> UpdateMenuEventHandler;
         public event Action<int> DeleteMenuEventHandler;
+        public event Action<int> UpdateMenuEventHandler;
+
 
         public MenuListUserControl()
         {
@@ -41,13 +42,8 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             {
                 if (control is MenuUserControl menuControl)
                 {
-                    // Assign the ContextMenuStrip to the MenuUserControl
                     menuControl.ContextMenuStrip = guna2ContextMenuStrip1;
-
-                    // Subscribe to the ProductClicked event to handle clicks
                     menuControl.ProductClicked += MenuControl_ProductClicked;
-
-                    // Store ProductId in the Tag property for easy access
                     menuControl.Tag = menuControl.ProductId;
                 }
 
@@ -57,11 +53,10 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
 
         private void MenuControl_ProductClicked(object sender, int productId)
         {
-            // Show the ContextMenuStrip at the current cursor position
             if (sender is MenuUserControl menuControl)
             {
-                guna2ContextMenuStrip1.Tag = productId; // Store ProductId in the ContextMenuStrip
-                guna2ContextMenuStrip1.Show(Cursor.Position); // Show at the current cursor position
+                guna2ContextMenuStrip1.Tag = productId; 
+                guna2ContextMenuStrip1.Show(Cursor.Position); 
             }
         }
 
@@ -86,7 +81,6 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         {
             if (guna2ContextMenuStrip1.Tag is int productId)
             {
-                MessageBox.Show($"Product clicked for update: {productId}");
                 UpdateMenuEventHandler?.Invoke(productId);
             }
         }
