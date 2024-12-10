@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Orange_POS.Helpers
@@ -44,7 +45,26 @@ namespace Orange_POS.Helpers
 
 
         }
-
+        public bool ValidatePrice(string price)
+        {
+            if (string.IsNullOrWhiteSpace(price))
+            { return false; }               
+            if (!decimal.TryParse(price, out decimal priceOut) || priceOut <= 0)
+            { return false; }
+            return true;
+        }
         
+        //hindi pa sure
+        public bool CheckProductDuplicate(string product)
+        {
+            using (var connection = _databaseConnection.GetConnection())
+            {
+                string query = "SELECT COUNT(1) FROM products_table WHERE Product_Name = @ProductName";
+                int count = connection.Execute(query, new { ProductName = product });
+                return count > 0;
+            }
+           
+        }
+
     }
 }

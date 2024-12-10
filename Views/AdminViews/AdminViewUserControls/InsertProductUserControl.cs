@@ -1,4 +1,5 @@
 ﻿using Mysqlx.Crud;
+using Orange_POS.Helpers;
 using Orange_POS.Models;
 using Orange_POS.ViewModels;
 using System;
@@ -16,6 +17,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
     public partial class InsertProductUserControl : UserControl
     {
         private readonly ProductViewModel productViewModel = new ProductViewModel();
+        InputValidation inputValidation = new InputValidation();    
         public event Action BackToMenuListEventHandler;
         public int ProductId { get; set; }
         public bool IsUpdate;
@@ -24,6 +26,8 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             InitializeComponent();
             InitializeDataBindings();
             IsProductUpdating();
+            ProductPriceTextBox.KeyPress += ProductPriceTextBox_KeyPress;
+            ProductPriceTextBox.TextChanged += ProductPriceTextBox_TextChanged;
         }
         private void InitializeDataBindings()
         {
@@ -86,16 +90,23 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            string price = ProductPriceTextBox.Text.Trim();
+            if (!inputValidation.ValidatePrice(price))
+            {
+                MessageBox.Show("Invalid Price.Please enter valid number greater than 0.");
+                return;
+            }
+            if (ProductMenuComboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select option from the dropdown.");
+                return;
+            }            
             if (string.IsNullOrWhiteSpace(productViewModel.ProductName))
             {
                 MessageBox.Show("Please enter product name.");
                 return;
-            }
-            if (string.IsNullOrEmpty(productViewModel.ProductImageFilePath))
-            {
-                MessageBox.Show("Please upload an Image.");
-                return;
-            }
+
+            }          
             if (IsUpdate)
             {
                 productViewModel.UpdateProduct(ProductId);
@@ -112,6 +123,37 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         private void CancelButton_Click(object sender, EventArgs e)
         {
             BackToMenuListEventHandler?.Invoke();
+        }
+
+        private void ProductPriceTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+                           
+            if (e.KeyChar == '.' && ProductPriceTextBox.Text.Contains("."))
+            {
+                e.Handled = true;
+            }           
+        }
+
+        private void ProductPriceTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+                if (textBox.Text.Count(c => c == '.') > 1)
+                {
+                    int lastIndex = textBox.Text.LastIndexOf(".");
+                    textBox.Text = textBox.Text.Remove(lastIndex, 1);
+                    textBox.SelectionStart = textBox.Text.Length;
+                }
+
+                if (!decimal.TryParse(textBox.Text, out _))
+                {
+                    textBox.Text = "";
+                }
+            }
         }
     }
 }
