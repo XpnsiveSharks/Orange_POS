@@ -147,6 +147,7 @@
     <Compile Include="Helpers\AdminViewControl.cs" />
     <Compile Include="Helpers\InputValidation.cs" />
     <Compile Include="Helpers\PasswordHashing.cs" />
+    <Compile Include="Helpers\SearchFilter.cs" />
     <Compile Include="Helpers\ValidateCredentials.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\OrderDetails.cs" />
@@ -238,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\CreateAccountUserControl.resx">
       <DependentUpon>CreateAccountUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\DeleteAccountUserControl.resx">
+      <DependentUpon>DeleteAccountUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\InsertProductUserControl.resx">
       <DependentUpon>InsertProductUserControl.cs</DependentUpon>

@@ -16,5 +16,10 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         {
             InitializeComponent();
         }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

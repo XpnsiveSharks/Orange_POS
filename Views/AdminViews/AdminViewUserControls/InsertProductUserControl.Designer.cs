@@ -239,7 +239,7 @@
             this.ProductNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.ProductNameTextBox.Location = new System.Drawing.Point(63, 172);
             this.ProductNameTextBox.Margin = new System.Windows.Forms.Padding(8);
-            this.ProductNameTextBox.MaxLength = 16;
+            this.ProductNameTextBox.MaxLength = 15;
             this.ProductNameTextBox.Name = "ProductNameTextBox";
             this.ProductNameTextBox.PasswordChar = '\0';
             this.ProductNameTextBox.PlaceholderText = "Enter menu name";
