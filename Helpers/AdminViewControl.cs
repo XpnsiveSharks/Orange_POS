@@ -10,6 +10,7 @@ namespace Orange_POS.Helpers
     {
         Dashboard,
         MenutList,
+        OrderList,
         Settings,
         CreateAccount,
         UpdatePassword,

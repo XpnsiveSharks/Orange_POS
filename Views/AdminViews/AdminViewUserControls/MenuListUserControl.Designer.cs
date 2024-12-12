@@ -33,7 +33,6 @@
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.UpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.AddMenuButton = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2ContextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -54,8 +53,6 @@
             this.ProductSearchTextBox.SelectedText = "";
             this.ProductSearchTextBox.Size = new System.Drawing.Size(320, 49);
             this.ProductSearchTextBox.TabIndex = 10;
-            this.ProductSearchTextBox.TextChanged += new System.EventHandler(this.ProductSearchTextBox_TextChanged);
-            this.ProductSearchTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ProductSearchTextBox_KeyPress);
             // 
             // MenuListFlowLayoutPanel
             // 
@@ -98,21 +95,6 @@
             this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(150, 32);
             this.DeleteToolStripMenuItem.Text = "Delete";
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(716, 43);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(58, 40);
-            this.guna2Button1.TabIndex = 17;
-            this.guna2Button1.Text = "guna2Button1";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
             // AddMenuButton
             // 
             this.AddMenuButton.BackColor = System.Drawing.Color.Transparent;
@@ -135,7 +117,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
-            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.MenuListFlowLayoutPanel);
             this.Controls.Add(this.ProductSearchTextBox);
             this.Controls.Add(this.AddMenuButton);
@@ -153,6 +134,5 @@
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem UpdateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem DeleteToolStripMenuItem;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

@@ -147,7 +147,6 @@
     <Compile Include="Helpers\AdminViewControl.cs" />
     <Compile Include="Helpers\InputValidation.cs" />
     <Compile Include="Helpers\PasswordHashing.cs" />
-    <Compile Include="Helpers\SearchFilter.cs" />
     <Compile Include="Helpers\ValidateCredentials.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\OrderDetails.cs" />
@@ -172,6 +171,8 @@
     <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Repositories\StaffRepository.cs" />
     <Compile Include="Repositories\UsersRepository.cs" />
+    <Compile Include="ViewModels\OrderDetailsViewModel.cs" />
+    <Compile Include="ViewModels\OrdersViewModel.cs" />
     <Compile Include="ViewModels\ProductViewModel.cs" />
     <Compile Include="Views\AdminViews\AdminIndexView.cs">
       <SubType>Form</SubType>
@@ -185,11 +186,29 @@
     <Compile Include="Views\AdminViews\AdminViewUserControlContents\MenuUserControl.Designer.cs">
       <DependentUpon>MenuUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\AdminViews\AdminViewUserControlContents\OrderDetailsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminViewUserControlContents\OrderDetailsUserControl.Designer.cs">
+      <DependentUpon>OrderDetailsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminViewUserControlContents\PendingOrderUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminViewUserControlContents\PendingOrderUserControl.Designer.cs">
+      <DependentUpon>PendingOrderUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\AdminViews\AdminViewUserControls\CreateAccountUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\AdminViews\AdminViewUserControls\CreateAccountUserControl.Designer.cs">
       <DependentUpon>CreateAccountUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminViewUserControls\DashboardUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminViewUserControls\DashboardUserControl.Designer.cs">
+      <DependentUpon>DashboardUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AdminViews\AdminViewUserControls\DeleteAccountUserControl.cs">
       <SubType>UserControl</SubType>
@@ -208,6 +227,12 @@
     </Compile>
     <Compile Include="Views\AdminViews\AdminViewUserControls\MenuListUserControl.Designer.cs">
       <DependentUpon>MenuListUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminViewUserControls\OrderListUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminViewUserControls\OrderListUserControl.Designer.cs">
+      <DependentUpon>OrderListUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AdminViews\AdminViewUserControls\SettingsUserControl.cs">
       <SubType>UserControl</SubType>
@@ -237,8 +262,17 @@
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControlContents\MenuUserControl.resx">
       <DependentUpon>MenuUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminViews\AdminViewUserControlContents\OrderDetailsUserControl.resx">
+      <DependentUpon>OrderDetailsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminViews\AdminViewUserControlContents\PendingOrderUserControl.resx">
+      <DependentUpon>PendingOrderUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\CreateAccountUserControl.resx">
       <DependentUpon>CreateAccountUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\DashboardUserControl.resx">
+      <DependentUpon>DashboardUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\DeleteAccountUserControl.resx">
       <DependentUpon>DeleteAccountUserControl.cs</DependentUpon>
@@ -248,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\MenuListUserControl.resx">
       <DependentUpon>MenuListUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\OrderListUserControl.resx">
+      <DependentUpon>OrderListUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\SettingsUserControl.resx">
       <DependentUpon>SettingsUserControl.cs</DependentUpon>
