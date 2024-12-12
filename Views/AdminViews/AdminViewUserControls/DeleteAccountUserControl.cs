@@ -1,4 +1,5 @@
-﻿using Orange_POS.Repositories;
+﻿using Orange_POS.Helpers;
+using Orange_POS.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,8 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
     {
         public event Action BackToSettingsEventHandler;
         private readonly UsersRepository usersRepository = new UsersRepository();
+       
+
         public DeleteAccountUserControl()
         {
             InitializeComponent();
@@ -49,6 +52,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                 MessageBox.Show("Password Doesnt match try again!", "Error" ,MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
 
             if (confirmation == DialogResult.Yes)
             {

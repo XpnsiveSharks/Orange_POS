@@ -1,4 +1,5 @@
-﻿using Orange_POS.Models;
+﻿using Orange_POS.Helpers;
+using Orange_POS.Models;
 using Orange_POS.Repositories;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,8 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         public event Action BackToSettingsEventHandler;
         private readonly UsersRepository usersRepository = new UsersRepository();
         private readonly Users users = new Users();
+        InputValidation inputValidation = new InputValidation();
+
         public UpdatePasswordUserControl()
         {
             InitializeComponent();
@@ -38,6 +41,12 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             if (newPassword != confirmPassword)
             {
                 MessageBox.Show("New password and confirmation password do not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!inputValidation.ValidatePassword(newPassword))
+            {
+                MessageBox.Show("Password must be at least 8 characters long, include an uppercase letter, number, and special character.", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -63,6 +72,11 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         private void BackButton_Click(object sender, EventArgs e)
         {
             BackToSettingsEventHandler?.Invoke();
+            CurrentPassword.Clear();
+            NewPassword.Clear();
+            ConfirmPassword.Clear();
+            ShowNewPassword.Checked = false;
+            ShowConfirmPassword.Checked = false;
         }
 
         private void ShowNewPassword_CheckedChanged(object sender, EventArgs e)

@@ -7,6 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Orange_POS.Helpers
 {
@@ -19,10 +20,14 @@ namespace Orange_POS.Helpers
             _configurationLoader = new ConfigurationLoader();
             _databaseConnection = new DatabaseConnection(_configurationLoader.Configuration);
         }
+
         public bool ValidateUsername(string username)
         {
-            if (string.IsNullOrEmpty(username) || username.Length < 7 || username.Length > 10) 
+            if (username.Length < 7)
+            {
+                MessageBox.Show("Username Must be 8 Characters Long");
                 return false;
+            }
 
             using (var connection = _databaseConnection.GetConnection())
             {
@@ -31,8 +36,13 @@ namespace Orange_POS.Helpers
                 {
                     Username = username
                 });
-                return count == 0;
+                if (count > 0)
+                {
+                    MessageBox.Show("Username already exists.");
+                    return false;
+                }
             }
+            return true;
         }
 
         public bool ValidatePassword(string password)
@@ -40,11 +50,11 @@ namespace Orange_POS.Helpers
             if (string.IsNullOrEmpty(password) || password.Length < 8)
              return false;
 
-            string pattern = @"^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8, }$";
+            string pattern = @"^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&_])[A-Za-z\d@$!%*?&_]{8,}$";
             return Regex.IsMatch(password, pattern);
-
-
         }
+        
+
         public bool ValidatePrice(string price)
         {
             if (string.IsNullOrWhiteSpace(price))

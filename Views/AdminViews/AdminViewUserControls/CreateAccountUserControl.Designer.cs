@@ -39,7 +39,7 @@
             this.ShowPassword = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.ConfirmPassTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.ConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -141,6 +141,7 @@
             this.ShowConfirmPassword.UncheckedState.BorderThickness = 0;
             this.ShowConfirmPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.ShowConfirmPassword.UseVisualStyleBackColor = false;
+            this.ShowConfirmPassword.CheckedChanged += new System.EventHandler(this.ShowConfirmPassword_CheckedChanged);
             // 
             // BackButton
             // 
@@ -195,7 +196,7 @@
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel4);
             this.guna2Panel1.Controls.Add(this.CreateAccountButton);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel3);
-            this.guna2Panel1.Controls.Add(this.ConfirmPassTextBox);
+            this.guna2Panel1.Controls.Add(this.ConfirmPassword);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.CreateUsername);
@@ -263,30 +264,30 @@
             this.guna2HtmlLabel3.TabIndex = 45;
             this.guna2HtmlLabel3.Text = "Password:";
             // 
-            // ConfirmPassTextBox
+            // ConfirmPassword
             // 
-            this.ConfirmPassTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.ConfirmPassTextBox.BorderRadius = 15;
-            this.ConfirmPassTextBox.BorderThickness = 2;
-            this.ConfirmPassTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ConfirmPassTextBox.DefaultText = "";
-            this.ConfirmPassTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.ConfirmPassTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.ConfirmPassTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ConfirmPassTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ConfirmPassTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.ConfirmPassTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ConfirmPassTextBox.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.ConfirmPassTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.ConfirmPassTextBox.Location = new System.Drawing.Point(213, 285);
-            this.ConfirmPassTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.ConfirmPassTextBox.Name = "ConfirmPassTextBox";
-            this.ConfirmPassTextBox.PasswordChar = '●';
-            this.ConfirmPassTextBox.PlaceholderText = "Password";
-            this.ConfirmPassTextBox.SelectedText = "";
-            this.ConfirmPassTextBox.Size = new System.Drawing.Size(381, 40);
-            this.ConfirmPassTextBox.TabIndex = 44;
-            this.ConfirmPassTextBox.TextOffset = new System.Drawing.Point(10, 0);
+            this.ConfirmPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.ConfirmPassword.BorderRadius = 15;
+            this.ConfirmPassword.BorderThickness = 2;
+            this.ConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ConfirmPassword.DefaultText = "";
+            this.ConfirmPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.ConfirmPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.ConfirmPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ConfirmPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ConfirmPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.ConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.ConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.ConfirmPassword.Location = new System.Drawing.Point(213, 285);
+            this.ConfirmPassword.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.ConfirmPassword.Name = "ConfirmPassword";
+            this.ConfirmPassword.PasswordChar = '●';
+            this.ConfirmPassword.PlaceholderText = "Confirm Password";
+            this.ConfirmPassword.SelectedText = "";
+            this.ConfirmPassword.Size = new System.Drawing.Size(381, 40);
+            this.ConfirmPassword.TabIndex = 44;
+            this.ConfirmPassword.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // guna2HtmlLabel1
             // 
@@ -353,7 +354,7 @@
         private Guna.UI2.WinForms.Guna2CheckBox ShowPassword;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2TextBox ConfirmPassTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox ConfirmPassword;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
     }
 }
