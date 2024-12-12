@@ -167,6 +167,7 @@ namespace Orange_POS.Views.AdminViews
 
         private void OrderListButton_Click(object sender, EventArgs e)
         {
+
         }
 
         private void SettingsButton_Click(object sender, EventArgs e)
