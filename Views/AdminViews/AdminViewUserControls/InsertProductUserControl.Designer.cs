@@ -167,7 +167,7 @@
             this.ProductPriceTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductPriceTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.ProductPriceTextBox.Location = new System.Drawing.Point(63, 442);
-            this.ProductPriceTextBox.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.ProductPriceTextBox.Margin = new System.Windows.Forms.Padding(8);
             this.ProductPriceTextBox.Name = "ProductPriceTextBox";
             this.ProductPriceTextBox.PasswordChar = '\0';
             this.ProductPriceTextBox.PlaceholderText = "00.00";
@@ -211,7 +211,7 @@
             this.ProductMenuComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.ProductMenuComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ProductMenuComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ProductMenuComboBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductMenuComboBox.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.ProductMenuComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.ProductMenuComboBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.ProductMenuComboBox.ItemHeight = 30;
@@ -238,7 +238,8 @@
             this.ProductNameTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.ProductNameTextBox.Location = new System.Drawing.Point(63, 172);
-            this.ProductNameTextBox.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.ProductNameTextBox.Margin = new System.Windows.Forms.Padding(8);
+            this.ProductNameTextBox.MaxLength = 16;
             this.ProductNameTextBox.Name = "ProductNameTextBox";
             this.ProductNameTextBox.PasswordChar = '\0';
             this.ProductNameTextBox.PlaceholderText = "Enter menu name";
@@ -263,9 +264,9 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(31, 18);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(22, 17);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(459, 73);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(509, 102);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Add Menu";
             // 

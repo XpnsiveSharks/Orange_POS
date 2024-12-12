@@ -8,6 +8,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
 {
     public partial class MenuListUserControl : UserControl
     {
+        InsertProductUserControl insertProductUserControl = new InsertProductUserControl();
         private ProductViewModel _productViewModel;
         public event Action InsertMenuEventHandler;
         public event Action<int> DeleteMenuEventHandler;
@@ -61,7 +62,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         }
 
         private void AddMenuButton_Click(object sender, EventArgs e)
-        {
+        {        
             InsertMenuEventHandler?.Invoke();
         }
 
