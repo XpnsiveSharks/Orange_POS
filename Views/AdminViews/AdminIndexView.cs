@@ -56,8 +56,12 @@ namespace Orange_POS.Views.AdminViews
                 { AdminViewControl.UpdatePassword, SubscribeUpdatePasswordEvents },
                 { AdminViewControl.MenutList, SubscribeMenuListUserEvents },
                 { AdminViewControl.InsertProduct, SubscribeInsertProductUserEvents },
+
+                { AdminViewControl.DeleteAccount, SubscribeDeleteAccountEvents },
+
                 { AdminViewControl.Dashboard, SubscribeDashboardUserEvents },
                 { AdminViewControl.OrderList, SubscribeOrderListUserEvents }
+
 
             };
 
@@ -137,6 +141,16 @@ namespace Orange_POS.Views.AdminViews
 
             }
         }
+
+
+        private void SubscribeDeleteAccountEvents(UserControl control)
+        {
+            if (control is DeleteAccountUserControl deleteAccountControl)
+            {
+                deleteAccountControl.BackToSettingsEventHandler -= OnBackToSettings;
+                deleteAccountControl.BackToSettingsEventHandler += OnBackToSettings;
+            }
+        }
         private void OnMenuReload()
         {
             if (_controls.TryGetValue(AdminViewControl.MenutList, out var control) && control is MenuListUserControl menuListUserControl)
@@ -207,7 +221,22 @@ namespace Orange_POS.Views.AdminViews
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show(
+                "Exit?",
+                "Exit Program", 
+                MessageBoxButtons.YesNo, 
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else 
+            {
+                return;
+            }
+           
         }
 
     }

@@ -289,9 +289,11 @@
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\CreateAccountUserControl.resx">
       <DependentUpon>CreateAccountUserControl.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\DashboardUserControl.resx">
       <DependentUpon>DashboardUserControl.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\DeleteAccountUserControl.resx">
       <DependentUpon>DeleteAccountUserControl.cs</DependentUpon>
     </EmbeddedResource>
