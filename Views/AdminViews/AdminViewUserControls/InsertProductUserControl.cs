@@ -176,12 +176,5 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             ProductMenuComboBox.SelectedIndex = -1;
             ProductPreviewPictureBox.Image = null;
         }
-        public void ClearComponents()
-        {
-            ProductNameTextBox.Text = string.Empty;
-            ProductPriceTextBox.Text = string.Empty;
-            ProductMenuComboBox.SelectedIndex = -1;
-            ProductPreviewPictureBox.Image = null;
-        }
     }
 }

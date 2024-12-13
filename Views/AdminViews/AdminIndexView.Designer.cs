@@ -75,7 +75,7 @@
             this.ExitButton.Image = global::Orange_POS.Properties.Resources._33;
             this.ExitButton.ImageSize = new System.Drawing.Size(50, 50);
             this.ExitButton.Location = new System.Drawing.Point(3, 405);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(2);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(79, 63);
             this.ExitButton.TabIndex = 18;
@@ -101,7 +101,7 @@
             this.OrderListButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
             this.OrderListButton.Image = global::Orange_POS.Properties.Resources._32;
             this.OrderListButton.ImageSize = new System.Drawing.Size(50, 50);
-            this.OrderListButton.Location = new System.Drawing.Point(7, 318);
+            this.OrderListButton.Location = new System.Drawing.Point(5, 206);
             this.OrderListButton.Name = "OrderListButton";
             this.OrderListButton.Size = new System.Drawing.Size(79, 63);
             this.OrderListButton.TabIndex = 17;
@@ -128,7 +128,7 @@
             this.ProductButton.Image = global::Orange_POS.Properties.Resources._30;
             this.ProductButton.ImageSize = new System.Drawing.Size(50, 50);
             this.ProductButton.Location = new System.Drawing.Point(2, 140);
-            this.ProductButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProductButton.Margin = new System.Windows.Forms.Padding(2);
             this.ProductButton.Name = "ProductButton";
             this.ProductButton.Size = new System.Drawing.Size(79, 63);
             this.ProductButton.TabIndex = 16;
@@ -155,7 +155,7 @@
             this.DashboardButton.Image = global::Orange_POS.Properties.Resources._291;
             this.DashboardButton.ImageSize = new System.Drawing.Size(50, 50);
             this.DashboardButton.Location = new System.Drawing.Point(5, 73);
-            this.DashboardButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DashboardButton.Margin = new System.Windows.Forms.Padding(2);
             this.DashboardButton.Name = "DashboardButton";
             this.DashboardButton.Size = new System.Drawing.Size(79, 63);
             this.DashboardButton.TabIndex = 9;
@@ -182,7 +182,7 @@
             this.SettingsButton.Image = global::Orange_POS.Properties.Resources._31;
             this.SettingsButton.ImageSize = new System.Drawing.Size(50, 50);
             this.SettingsButton.Location = new System.Drawing.Point(5, 274);
-            this.SettingsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SettingsButton.Margin = new System.Windows.Forms.Padding(2);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Size = new System.Drawing.Size(79, 63);
             this.SettingsButton.TabIndex = 16;
@@ -206,7 +206,7 @@
             this.Controls.Add(this.AdminIndexPanel);
             this.Controls.Add(this.AdminButtonsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminIndexView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminIndexView";

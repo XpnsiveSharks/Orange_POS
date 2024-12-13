@@ -135,8 +135,6 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                 MenuListFlowLayoutPanel.Controls.Add(control);
             }
         }
-
-        
     }
 
 }
