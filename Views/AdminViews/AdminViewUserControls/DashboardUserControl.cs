@@ -24,15 +24,44 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
 
         private void LoadData(string startDate = null, string endDate = null)
         {
-            // Load orders using the ViewModel
             var orders = _ordersViewModel.LoadOrders(startDate, endDate);
 
-            // Bind the data to the DataGridView
-            ReportsDataGridView.AutoGenerateColumns = true;
-            ReportsDataGridView.DataSource = orders;
-            CustomizeDataGridViewHeaders();
-        }
+            ReportsDataGridView.AutoGenerateColumns = false;
+            ReportsDataGridView.Columns.Clear();
 
+            ReportsDataGridView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "OrderNumber",
+                HeaderText = "Order No."
+            });
+            ReportsDataGridView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "OrderDate",
+                HeaderText = "Date"
+            });
+            ReportsDataGridView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "OrderType",
+                HeaderText = "Type"
+            });
+            ReportsDataGridView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "TotalAmount",
+                HeaderText = "Amount"
+            });
+            ReportsDataGridView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "ProductName",
+                HeaderText = "Product"
+            });
+            ReportsDataGridView.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "Quantity",
+                HeaderText = "Quantity"
+            });
+
+            ReportsDataGridView.DataSource = orders;
+        }
         private void FilterButton_Click(object sender, EventArgs e)
         {
             // Get the selected date range
@@ -42,30 +71,9 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             // Reload data with filters
             LoadData(startDate, endDate);
         }
-
-        private void CustomizeDataGridViewHeaders()
+        private void FilterButton_Click_1(object sender, EventArgs e)
         {
-            if (ReportsDataGridView.Columns.Contains("Order_Number"))
-            {
-                ReportsDataGridView.Columns["Order_Number"].HeaderText = "Order No.";
-            }
-            if (ReportsDataGridView.Columns.Contains("Order_Date"))
-            {
-                ReportsDataGridView.Columns["Order_Date"].HeaderText = "Date";
-            }
-            if (ReportsDataGridView.Columns.Contains("Product_Name"))
-            {
-                ReportsDataGridView.Columns["Product_Name"].HeaderText = "Product";
-            }
-            if (ReportsDataGridView.Columns.Contains("Total_Amount"))
-            {
-                ReportsDataGridView.Columns["Total_Amount"].HeaderText = "Amount";
-            }
-            if (ReportsDataGridView.Columns.Contains("Quantity"))
-            {
-                ReportsDataGridView.Columns["Quantity"].HeaderText = "Quantity";
-            }
+
         }
-        
     }
 }

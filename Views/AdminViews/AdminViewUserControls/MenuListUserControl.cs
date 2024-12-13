@@ -10,7 +10,6 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
 {
     public partial class MenuListUserControl : UserControl
     {
-        InsertProductUserControl insertProductUserControl = new InsertProductUserControl();
         private ProductViewModel _productViewModel;
         public event Action InsertMenuEventHandler;
         public event Action<int> DeleteMenuEventHandler;
