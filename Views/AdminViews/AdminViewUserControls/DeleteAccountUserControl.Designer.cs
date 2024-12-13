@@ -34,9 +34,11 @@
             this.DeleteAccount = new Guna.UI2.WinForms.Guna2TileButton();
             this.ShowPassword = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+
             this.ShowConfirmPassword = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
+
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -48,7 +50,9 @@
             // DeleteUsername
             // 
             this.DeleteUsername.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+
             this.DeleteUsername.BorderRadius = 16;
+
             this.DeleteUsername.BorderThickness = 2;
             this.DeleteUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.DeleteUsername.DefaultText = "";
@@ -73,7 +77,9 @@
             // DeletePassword
             // 
             this.DeletePassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+
             this.DeletePassword.BorderRadius = 16;
+
             this.DeletePassword.BorderThickness = 2;
             this.DeletePassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.DeletePassword.DefaultText = "";
@@ -98,7 +104,7 @@
             // BackButton
             // 
             this.BackButton.BorderColor = System.Drawing.Color.Transparent;
-            this.BackButton.BorderRadius = 20;
+            this.BackButton.BorderRadius = 15;
             this.BackButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.BackButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.BackButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -130,7 +136,7 @@
             this.DeleteAccount.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.DeleteAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.DeleteAccount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.DeleteAccount.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.DeleteAccount.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.DeleteAccount.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.DeleteAccount.Location = new System.Drawing.Point(522, 378);
             this.DeleteAccount.Margin = new System.Windows.Forms.Padding(2);
@@ -181,6 +187,7 @@
             this.guna2Panel1.Size = new System.Drawing.Size(732, 437);
             this.guna2Panel1.TabIndex = 50;
             // 
+
             // ShowConfirmPassword
             // 
             this.ShowConfirmPassword.AutoSize = true;
@@ -255,6 +262,7 @@
             this.guna2HtmlLabel3.Text = "Password:";
             // 
             // guna2HtmlLabel1
+
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -268,6 +276,7 @@
             // 
             // guna2Panel2
             // 
+
             this.guna2Panel2.BorderRadius = 25;
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -277,9 +286,11 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(732, 54);
             this.guna2Panel2.TabIndex = 50;
+
             // 
             // guna2HtmlLabel2
             // 
+
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
@@ -287,6 +298,55 @@
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(206, 34);
+            this.guna2HtmlLabel2.TabIndex = 0;
+            this.guna2HtmlLabel2.Text = "Delete Account";
+
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.AutoSize = false;
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(326, 236);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(251, 47);
+            this.guna2HtmlLabel3.TabIndex = 52;
+            this.guna2HtmlLabel3.Text = "Password:";
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.AutoSize = false;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(326, 128);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(178, 51);
+            this.guna2HtmlLabel1.TabIndex = 51;
+            this.guna2HtmlLabel1.Text = "Username:";
+            this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BorderRadius = 25;
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel2);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(1098, 83);
+            this.guna2Panel2.TabIndex = 50;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.AutoSize = false;
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(28, 15);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(743, 108);
             this.guna2HtmlLabel2.TabIndex = 0;
             this.guna2HtmlLabel2.Text = "Delete Account";
             // 
@@ -302,7 +362,6 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

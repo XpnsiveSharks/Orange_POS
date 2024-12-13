@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
 namespace Orange_POS.Views.AdminViews.AdminViewUserControls
 {
@@ -26,6 +27,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             InitializeComponent();
             InitializeDataBindings();
             IsProductUpdating();
+            PopulateComboBoxItems();
             ProductPriceTextBox.KeyPress += ProductPriceTextBox_KeyPress;
             ProductPriceTextBox.TextChanged += ProductPriceTextBox_TextChanged;
         }
@@ -36,6 +38,12 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             ProductPriceTextBox.DataBindings.Add("Text", productViewModel, nameof(productViewModel.ProductPrice), true, DataSourceUpdateMode.OnPropertyChanged);
             ProductMenuComboBox.DataBindings.Add("SelectedItem", productViewModel, nameof(productViewModel.Menu), true, DataSourceUpdateMode.OnPropertyChanged);
         }
+        private void PopulateComboBoxItems()
+        {
+            ProductMenuComboBox.Items.Clear();
+            ProductMenuComboBox.Items.AddRange(new[] { "Ulam", "Drinks", "Desserts" });
+        }
+
         public void InitializeControl()
         {
             if (IsUpdate)
@@ -89,7 +97,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
-        {
+        {           
             string price = ProductPriceTextBox.Text.Trim();
             if (!inputValidation.ValidatePrice(price))
             {
@@ -105,8 +113,12 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             {
                 MessageBox.Show("Please enter product name.");
                 return;
-
-            }          
+            }  
+            if (!inputValidation.ValidateProductName(productViewModel.ProductName))
+            {
+                MessageBox.Show("A product with this name already exists. Please choose another name.");
+                return;
+            }
             if (IsUpdate)
             {
                 productViewModel.UpdateProduct(ProductId);
@@ -116,12 +128,14 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             {
                 productViewModel.AddingMenu();
                 MessageBox.Show("Product saved successfully");
-            }
-            BackToMenuListEventHandler?.Invoke();
+                ClearComponents();
+            }           
+            BackToMenuListEventHandler?.Invoke();            
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
+            ClearComponents();
             BackToMenuListEventHandler?.Invoke();
         }
 
@@ -154,6 +168,13 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                     textBox.Text = "";
                 }
             }
+        }
+        public void ClearComponents()
+        {
+            ProductNameTextBox.Text = string.Empty;
+            ProductPriceTextBox.Text = string.Empty;
+            ProductMenuComboBox.SelectedIndex = -1;
+            ProductPreviewPictureBox.Image = null;
         }
     }
 }

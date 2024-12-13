@@ -23,6 +23,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             InitializeComponent();
         }
 
+
         private void BackButton_Click(object sender, EventArgs e)
         {
             BackToSettingsEventHandler?.Invoke();
@@ -106,6 +107,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             {
                 ConfirmPassword.PasswordChar = '●';
             }
+
         }
     }
 }

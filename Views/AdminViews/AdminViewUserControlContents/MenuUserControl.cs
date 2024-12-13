@@ -17,12 +17,15 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControlContents
         {
             InitializeComponent();
             AttachClickEvents();
-
-            //panel configuration
+            PanelConfiguration();
+            ProductNameLabel.Size = new Size(170, 30);
+        }
+        private void PanelConfiguration()
+        {
             ProductPanel.BorderColor = ColorTranslator.FromHtml("#e9dfce");
             ProductPanel.BorderRadius = 20;
             ProductPanel.MouseHover += ProductPanel_MouseHover;
-            ProductPanel.MouseEnter += ProductPanel_MouseEnter; 
+            ProductPanel.MouseEnter += ProductPanel_MouseEnter;
             ProductPanel.MouseLeave += ProductPanel_MouseLeave;
         }
         public int ProductId { get; set; }
@@ -31,10 +34,16 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControlContents
             get => ProductButton.Image;
             set => ProductButton.Image = value;
         }
+        private string _productName;
         public string ProductNames
         {
             get => ProductNameLabel.Text;
-            set => ProductNameLabel.Text = value;
+            set
+            {
+                _productName = value;
+                ProductNameLabel.Text = value;
+                SetProductNameLabel(ProductNameLabel, value, ProductPanel);
+            }
         }
         public double ProductPrice
         {
@@ -56,27 +65,47 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControlContents
         }
         private void NotifyProductClicked(object sender, EventArgs e)
         {
-            ProductClicked?.Invoke(this,(ProductId));
+            ProductClicked?.Invoke(this, ProductId);
         }
-
-
-
         private void ProductPanel_MouseHover(object sender, EventArgs e)
         {
             ProductPanel.BorderColor = ColorTranslator.FromHtml("#d45c2f");
             ProductPanel.BorderRadius = 20;
         }
-
         private void ProductPanel_MouseEnter(object sender, EventArgs e)
         {
             ProductPanel.BorderColor = ColorTranslator.FromHtml("#d45c2f");
             ProductPanel.BorderRadius = 20;
         }
-
         private void ProductPanel_MouseLeave(object sender, EventArgs e)
         {
             ProductPanel.BorderColor = ColorTranslator.FromHtml("#e9dfce");
             ProductPanel.BorderRadius = 20;
+        }
+
+        private void AdjustFontSize(Guna.UI2.WinForms.Guna2HtmlLabel label, string text, Guna.UI2.WinForms.Guna2GradientPanel panel)
+        {
+            using (Graphics g = label.CreateGraphics())
+            {
+                float fontSize = label.Font.Size;
+                SizeF textSize = g.MeasureString(text, label.Font);
+                while(textSize.Width > panel.Width && label.Font.Size > 1)
+                {
+                    fontSize -= 0.5f;
+                    label.Font = new Font(label.Font.FontFamily,fontSize, label.Font.Style);
+                    textSize = g.MeasureString(text, label.Font);                    
+                } 
+            }
+        }
+        private void SetProductNameLabel(Guna.UI2.WinForms.Guna2HtmlLabel label, string text, Guna.UI2.WinForms.Guna2GradientPanel panel)
+        {
+            label.Text = text;  
+            AdjustFontSize(label, text, ProductPanel);
+        }
+
+        private void MenuUserControl_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

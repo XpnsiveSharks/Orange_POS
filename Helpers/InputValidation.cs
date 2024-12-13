@@ -7,7 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Orange_POS.Helpers
 {
@@ -63,9 +63,9 @@ namespace Orange_POS.Helpers
             { return false; }
             return true;
         }
-        
+
         //hindi pa sure
-        public bool CheckProductDuplicate(string product)
+        public bool ValidateProductName(string product)
         {
             using (var connection = _databaseConnection.GetConnection())
             {

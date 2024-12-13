@@ -20,6 +20,7 @@ namespace Orange_POS.Views.AdminViews
             InitializeComponent();
             InitializeControls();
             ChangeUserControl();
+            LoadUserControl(AdminViewControl.Dashboard);
         }
         private void InitializeControls()
         {
@@ -30,7 +31,9 @@ namespace Orange_POS.Views.AdminViews
                 { AdminViewControl.CreateAccount, new CreateAccountUserControl() },
                 { AdminViewControl.UpdatePassword, new UpdatePasswordUserControl() },
                 { AdminViewControl.DeleteAccount, new DeleteAccountUserControl() },
-                { AdminViewControl.InsertProduct, new InsertProductUserControl() }  
+                { AdminViewControl.InsertProduct, new InsertProductUserControl() },
+                { AdminViewControl.Dashboard, new DashboardUserControl() },
+                { AdminViewControl.OrderList, new OrderListUserControl() }
             };
         }
 
@@ -53,7 +56,13 @@ namespace Orange_POS.Views.AdminViews
                 { AdminViewControl.UpdatePassword, SubscribeUpdatePasswordEvents },
                 { AdminViewControl.MenutList, SubscribeMenuListUserEvents },
                 { AdminViewControl.InsertProduct, SubscribeInsertProductUserEvents },
+
                 { AdminViewControl.DeleteAccount, SubscribeDeleteAccountEvents },
+
+                { AdminViewControl.Dashboard, SubscribeDashboardUserEvents },
+                { AdminViewControl.OrderList, SubscribeOrderListUserEvents }
+
+
             };
 
             foreach (var controlKey in _controls.Keys)
@@ -88,6 +97,9 @@ namespace Orange_POS.Views.AdminViews
             {
                 menuListUserControl.InsertMenuEventHandler -= OnInsertMenu;
                 menuListUserControl.InsertMenuEventHandler += OnInsertMenu;
+
+                menuListUserControl.UpdateMenuEventHandler -= OnUpdateMenu;
+                menuListUserControl.UpdateMenuEventHandler += OnUpdateMenu;
             }
         }
         private void SubscribeCreateAccountEvents(UserControl control)
@@ -96,6 +108,22 @@ namespace Orange_POS.Views.AdminViews
             {
                 createAccountControl.BackToSettingsEventHandler -= OnBackToSettings;
                 createAccountControl.BackToSettingsEventHandler += OnBackToSettings;
+            }
+        }
+        private void SubscribeDashboardUserEvents(UserControl control)
+        {
+            if (control is DashboardUserControl dashboardUserControl)
+            {
+                dashboardUserControl.BackToDashboardEventHandler -= OnDashboardReload;
+                dashboardUserControl.BackToDashboardEventHandler += OnDashboardReload;
+            }
+        }
+        private void SubscribeOrderListUserEvents(UserControl control)
+        {
+            if (control is OrderListUserControl orderListUserControl)
+            {
+                orderListUserControl.BackToOrderListEventHandler -= OnOrderListReload;
+                orderListUserControl.BackToOrderListEventHandler += OnOrderListReload;
             }
         }
         private void SubscribeSettingsEvents(UserControl control)
@@ -131,6 +159,18 @@ namespace Orange_POS.Views.AdminViews
                 LoadUserControl(AdminViewControl.MenutList);
             }
         }
+        private void OnUpdateMenu(int productId)
+        {
+            if (_controls.TryGetValue(AdminViewControl.InsertProduct, out var control) &&
+                control is InsertProductUserControl insertProductUserControl)
+            {
+                insertProductUserControl.ProductId = productId;
+                insertProductUserControl.IsUpdate = true;
+                insertProductUserControl.InitializeControl(); 
+                LoadUserControl(AdminViewControl.InsertProduct);
+            }
+        }
+
         private void OnInsertMenu()
         {
             LoadUserControl(AdminViewControl.InsertProduct);
@@ -151,9 +191,17 @@ namespace Orange_POS.Views.AdminViews
         {
             LoadUserControl(AdminViewControl.UpdatePassword);
         }
+        private void OnDashboardReload()
+        {         
+            LoadUserControl(AdminViewControl.Dashboard);          
+        }
+        private void OnOrderListReload()
+        {
+            LoadUserControl(AdminViewControl.OrderList);
+        }
         private void DashboardButton_Click(object sender, EventArgs e)
         {
-
+            LoadUserControl(AdminViewControl.Dashboard);
         }
 
         private void ProductButton_Click(object sender, EventArgs e)
@@ -163,6 +211,7 @@ namespace Orange_POS.Views.AdminViews
 
         private void OrderListButton_Click(object sender, EventArgs e)
         {
+            LoadUserControl(AdminViewControl.OrderList);
         }
 
         private void SettingsButton_Click(object sender, EventArgs e)
@@ -189,5 +238,6 @@ namespace Orange_POS.Views.AdminViews
             }
            
         }
+
     }
 }
