@@ -30,6 +30,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             // Bind the data to the DataGridView
             ReportsDataGridView.AutoGenerateColumns = true;
             ReportsDataGridView.DataSource = orders;
+            CustomizeDataGridViewHeaders();
         }
 
         private void FilterButton_Click(object sender, EventArgs e)
@@ -41,5 +42,30 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             // Reload data with filters
             LoadData(startDate, endDate);
         }
+
+        private void CustomizeDataGridViewHeaders()
+        {
+            if (ReportsDataGridView.Columns.Contains("Order_Number"))
+            {
+                ReportsDataGridView.Columns["Order_Number"].HeaderText = "Order No.";
+            }
+            if (ReportsDataGridView.Columns.Contains("Order_Date"))
+            {
+                ReportsDataGridView.Columns["Order_Date"].HeaderText = "Date";
+            }
+            if (ReportsDataGridView.Columns.Contains("Product_Name"))
+            {
+                ReportsDataGridView.Columns["Product_Name"].HeaderText = "Product";
+            }
+            if (ReportsDataGridView.Columns.Contains("Total_Amount"))
+            {
+                ReportsDataGridView.Columns["Total_Amount"].HeaderText = "Amount";
+            }
+            if (ReportsDataGridView.Columns.Contains("Quantity"))
+            {
+                ReportsDataGridView.Columns["Quantity"].HeaderText = "Quantity";
+            }
+        }
+        
     }
 }
