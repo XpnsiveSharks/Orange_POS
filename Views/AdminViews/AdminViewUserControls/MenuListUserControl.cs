@@ -1,7 +1,9 @@
-﻿using Orange_POS.Models;
+﻿using Orange_POS.Helpers;
+using Orange_POS.Models;
 using Orange_POS.ViewModels;
 using Orange_POS.Views.AdminViews.AdminViewUserControlContents;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Orange_POS.Views.AdminViews.AdminViewUserControls
@@ -9,14 +11,15 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
     public partial class MenuListUserControl : UserControl
     {
         InsertProductUserControl insertProductUserControl = new InsertProductUserControl();
+        private readonly SearchFilter _searchFilter;
         private ProductViewModel _productViewModel;
         public event Action InsertMenuEventHandler;
         public event Action<int> DeleteMenuEventHandler;
         public event Action<int> UpdateMenuEventHandler;
 
-
         public MenuListUserControl()
         {
+            _searchFilter = new SearchFilter(); 
             _productViewModel = new ProductViewModel();
             InitializeComponent();
             guna2ContextMenuStrip1.ItemClicked += guna2ContextMenuStrip1_ItemClicked;
@@ -105,6 +108,33 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                 }
+            }
+        }
+
+        private void ProductSearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string searchQuery = ProductSearchTextBox.Text.Trim().ToLower();
+            if (string.IsNullOrEmpty(searchQuery))
+            {
+                UpdateProductPanel();
+                return;
+            }
+
+            var filteredControls = _productViewModel.ProductControls
+                .Where(control => control.ProductNames.ToLower().Contains(searchQuery))
+                .ToList();
+
+            MenuListFlowLayoutPanel.Controls.Clear();
+            foreach (var control in filteredControls)
+            {
+                if (control is MenuUserControl menuControl)
+                {
+                    menuControl.ContextMenuStrip = guna2ContextMenuStrip1;
+                    menuControl.ProductClicked += MenuControl_ProductClicked;
+                    menuControl.Tag = menuControl.ProductId;
+                }
+
+                MenuListFlowLayoutPanel.Controls.Add(control);
             }
         }
     }

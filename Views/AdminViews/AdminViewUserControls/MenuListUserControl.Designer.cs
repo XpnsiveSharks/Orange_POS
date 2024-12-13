@@ -53,6 +53,7 @@
             this.ProductSearchTextBox.SelectedText = "";
             this.ProductSearchTextBox.Size = new System.Drawing.Size(320, 49);
             this.ProductSearchTextBox.TabIndex = 10;
+            this.ProductSearchTextBox.TextChanged += new System.EventHandler(this.ProductSearchTextBox_TextChanged);
             // 
             // MenuListFlowLayoutPanel
             // 
