@@ -217,6 +217,11 @@ namespace Orange_POS.Views.AdminViews
         private void SettingsButton_Click(object sender, EventArgs e)
         {
             LoadUserControl(AdminViewControl.Settings);
+            if (_controls.TryGetValue(AdminViewControl.Settings, out var control) &&
+              control is SettingsUserControl settingsControl)
+            {
+                settingsControl.UpdateLoggedInUser();
+            }
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

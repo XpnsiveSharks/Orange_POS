@@ -36,7 +36,7 @@ namespace Orange_POS.Helpers
 
                     if (string.IsNullOrEmpty(storedPasswordHash))
                     {
-                        return false; // User not found or role mismatch
+                        return false; 
                     }
 
                     string enteredPasswordHash = passwordHashing.hashPassword(password);

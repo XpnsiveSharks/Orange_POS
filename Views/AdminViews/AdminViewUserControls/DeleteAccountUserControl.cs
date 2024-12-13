@@ -1,5 +1,6 @@
 ﻿using Orange_POS.Helpers;
 using Orange_POS.Repositories;
+using Orange_POS.Views.SharedViews;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Orange_POS.Views.SharedViews.SharedViewsUserControl.AdminLoginUserControl;
 
 namespace Orange_POS.Views.AdminViews.AdminViewUserControls
 {
@@ -16,7 +18,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
     {
         public event Action BackToSettingsEventHandler;
         private readonly UsersRepository usersRepository = new UsersRepository();
-       
+        private readonly MainLoginView mainLoginView = new MainLoginView();
 
         public DeleteAccountUserControl()
         {
@@ -63,19 +65,29 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
 
                     if (isDeleted)
                     {
-
                         MessageBox.Show("Account deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        SettingsUserControl settings = new SettingsUserControl();
-                        settings.Show();
-                        DeleteUsername.Clear();
-                        DeletePassword.Clear();
-                        ConfirmPassword.Clear();
-                        BackToSettingsEventHandler?.Invoke();
+                       
+                        if (username == CurrentUser.Username)
+                        {
+                            CurrentUser.Username = null;
+                            CurrentUser.UserRole = null;
+                            mainLoginView.Show();
+                        }
+                        else
+                        {
+                            DeleteUsername.Clear();
+                            DeletePassword.Clear();
+                            ConfirmPassword.Clear();
+                            BackToSettingsEventHandler?.Invoke();
+                        }
+                     
                     }
                     else
                     {
                         MessageBox.Show("Invalid username or password. Deletion failed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+
+                 
                 }
                 catch (Exception ex)
                 {
