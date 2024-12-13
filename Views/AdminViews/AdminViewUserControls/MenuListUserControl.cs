@@ -63,7 +63,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         }
 
         private void AddMenuButton_Click(object sender, EventArgs e)
-        {        
+        {
             InsertMenuEventHandler?.Invoke();
         }
 
