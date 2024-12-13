@@ -1,4 +1,5 @@
-﻿using Orange_POS.Models;
+﻿using Orange_POS.Helpers;
+using Orange_POS.Models;
 using Orange_POS.ViewModels;
 using Orange_POS.Views.AdminViews.AdminViewUserControlContents;
 using System;
@@ -14,7 +15,6 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         public event Action InsertMenuEventHandler;
         public event Action<int> DeleteMenuEventHandler;
         public event Action<int> UpdateMenuEventHandler;
-
 
         public MenuListUserControl()
         {
@@ -63,7 +63,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         }
 
         private void AddMenuButton_Click(object sender, EventArgs e)
-        {        
+        {
             InsertMenuEventHandler?.Invoke();
         }
 
@@ -106,6 +106,33 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                 }
+            }
+        }
+
+        private void ProductSearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string searchQuery = ProductSearchTextBox.Text.Trim().ToLower();
+            if (string.IsNullOrEmpty(searchQuery))
+            {
+                UpdateProductPanel();
+                return;
+            }
+
+            var filteredControls = _productViewModel.ProductControls
+                .Where(control => control.ProductNames.ToLower().Contains(searchQuery))
+                .ToList();
+
+            MenuListFlowLayoutPanel.Controls.Clear();
+            foreach (var control in filteredControls)
+            {
+                if (control is MenuUserControl menuControl)
+                {
+                    menuControl.ContextMenuStrip = guna2ContextMenuStrip1;
+                    menuControl.ProductClicked += MenuControl_ProductClicked;
+                    menuControl.Tag = menuControl.ProductId;
+                }
+
+                MenuListFlowLayoutPanel.Controls.Add(control);
             }
         }
 

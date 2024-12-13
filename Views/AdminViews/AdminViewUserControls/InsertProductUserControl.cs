@@ -113,7 +113,12 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             {
                 MessageBox.Show("Please enter product name.");
                 return;
-            }          
+            }  
+            if (!inputValidation.ValidateProductName(productViewModel.ProductName))
+            {
+                MessageBox.Show("A product with this name already exists. Please choose another name.");
+                return;
+            }
             if (IsUpdate)
             {
                 productViewModel.UpdateProduct(ProductId);
@@ -163,6 +168,13 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                     textBox.Text = "";
                 }
             }
+        }
+        public void ClearComponents()
+        {
+            ProductNameTextBox.Text = string.Empty;
+            ProductPriceTextBox.Text = string.Empty;
+            ProductMenuComboBox.SelectedIndex = -1;
+            ProductPreviewPictureBox.Image = null;
         }
         public void ClearComponents()
         {

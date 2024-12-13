@@ -101,8 +101,7 @@
             this.OrderListButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
             this.OrderListButton.Image = global::Orange_POS.Properties.Resources._32;
             this.OrderListButton.ImageSize = new System.Drawing.Size(50, 50);
-            this.OrderListButton.Location = new System.Drawing.Point(5, 207);
-            this.OrderListButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.OrderListButton.Location = new System.Drawing.Point(7, 318);
             this.OrderListButton.Name = "OrderListButton";
             this.OrderListButton.Size = new System.Drawing.Size(79, 63);
             this.OrderListButton.TabIndex = 17;

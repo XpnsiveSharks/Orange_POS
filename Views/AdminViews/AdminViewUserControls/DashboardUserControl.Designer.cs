@@ -162,7 +162,7 @@
             // 
             // FilterButton
             // 
-            this.FilterButton.BorderRadius = 18;
+            this.FilterButton.BorderRadius = 15;
             this.FilterButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.FilterButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.FilterButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
