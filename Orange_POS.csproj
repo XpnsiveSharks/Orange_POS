@@ -246,6 +246,24 @@
     <Compile Include="Views\AdminViews\AdminViewUserControls\UpdatePasswordUserControl.Designer.cs">
       <DependentUpon>UpdatePasswordUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\SharedViews\MainLoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SharedViews\MainLoginView.Designer.cs">
+      <DependentUpon>MainLoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\AdminLoginUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\AdminLoginUserControl.Designer.cs">
+      <DependentUpon>AdminLoginUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\StaffLoginUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SharedViews\SharedViewsUserControl\StaffLoginUserControl.Designer.cs">
+      <DependentUpon>StaffLoginUserControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -292,6 +310,15 @@
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\UpdatePasswordUserControl.resx">
       <DependentUpon>UpdatePasswordUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\SharedViews\MainLoginView.resx">
+      <DependentUpon>MainLoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SharedViews\SharedViewsUserControl\AdminLoginUserControl.resx">
+      <DependentUpon>AdminLoginUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SharedViews\SharedViewsUserControl\StaffLoginUserControl.resx">
+      <DependentUpon>StaffLoginUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Configurations\AppSettings.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -318,6 +345,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo OOP %28pos%29 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

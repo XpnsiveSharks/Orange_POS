@@ -11,7 +11,6 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
     public partial class MenuListUserControl : UserControl
     {
         InsertProductUserControl insertProductUserControl = new InsertProductUserControl();
-        private readonly SearchFilter _searchFilter;
         private ProductViewModel _productViewModel;
         public event Action InsertMenuEventHandler;
         public event Action<int> DeleteMenuEventHandler;
@@ -19,7 +18,6 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
 
         public MenuListUserControl()
         {
-            _searchFilter = new SearchFilter(); 
             _productViewModel = new ProductViewModel();
             InitializeComponent();
             guna2ContextMenuStrip1.ItemClicked += guna2ContextMenuStrip1_ItemClicked;
