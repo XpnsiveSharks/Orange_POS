@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Orange_POS.Views.AdminViews.AdminViewUserControls
+namespace Orange_POS.Views.AdminViews.AdminViewUserControlContents
 {
-    public partial class DeleteAccountUserControl : UserControl
+    public partial class PendingOrderUserControl : UserControl
     {
-        public DeleteAccountUserControl()
+        public PendingOrderUserControl()
         {
             InitializeComponent();
-        }
-
-        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

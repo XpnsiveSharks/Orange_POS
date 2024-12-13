@@ -39,7 +39,7 @@
             // 
             // ProductSearchTextBox
             // 
-            this.ProductSearchTextBox.BorderRadius = 20;
+            this.ProductSearchTextBox.BorderRadius = 15;
             this.ProductSearchTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ProductSearchTextBox.DefaultText = "";
             this.ProductSearchTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -49,10 +49,10 @@
             this.ProductSearchTextBox.Name = "ProductSearchTextBox";
             this.ProductSearchTextBox.PasswordChar = '\0';
             this.ProductSearchTextBox.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(144)))), ((int)(((byte)(144)))));
-            this.ProductSearchTextBox.PlaceholderText = "Search";
+            this.ProductSearchTextBox.PlaceholderText = "Search for menu";
             this.ProductSearchTextBox.SelectedText = "";
             this.ProductSearchTextBox.Size = new System.Drawing.Size(213, 32);
-            this.ProductSearchTextBox.TabIndex = 15;
+            this.ProductSearchTextBox.TabIndex = 10;
             // 
             // MenuListFlowLayoutPanel
             // 
@@ -66,6 +66,7 @@
             // 
             // guna2ContextMenuStrip1
             // 
+            this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.guna2ContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.UpdateToolStripMenuItem,
             this.DeleteToolStripMenuItem});
@@ -79,21 +80,21 @@
             this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(113, 48);
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(142, 64);
             // 
             // UpdateToolStripMenuItem
             // 
             this.UpdateToolStripMenuItem.Image = global::Orange_POS.Properties.Resources._272;
             this.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem";
-            this.UpdateToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-            this.UpdateToolStripMenuItem.Text = "Update";
+            this.UpdateToolStripMenuItem.Size = new System.Drawing.Size(141, 30);
+            this.UpdateToolStripMenuItem.Text = "       Update";
             // 
             // DeleteToolStripMenuItem
             // 
             this.DeleteToolStripMenuItem.Image = global::Orange_POS.Properties.Resources._28;
             this.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem";
-            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-            this.DeleteToolStripMenuItem.Text = "Delete";
+            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(141, 30);
+            this.DeleteToolStripMenuItem.Text = "       Delete";
             // 
             // AddMenuButton
             // 

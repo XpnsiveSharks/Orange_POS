@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
 namespace Orange_POS.Views.AdminViews.AdminViewUserControls
 {
@@ -96,7 +97,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
-        {
+        {           
             string price = ProductPriceTextBox.Text.Trim();
             if (!inputValidation.ValidatePrice(price))
             {
@@ -112,7 +113,6 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             {
                 MessageBox.Show("Please enter product name.");
                 return;
-
             }          
             if (IsUpdate)
             {
@@ -123,12 +123,14 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             {
                 productViewModel.AddingMenu();
                 MessageBox.Show("Product saved successfully");
-            }
-            BackToMenuListEventHandler?.Invoke();
+                ClearComponents();
+            }           
+            BackToMenuListEventHandler?.Invoke();            
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
+            ClearComponents();
             BackToMenuListEventHandler?.Invoke();
         }
 
@@ -161,6 +163,13 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                     textBox.Text = "";
                 }
             }
+        }
+        public void ClearComponents()
+        {
+            ProductNameTextBox.Text = string.Empty;
+            ProductPriceTextBox.Text = string.Empty;
+            ProductMenuComboBox.SelectedIndex = -1;
+            ProductPreviewPictureBox.Image = null;
         }
     }
 }

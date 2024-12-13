@@ -10,16 +10,12 @@ using System.Windows.Forms;
 
 namespace Orange_POS.Views.AdminViews.AdminViewUserControls
 {
-    public partial class DeleteAccountUserControl : UserControl
+    public partial class OrderListUserControl : UserControl
     {
-        public DeleteAccountUserControl()
+        public event Action BackToOrderListEventHandler;
+        public OrderListUserControl()
         {
             InitializeComponent();
-        }
-
-        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
