@@ -20,7 +20,7 @@ namespace Orange_POS
             Application.Run(new Views.SharedViews.MainLoginView());
             //Application.Run(new Views.AdminViews.AdminIndexView());
 
-
+             
         }
     }
 }
