@@ -41,7 +41,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         private void PopulateComboBoxItems()
         {
             ProductMenuComboBox.Items.Clear();
-            ProductMenuComboBox.Items.AddRange(new[] { "Ulam", "Drinks", "Desserts" });
+            ProductMenuComboBox.Items.AddRange(new[] { "Main Course", "Snacks", "Desserts", "Beverages" });
         }
 
         public void InitializeControl()
@@ -114,11 +114,6 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                 MessageBox.Show("Please enter product name.");
                 return;
             }  
-            if (!inputValidation.ValidateProductName(productViewModel.ProductName))
-            {
-                MessageBox.Show("A product with this name already exists. Please choose another name.");
-                return;
-            }
             if (IsUpdate)
             {
                 productViewModel.UpdateProduct(ProductId);
@@ -126,9 +121,17 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             }
             else
             {
-                productViewModel.AddingMenu();
-                MessageBox.Show("Product saved successfully");
-                ClearComponents();
+                if (!inputValidation.ValidateProductName(productViewModel.ProductName))
+                {
+                    MessageBox.Show("A product with this name already exists. Please choose another name.");
+                    return;
+                }
+                else
+                {
+                    productViewModel.AddingMenu();
+                    MessageBox.Show("Product saved successfully");
+                    ClearComponents();
+                }  
             }           
             BackToMenuListEventHandler?.Invoke();            
         }
