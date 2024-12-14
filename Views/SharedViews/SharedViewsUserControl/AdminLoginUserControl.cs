@@ -25,7 +25,14 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
             UserRole = userRole;
         }
 
-        private void BackButton_Click(object sender, EventArgs e)
+
+        public class CurrentUser
+        {
+            public static string Username { get; set; }
+            public static string UserRole { get; set; }
+        }
+
+        private void BackButton_Click_1(object sender, EventArgs e)
         {
             if (this.Parent is Panel panel && panel.FindForm() is MainLoginView mainLogin)
             {
@@ -33,7 +40,7 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
             }
         }
 
-        private void AdminLoginButton_Click(object sender, EventArgs e)
+        private void AdminLoginButton_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -60,13 +67,8 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
             }
             catch (Exception ex)
             {
-                throw new Exception("An error has occured while accessing the database", ex);
+                throw new Exception("An error has occurred while accessing the database", ex);
             }
-        }
-        public static class CurrentUser
-        {
-            public static string Username { get; set; }
-            public static string UserRole { get; set; }
         }
     }
 }

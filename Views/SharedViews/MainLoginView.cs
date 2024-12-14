@@ -12,6 +12,7 @@ namespace Orange_POS.Views.SharedViews
 {
     public partial class MainLoginView : Form
     {
+
         public MainLoginView()
         {
             InitializeComponent();

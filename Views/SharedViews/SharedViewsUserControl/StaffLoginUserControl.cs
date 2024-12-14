@@ -20,15 +20,6 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
             InitializeComponent();
             UserRole = userRole;
         }
-
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            if (this.Parent is Panel panel && panel.FindForm() is MainLoginView mainLogin)
-            {
-                mainLogin.RemoveLoginUserControl(this);
-            }
-        }
-
         private void StaffLoginButton_Click(object sender, EventArgs e)
         {
 
@@ -51,6 +42,14 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
             catch (Exception ex)
             {
                 throw new Exception("An error has occured while accessing the database", ex);
+            }
+        }
+
+        private void BackButton_Click_1(object sender, EventArgs e)
+        {
+            if (this.Parent is Panel panel && panel.FindForm() is MainLoginView mainLogin)
+            {
+                mainLogin.RemoveLoginUserControl(this);
             }
         }
     }
