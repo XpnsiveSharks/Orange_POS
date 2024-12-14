@@ -36,6 +36,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.CurrentUsernameSettings = new System.Windows.Forms.Label();
+            this.Logout = new Guna.UI2.WinForms.Guna2Button();
             this.SettingsIndexPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,6 +44,7 @@
             // 
             this.SettingsIndexPanel.BackColor = System.Drawing.Color.Transparent;
             this.SettingsIndexPanel.BorderRadius = 25;
+            this.SettingsIndexPanel.Controls.Add(this.Logout);
             this.SettingsIndexPanel.Controls.Add(this.label1);
             this.SettingsIndexPanel.Controls.Add(this.DeleteAccount);
             this.SettingsIndexPanel.Controls.Add(this.CreateAccount);
@@ -164,6 +166,25 @@
             this.CurrentUsernameSettings.Text = "Username";
             this.CurrentUsernameSettings.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // Logout
+            // 
+            this.Logout.BorderRadius = 18;
+            this.Logout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Logout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Logout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Logout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Logout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
+            this.Logout.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.Logout.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.Logout.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.Logout.Location = new System.Drawing.Point(622, 370);
+            this.Logout.Name = "Logout";
+            this.Logout.Size = new System.Drawing.Size(79, 38);
+            this.Logout.TabIndex = 43;
+            this.Logout.Text = "Logout";
+            this.Logout.Click += new System.EventHandler(this.Logout_Click);
+            // 
             // SettingsUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,5 +208,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label CurrentUsernameSettings;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Button Logout;
     }
 }

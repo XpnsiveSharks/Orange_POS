@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Orange_POS.Views.SharedViews;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         public event Action CreateAccountEventHandler;
         public event Action ChangePasswordEventHandler;
         public event Action DeleteAccountEventHandler;
-
+        public readonly MainLoginView mainLoginView = new MainLoginView();
         public string username { get; set; }
         public SettingsUserControl()
         {
@@ -42,6 +43,21 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         private void DeleteAccount_Click(object sender, EventArgs e)
         {
             DeleteAccountEventHandler?.Invoke();
+        }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to Logout?", "Logout", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Hide();
+                mainLoginView.Show();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+            
         }
     }
 }
