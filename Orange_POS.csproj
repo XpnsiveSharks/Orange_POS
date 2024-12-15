@@ -187,16 +187,22 @@
     <Compile Include="Views\AdminViews\AdminViewUserControlContents\MenuUserControl.Designer.cs">
       <DependentUpon>MenuUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\AdminViews\AdminViewUserControlContents\OrderDetailsUserControl.cs">
+    <Compile Include="Views\StaffViews\StaffIndexView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StaffViews\StaffIndexView.Designer.cs">
+      <DependentUpon>StaffIndexView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StaffViews\StaffUserControls\OrderDetailsUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\AdminViews\AdminViewUserControlContents\OrderDetailsUserControl.Designer.cs">
+    <Compile Include="Views\StaffViews\StaffUserControls\OrderDetailsUserControl.Designer.cs">
       <DependentUpon>OrderDetailsUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\AdminViews\AdminViewUserControlContents\PendingOrderUserControl.cs">
+    <Compile Include="Views\StaffViews\StaffUserControls\PendingOrderUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\AdminViews\AdminViewUserControlContents\PendingOrderUserControl.Designer.cs">
+    <Compile Include="Views\StaffViews\StaffUserControls\PendingOrderUserControl.Designer.cs">
       <DependentUpon>PendingOrderUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AdminViews\AdminViewUserControls\CreateAccountUserControl.cs">
@@ -281,10 +287,13 @@
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControlContents\MenuUserControl.resx">
       <DependentUpon>MenuUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\AdminViews\AdminViewUserControlContents\OrderDetailsUserControl.resx">
+    <EmbeddedResource Include="Views\StaffViews\StaffIndexView.resx">
+      <DependentUpon>StaffIndexView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StaffViews\StaffUserControls\OrderDetailsUserControl.resx">
       <DependentUpon>OrderDetailsUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\AdminViews\AdminViewUserControlContents\PendingOrderUserControl.resx">
+    <EmbeddedResource Include="Views\StaffViews\StaffUserControls\PendingOrderUserControl.resx">
       <DependentUpon>PendingOrderUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\CreateAccountUserControl.resx">

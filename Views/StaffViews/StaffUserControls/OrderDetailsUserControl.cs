@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Orange_POS.Views.AdminViews.AdminViewUserControlContents
@@ -15,12 +8,8 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControlContents
         public OrderDetailsUserControl(string orderType)
         {
             InitializeComponent();
+            this.Order_Type = orderType;
         }
-        public FlowLayoutPanel pendingOrderFlowLayout
-        {
-            get { return this.PendingOrderFlowLayout; }
-        }
-
         public string Order_Number
         {
             get => OrderNumber.Text;
@@ -39,11 +28,14 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControlContents
             set => OrderType.Text = value;
         }
 
-        public void AddOrder(PendingOrderUserControl orderControl)
+        private void PrintButton_Click(object sender, EventArgs e)
         {
-            if (orderControl == null) throw new ArgumentNullException(nameof(orderControl));
-            PendingOrderFlowLayout.Controls.Add(orderControl);
+            // Print logic here
         }
 
+        private void CompleteOrderButton_Click(object sender, EventArgs e)
+        {
+            // Complete order logic here
+        }
     }
 }

@@ -57,8 +57,9 @@
             this.OrderDetailsPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.OrderDetailsPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.OrderDetailsPanel.Location = new System.Drawing.Point(0, 0);
+            this.OrderDetailsPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OrderDetailsPanel.Name = "OrderDetailsPanel";
-            this.OrderDetailsPanel.Size = new System.Drawing.Size(340, 459);
+            this.OrderDetailsPanel.Size = new System.Drawing.Size(227, 298);
             this.OrderDetailsPanel.TabIndex = 0;
             // 
             // guna2Panel2
@@ -67,9 +68,10 @@
             this.guna2Panel2.Controls.Add(this.PrintButton);
             this.guna2Panel2.Controls.Add(this.CompleteOrderButton);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 380);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 247);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(340, 79);
+            this.guna2Panel2.Size = new System.Drawing.Size(227, 51);
             this.guna2Panel2.TabIndex = 7;
             // 
             // PrintButton
@@ -84,11 +86,13 @@
             this.PrintButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.PrintButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
             this.PrintButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.PrintButton.Location = new System.Drawing.Point(3, 14);
+            this.PrintButton.Location = new System.Drawing.Point(2, 9);
+            this.PrintButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(161, 44);
+            this.PrintButton.Size = new System.Drawing.Size(107, 29);
             this.PrintButton.TabIndex = 4;
             this.PrintButton.Text = "Print";
+            this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
             // 
             // CompleteOrderButton
             // 
@@ -104,18 +108,22 @@
             this.CompleteOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
             this.CompleteOrderButton.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.CompleteOrderButton.IndicateFocus = true;
-            this.CompleteOrderButton.Location = new System.Drawing.Point(182, 14);
+            this.CompleteOrderButton.Location = new System.Drawing.Point(121, 9);
+            this.CompleteOrderButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CompleteOrderButton.Name = "CompleteOrderButton";
-            this.CompleteOrderButton.Size = new System.Drawing.Size(158, 44);
+            this.CompleteOrderButton.Size = new System.Drawing.Size(105, 29);
             this.CompleteOrderButton.TabIndex = 5;
             this.CompleteOrderButton.Text = "Complete";
+            this.CompleteOrderButton.Click += new System.EventHandler(this.CompleteOrderButton_Click);
             // 
             // PendingOrderFlowLayout
             // 
+            this.PendingOrderFlowLayout.AutoScroll = true;
             this.PendingOrderFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PendingOrderFlowLayout.Location = new System.Drawing.Point(0, 149);
+            this.PendingOrderFlowLayout.Location = new System.Drawing.Point(0, 97);
+            this.PendingOrderFlowLayout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PendingOrderFlowLayout.Name = "PendingOrderFlowLayout";
-            this.PendingOrderFlowLayout.Size = new System.Drawing.Size(340, 310);
+            this.PendingOrderFlowLayout.Size = new System.Drawing.Size(227, 201);
             this.PendingOrderFlowLayout.TabIndex = 6;
             // 
             // ProductName
@@ -123,7 +131,8 @@
             this.ProductName.BackColor = System.Drawing.Color.Transparent;
             this.ProductName.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.ProductName.Location = new System.Drawing.Point(40, 177);
+            this.ProductName.Location = new System.Drawing.Point(27, 115);
+            this.ProductName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ProductName.Name = "ProductName";
             this.ProductName.Size = new System.Drawing.Size(3, 2);
             this.ProductName.TabIndex = 3;
@@ -141,8 +150,9 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(340, 149);
+            this.guna2Panel1.Size = new System.Drawing.Size(227, 97);
             this.guna2Panel1.TabIndex = 0;
             // 
             // OrderType
@@ -150,9 +160,10 @@
             this.OrderType.BackColor = System.Drawing.Color.Transparent;
             this.OrderType.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.OrderType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.OrderType.Location = new System.Drawing.Point(147, 103);
+            this.OrderType.Location = new System.Drawing.Point(98, 67);
+            this.OrderType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OrderType.Name = "OrderType";
-            this.OrderType.Size = new System.Drawing.Size(100, 27);
+            this.OrderType.Size = new System.Drawing.Size(67, 22);
             this.OrderType.TabIndex = 5;
             this.OrderType.Text = "Take Out";
             // 
@@ -161,9 +172,10 @@
             this.OrderDate.BackColor = System.Drawing.Color.Transparent;
             this.OrderDate.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.OrderDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.OrderDate.Location = new System.Drawing.Point(79, 63);
+            this.OrderDate.Location = new System.Drawing.Point(53, 41);
+            this.OrderDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OrderDate.Name = "OrderDate";
-            this.OrderDate.Size = new System.Drawing.Size(127, 27);
+            this.OrderDate.Size = new System.Drawing.Size(86, 22);
             this.OrderDate.TabIndex = 4;
             this.OrderDate.Text = "Feb. 8, 2024";
             // 
@@ -172,9 +184,10 @@
             this.OrderNumber.BackColor = System.Drawing.Color.Transparent;
             this.OrderNumber.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.OrderNumber.Location = new System.Drawing.Point(125, 23);
+            this.OrderNumber.Location = new System.Drawing.Point(83, 15);
+            this.OrderNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OrderNumber.Name = "OrderNumber";
-            this.OrderNumber.Size = new System.Drawing.Size(63, 27);
+            this.OrderNumber.Size = new System.Drawing.Size(43, 22);
             this.OrderNumber.TabIndex = 3;
             this.OrderNumber.Text = "12345";
             // 
@@ -183,9 +196,10 @@
             this.OrderTypeLabel.BackColor = System.Drawing.Color.Transparent;
             this.OrderTypeLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderTypeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.OrderTypeLabel.Location = new System.Drawing.Point(13, 101);
+            this.OrderTypeLabel.Location = new System.Drawing.Point(9, 66);
+            this.OrderTypeLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OrderTypeLabel.Name = "OrderTypeLabel";
-            this.OrderTypeLabel.Size = new System.Drawing.Size(127, 28);
+            this.OrderTypeLabel.Size = new System.Drawing.Size(89, 20);
             this.OrderTypeLabel.TabIndex = 2;
             this.OrderTypeLabel.Text = "Order Type:";
             // 
@@ -194,9 +208,10 @@
             this.OrderDateLabel.BackColor = System.Drawing.Color.Transparent;
             this.OrderDateLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.OrderDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.OrderDateLabel.Location = new System.Drawing.Point(13, 63);
+            this.OrderDateLabel.Location = new System.Drawing.Point(9, 41);
+            this.OrderDateLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OrderDateLabel.Name = "OrderDateLabel";
-            this.OrderDateLabel.Size = new System.Drawing.Size(60, 28);
+            this.OrderDateLabel.Size = new System.Drawing.Size(42, 20);
             this.OrderDateLabel.TabIndex = 1;
             this.OrderDateLabel.Text = "Date: ";
             // 
@@ -205,21 +220,23 @@
             this.OrderNumberLabel.BackColor = System.Drawing.Color.Transparent;
             this.OrderNumberLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.OrderNumberLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.OrderNumberLabel.Location = new System.Drawing.Point(13, 23);
+            this.OrderNumberLabel.Location = new System.Drawing.Point(9, 15);
+            this.OrderNumberLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OrderNumberLabel.Name = "OrderNumberLabel";
-            this.OrderNumberLabel.Size = new System.Drawing.Size(106, 28);
+            this.OrderNumberLabel.Size = new System.Drawing.Size(75, 20);
             this.OrderNumberLabel.TabIndex = 0;
             this.OrderNumberLabel.Text = "Order No.";
             // 
             // OrderDetailsUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.OrderDetailsPanel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "OrderDetailsUserControl";
-            this.Size = new System.Drawing.Size(340, 459);
+            this.Size = new System.Drawing.Size(227, 298);
             this.OrderDetailsPanel.ResumeLayout(false);
             this.OrderDetailsPanel.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);

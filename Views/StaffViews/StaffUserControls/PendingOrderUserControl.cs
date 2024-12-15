@@ -16,5 +16,6 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControlContents
         {
             InitializeComponent();
         }
+
     }
 }

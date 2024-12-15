@@ -14,11 +14,13 @@ namespace Orange_POS.Repositories
     {
         private readonly DatabaseConnection _databaseConnection;
         private readonly ConfigurationLoader _configurationLoader;
+
         public OrdersRepository()
         {
             _configurationLoader = new ConfigurationLoader();
             _databaseConnection = new DatabaseConnection(_configurationLoader.Configuration);
         }
+
         public void AddOrders(Orders orders)
         {
             try
@@ -74,6 +76,38 @@ namespace Orange_POS.Repositories
             catch (SqlException ex)
             {
                 throw new Exception("An error has occured while accessing the database", ex);
+            }
+        }
+
+        public List<Orders> GetPendingOrders()
+        {
+            try
+            {
+                using (var connection = _databaseConnection.GetConnection())
+                {
+                    var query = "SELECT * FROM orders_table WHERE Status = @Status";
+                    return connection.Query<Orders>(query, new { Status = "Pending" }).ToList();
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("An error has occured while accessing the database", ex);
+            }
+        }
+
+        public void UpdateOrderStatus(int orderId, string newStatus)
+        {
+            try
+            {
+                using (var connection = _databaseConnection.GetConnection())
+                {
+                    var updateQuery = "UPDATE orders_table SET Status = @Status WHERE Order_Id = @Order_Id";
+                    connection.Execute(updateQuery, new { Status = newStatus, Order_Id = orderId });
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("An error has occured while updating the order status", ex);
             }
         }
     }
