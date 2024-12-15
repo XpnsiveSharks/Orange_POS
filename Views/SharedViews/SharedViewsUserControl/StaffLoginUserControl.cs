@@ -27,10 +27,16 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
             {
                 string username = StaffUsernameTextBox.Text;
                 string password = StaffPasswordTextBox.Text;
+                string confirmPassword = ConfirmPassword.Text;
 
                 if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
                     MessageBox.Show("Username and Password cannot be empty.");
+                    return;
+                }
+                if (password != confirmPassword)
+                {
+                    MessageBox.Show("New password and confirmation password do not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (validateCreds.validateCredentials(username, password, UserRole))
@@ -50,6 +56,30 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
             if (this.Parent is Panel panel && panel.FindForm() is MainLoginView mainLogin)
             {
                 mainLogin.RemoveLoginUserControl(this);
+            }
+        }
+
+        private void ShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ShowPassword.Checked)
+            {
+                StaffPasswordTextBox.PasswordChar = '\0';
+            }
+            else
+            {
+                StaffPasswordTextBox.PasswordChar = '●';
+            }
+        }
+
+        private void ShowConfirmPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ShowConfirmPassword.Checked)
+            {
+                ConfirmPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                ConfirmPassword.PasswordChar = '●';
             }
         }
     }

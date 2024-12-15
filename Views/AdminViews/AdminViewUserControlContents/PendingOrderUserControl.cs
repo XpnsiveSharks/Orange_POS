@@ -16,5 +16,47 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControlContents
         {
             InitializeComponent();
         }
+
+        private string _productName;
+        public string ProductNames
+        {
+            get => NamePendingOrder.Text;
+            set
+            {
+                _productName = value;
+                NamePendingOrder.Text = value;
+                SetProductNameLabel(NamePendingOrder, value, PendingOrderPanel);
+            }
+        }
+
+        public int Quantity
+        {
+            get => int.TryParse(QuantityPendingOrder.Text, out var quantity) ? quantity : 0;
+            set => QuantityPendingOrder.Text = value.ToString();
+        }
+
+        private void AdjustFontSize(Guna.UI2.WinForms.Guna2HtmlLabel label, string text, Guna.UI2.WinForms.Guna2Panel panel)
+        {
+            using (Graphics g = label.CreateGraphics())
+            {
+                float fontSize = label.Font.Size;
+                SizeF textSize = g.MeasureString(text, label.Font);
+                while (textSize.Width > panel.Width && label.Font.Size > 1)
+                {
+                    fontSize -= 0.5f;
+                    label.Font = new Font(label.Font.FontFamily, fontSize, label.Font.Style);
+                    textSize = g.MeasureString(text, label.Font);
+                }
+            }
+        }
+        private void SetProductNameLabel(Guna.UI2.WinForms.Guna2HtmlLabel label, string text, Guna.UI2.WinForms.Guna2Panel panel)
+        {
+            label.Text = text;
+            AdjustFontSize(label, text, PendingOrderPanel);
+        }
+        private void PendingOrderPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

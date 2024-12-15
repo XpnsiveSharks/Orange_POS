@@ -57,12 +57,12 @@
             this.CreateUserRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CreateUserRole.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.CreateUserRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CreateUserRole.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CreateUserRole.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateUserRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.CreateUserRole.ItemHeight = 30;
             this.CreateUserRole.Items.AddRange(new object[] {
             "Admin",
-            "Customer"});
+            "Staff"});
             this.CreateUserRole.Location = new System.Drawing.Point(328, 77);
             this.CreateUserRole.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CreateUserRole.Name = "CreateUserRole";
@@ -120,7 +120,6 @@
             this.CreateUsername.TabIndex = 38;
             this.CreateUsername.TextOffset = new System.Drawing.Point(8, 0);
             // 
-
             // ShowConfirmPassword
             // 
             this.ShowConfirmPassword.AutoSize = true;
@@ -134,7 +133,7 @@
             this.ShowConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ShowConfirmPassword.Location = new System.Drawing.Point(604, 298);
             this.ShowConfirmPassword.Name = "ShowConfirmPassword";
-            this.ShowConfirmPassword.Size = new System.Drawing.Size(102, 17);
+            this.ShowConfirmPassword.Size = new System.Drawing.Size(148, 24);
             this.ShowConfirmPassword.TabIndex = 41;
             this.ShowConfirmPassword.Text = "Show Password";
             this.ShowConfirmPassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -143,7 +142,6 @@
             this.ShowConfirmPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.ShowConfirmPassword.UseVisualStyleBackColor = false;
             this.ShowConfirmPassword.CheckedChanged += new System.EventHandler(this.ShowConfirmPassword_CheckedChanged);
-
             // 
             // BackButton
             // 
@@ -221,7 +219,6 @@
             this.guna2HtmlLabel5.TabIndex = 48;
             this.guna2HtmlLabel5.Text = "User role:";
             // 
-
             // ShowPassword
             // 
             this.ShowPassword.AutoSize = true;
@@ -235,7 +232,7 @@
             this.ShowPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ShowPassword.Location = new System.Drawing.Point(604, 228);
             this.ShowPassword.Name = "ShowPassword";
-            this.ShowPassword.Size = new System.Drawing.Size(102, 17);
+            this.ShowPassword.Size = new System.Drawing.Size(148, 24);
             this.ShowPassword.TabIndex = 47;
             this.ShowPassword.Text = "Show Password";
             this.ShowPassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -244,7 +241,6 @@
             this.ShowPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.ShowPassword.UseVisualStyleBackColor = false;
             this.ShowPassword.CheckedChanged += new System.EventHandler(this.ShowPassword_CheckedChanged);
-
             // 
             // guna2HtmlLabel4
             // 
@@ -268,7 +264,6 @@
             this.guna2HtmlLabel3.TabIndex = 45;
             this.guna2HtmlLabel3.Text = "Password:";
             // 
-
             // ConfirmPassword
             // 
             this.ConfirmPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
@@ -293,7 +288,6 @@
             this.ConfirmPassword.Size = new System.Drawing.Size(381, 40);
             this.ConfirmPassword.TabIndex = 44;
             this.ConfirmPassword.TextOffset = new System.Drawing.Point(10, 0);
-
             // 
             // guna2HtmlLabel1
             // 
