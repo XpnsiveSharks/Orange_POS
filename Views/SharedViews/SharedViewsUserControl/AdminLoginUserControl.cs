@@ -53,7 +53,7 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
                     MessageBox.Show("Username and Password cannot be empty.");
                     return;
                 }
-                string confirmPassword = ConfirmPassword.Text;
+                
                 if (password != confirmPassword)
                 {
                     MessageBox.Show("New password and confirmation password do not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

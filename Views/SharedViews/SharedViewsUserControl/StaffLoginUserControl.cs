@@ -91,13 +91,13 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
             {
                 string username = StaffUsernameTextBox.Text;
                 string password = StaffPasswordTextBox.Text;
+                string confirmPassword = ConfirmPassword.Text;
 
                 if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
                     MessageBox.Show("Username and Password cannot be empty.");
                     return;
-                }
-                string confirmPassword = ConfirmPassword.Text;
+                }                
                 if (password != confirmPassword)
                 {
                     MessageBox.Show("New password and confirmation password do not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -109,6 +109,10 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
                     CurrentUser.UserRole = "Staff";
                     CurrentUser.Username = username;
                     StaffIndexView.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username and password", "Error");
                 }
             }
             catch (Exception ex)

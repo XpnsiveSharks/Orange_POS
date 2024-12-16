@@ -10,7 +10,7 @@ namespace Orange_POS.Views.StaffViews.StaffUserControls
     public partial class DetailsUserControl : UserControl
     {
         private OrdersRepository ordersRepository;
-
+        public event EventHandler OrderCompleted;
         public DetailsUserControl()
         {
             InitializeComponent();
@@ -66,12 +66,10 @@ namespace Orange_POS.Views.StaffViews.StaffUserControls
 
         private void CompleteOrderButton_Click(object sender, EventArgs e)
         {
-            // Update the order status in the database
             try
             {
                 ordersRepository.UpdateOrderStatus(Order_Number, "Completed");
 
-                // Remove the user control from the parent flow layout panel
                 if (this.Parent is FlowLayoutPanel flowLayoutPanel)
                 {
                     flowLayoutPanel.Controls.Remove(this);
@@ -81,6 +79,8 @@ namespace Orange_POS.Views.StaffViews.StaffUserControls
             {
                 MessageBox.Show("An error has occurred while updating the order status: " + ex.Message);
             }
+
+            OrderCompleted?.Invoke(this, EventArgs.Empty);
         }
     }
 }

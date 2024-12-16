@@ -47,7 +47,7 @@
             this.PendingOrderPanel.Name = "PendingOrderPanel";
             this.PendingOrderPanel.Size = new System.Drawing.Size(213, 38);
             this.PendingOrderPanel.TabIndex = 0;
-            this.PendingOrderPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.PendingOrderPanel_Paint);
+         //   this.PendingOrderPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.PendingOrderPanel_Paint);
             // 
             // guna2HtmlLabel1
             // 

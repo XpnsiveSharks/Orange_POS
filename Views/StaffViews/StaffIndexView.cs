@@ -13,7 +13,12 @@ namespace Orange_POS.Views.StaffViews
     public partial class StaffIndexView : Form
     {
         private OrdersRepository ordersRepository;
-
+        private Label PendingOrdersCountLabel;
+        public int Order_Count 
+        {
+            get => int.TryParse(OrderCount.Text, out var count) ? count : 0;
+            set => OrderCount.Text = $"Pending orders: {value}";
+        }
         public StaffIndexView()
         {
             InitializeComponent();
@@ -36,24 +41,20 @@ namespace Orange_POS.Views.StaffViews
                         Order_Date = order.Order_Date,
                         Order_Type = order.Order_Type
                     };
-
-
+                    orderDetailsUserControl.OrderCompleted += OnOrderCompleted;
                     OrdersFlowLayoutPanel.Controls.Add(orderDetailsUserControl);
-                    /*var dummyUsercontrol = new dummy()
-                    {
-                        MyProperty = order.Order_Type
-                    };
-*/
-
-                    //OrdersFlowLayoutPanel.Controls.Add(dummyUsercontrol);
-
                 }
-
+                Order_Count = pendingOrders.Count;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error has occurred while loading pending orders: " + ex.Message);
             }
+        }
+        private void OnOrderCompleted(object sender, EventArgs e)
+        {
+            Order_Count--;
+            LoadPendingOrders();
         }
     }
 }

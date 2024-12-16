@@ -46,7 +46,7 @@ namespace Orange_POS.Helpers
             catch (Exception ex)
             {
                 throw new Exception($"An error occurred while accessing the database: {ex.Message}");
-                return false;
+               
             }
         }
 
