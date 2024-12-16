@@ -16,6 +16,15 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControlContents
         {
             InitializeComponent();
         }
-
+        public string PendingOrder 
+        { 
+            get => NamePendingOrder.Text; 
+            set => NamePendingOrder.Text = value; 
+        }
+        public int QuantityOrder 
+        { 
+            get => int.TryParse(QuantityPendingOrder.Text, out var price) ? price : 0;
+            set => QuantityPendingOrder.Text = value.ToString();
+        }
     }
 }

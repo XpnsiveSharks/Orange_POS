@@ -1,6 +1,7 @@
 ﻿using Orange_POS.Models;
 using Orange_POS.Repositories;
 using Orange_POS.Views.AdminViews.AdminViewUserControlContents;
+using Orange_POS.Views.StaffViews.StaffUserControls;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -19,31 +20,35 @@ namespace Orange_POS.Views.StaffViews
             ordersRepository = new OrdersRepository();
             LoadPendingOrders();
         }
+
         private void LoadPendingOrders()
         {
             try
             {
                 List<Orders> pendingOrders = ordersRepository.GetPendingOrders();
-
-                Console.WriteLine($"Number of pending orders retrieved: {pendingOrders.Count}");
-
                 OrdersFlowLayoutPanel.Controls.Clear();
 
                 foreach (var order in pendingOrders)
                 {
-                    Console.WriteLine($"Adding Order Number: {order.Order_Number}");
-
-                    OrderDetailsUserControl orderDetailsUserControl = new OrderDetailsUserControl(order.Order_Type)
+                    var orderDetailsUserControl = new DetailsUserControl()
                     {
                         Order_Number = order.Order_Number,
                         Order_Date = order.Order_Date,
                         Order_Type = order.Order_Type
                     };
 
+
                     OrdersFlowLayoutPanel.Controls.Add(orderDetailsUserControl);
+                    /*var dummyUsercontrol = new dummy()
+                    {
+                        MyProperty = order.Order_Type
+                    };
+*/
+
+                    //OrdersFlowLayoutPanel.Controls.Add(dummyUsercontrol);
+
                 }
 
-                Console.WriteLine($"Number of controls added to OrdersFlowLayoutPanel: {OrdersFlowLayoutPanel.Controls.Count}");
             }
             catch (Exception ex)
             {

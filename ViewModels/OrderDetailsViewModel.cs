@@ -1,5 +1,6 @@
 ﻿using Orange_POS.Repositories;
 using Orange_POS.Views.AdminViews.AdminViewUserControlContents;
+using Orange_POS.Views.StaffViews.StaffUserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,7 +42,7 @@ namespace Orange_POS.ViewModels
             List<OrderDetailsUserControl> orderDetailsUserControls = new List<OrderDetailsUserControl>();
             foreach (var item in _orderDetailsRepository.GetOrderDetails())
             {
-                OrderDetailsUserControl orderDetailsUserControl = new OrderDetailsUserControl("")
+                OrderDetailsUserControl orderDetailsUserControl = new OrderDetailsUserControl()
                 {
                     Order_Number = item.OrderNumber,
                     Order_Date = item.OrderDate,

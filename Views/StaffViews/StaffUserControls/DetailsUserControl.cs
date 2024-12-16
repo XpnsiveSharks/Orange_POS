@@ -3,33 +3,28 @@ using Orange_POS.Repositories;
 using Orange_POS.Views.AdminViews.AdminViewUserControlContents;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 
 namespace Orange_POS.Views.StaffViews.StaffUserControls
 {
-    public partial class OrderDetailsUserControl : UserControl
+    public partial class DetailsUserControl : UserControl
     {
         private OrdersRepository ordersRepository;
 
-        public OrderDetailsUserControl()
+        public DetailsUserControl()
         {
             InitializeComponent();
-            //this.Order_Type = orderType;
             ordersRepository = new OrdersRepository();
-            LoadProductOrderInfo();
         }
 
         public string Order_Number
         {
             get => OrderNumber.Text;
-            set => OrderNumber.Text = value;
+            set
+            {
+                OrderNumber.Text = value;
+                LoadProductOrderInfo(); // Load product info after setting the order number
+            }
         }
 
         public string Order_Date
@@ -44,18 +39,8 @@ namespace Orange_POS.Views.StaffViews.StaffUserControls
             set => OrderType.Text = value;
         }
 
-        private void PrintButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CompleteOrderButton_Click(object sender, EventArgs e)
-        {
-
-        }
         private void LoadProductOrderInfo()
         {
-            Console.WriteLine( "test"+ Order_Number);
             try
             {
                 List<ProductOrderInfo> productOrderInfos = ordersRepository.GetProductOrderInfo(Order_Number);
@@ -72,8 +57,6 @@ namespace Orange_POS.Views.StaffViews.StaffUserControls
 
                     PendingOrderFlowLayout.Controls.Add(pendingOrderUserControl);
                 }
-
-                Console.WriteLine($"Number of controls added to PendingOrderFlowLayout: {PendingOrderFlowLayout.Controls.Count}");
             }
             catch (Exception ex)
             {
@@ -81,5 +64,23 @@ namespace Orange_POS.Views.StaffViews.StaffUserControls
             }
         }
 
+        private void CompleteOrderButton_Click(object sender, EventArgs e)
+        {
+            // Update the order status in the database
+            try
+            {
+                ordersRepository.UpdateOrderStatus(Order_Number, "Completed");
+
+                // Remove the user control from the parent flow layout panel
+                if (this.Parent is FlowLayoutPanel flowLayoutPanel)
+                {
+                    flowLayoutPanel.Controls.Remove(this);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error has occurred while updating the order status: " + ex.Message);
+            }
+        }
     }
 }

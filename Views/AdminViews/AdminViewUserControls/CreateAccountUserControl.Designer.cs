@@ -62,7 +62,7 @@
             this.CreateUserRole.ItemHeight = 30;
             this.CreateUserRole.Items.AddRange(new object[] {
             "Admin",
-            "Customer"});
+            "Staff"});
             this.CreateUserRole.Location = new System.Drawing.Point(328, 77);
             this.CreateUserRole.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CreateUserRole.Name = "CreateUserRole";
@@ -120,7 +120,6 @@
             this.CreateUsername.TabIndex = 38;
             this.CreateUsername.TextOffset = new System.Drawing.Point(8, 0);
             // 
-
             // ShowConfirmPassword
             // 
             this.ShowConfirmPassword.AutoSize = true;
@@ -143,7 +142,6 @@
             this.ShowConfirmPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.ShowConfirmPassword.UseVisualStyleBackColor = false;
             this.ShowConfirmPassword.CheckedChanged += new System.EventHandler(this.ShowConfirmPassword_CheckedChanged);
-
             // 
             // BackButton
             // 
@@ -217,11 +215,10 @@
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(214, 81);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(111, 32);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(71, 23);
             this.guna2HtmlLabel5.TabIndex = 48;
             this.guna2HtmlLabel5.Text = "User role:";
             // 
-
             // ShowPassword
             // 
             this.ShowPassword.AutoSize = true;
@@ -244,7 +241,6 @@
             this.ShowPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.ShowPassword.UseVisualStyleBackColor = false;
             this.ShowPassword.CheckedChanged += new System.EventHandler(this.ShowPassword_CheckedChanged);
-
             // 
             // guna2HtmlLabel4
             // 
@@ -253,7 +249,7 @@
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(31, 293);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(253, 36);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(169, 24);
             this.guna2HtmlLabel4.TabIndex = 46;
             this.guna2HtmlLabel4.Text = "Confirm Password:";
             // 
@@ -264,11 +260,10 @@
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(31, 221);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(137, 36);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(93, 24);
             this.guna2HtmlLabel3.TabIndex = 45;
             this.guna2HtmlLabel3.Text = "Password:";
             // 
-
             // ConfirmPassword
             // 
             this.ConfirmPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
@@ -293,7 +288,6 @@
             this.ConfirmPassword.Size = new System.Drawing.Size(381, 40);
             this.ConfirmPassword.TabIndex = 44;
             this.ConfirmPassword.TextOffset = new System.Drawing.Point(10, 0);
-
             // 
             // guna2HtmlLabel1
             // 
@@ -302,7 +296,7 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(31, 165);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(144, 36);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(99, 24);
             this.guna2HtmlLabel1.TabIndex = 43;
             this.guna2HtmlLabel1.Text = "Username:";
             // 
@@ -324,13 +318,13 @@
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(23, 8);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(316, 49);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(212, 34);
             this.guna2HtmlLabel2.TabIndex = 0;
             this.guna2HtmlLabel2.Text = "Create Account";
             // 
             // CreateAccountUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2Panel1);

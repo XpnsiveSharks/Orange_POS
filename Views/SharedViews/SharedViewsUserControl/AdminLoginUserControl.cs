@@ -53,6 +53,12 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
                     MessageBox.Show("Username and Password cannot be empty.");
                     return;
                 }
+                string confirmPassword = ConfirmPassword.Text;
+                if (password != confirmPassword)
+                {
+                    MessageBox.Show("New password and confirmation password do not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 if (validateCreds.validateCredentials(username, password, "admin"))
                 {
                     CurrentUser.UserRole = "admin";
@@ -68,6 +74,30 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
             catch (Exception ex)
             {
                 throw new Exception("An error has occurred while accessing the database", ex);
+            }
+        }
+
+        private void ShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ShowPassword.Checked)
+            {
+                AdminPasswordTextBox.PasswordChar = '\0';
+            }
+            else
+            {
+                AdminPasswordTextBox.PasswordChar = '●';
+            }
+        }
+
+        private void ShowConfirmPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ShowConfirmPassword.Checked)
+            {
+                ConfirmPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                ConfirmPassword.PasswordChar = '●';
             }
         }
     }

@@ -95,20 +95,67 @@ namespace Orange_POS.Repositories
             }
         }
 
-        public void UpdateOrderStatus(int orderId, string newStatus)
+        public void UpdateOrderStatus(string orderNumber, string newStatus)
         {
             try
             {
                 using (var connection = _databaseConnection.GetConnection())
                 {
-                    var updateQuery = "UPDATE orders_table SET Status = @Status WHERE Order_Id = @Order_Id";
-                    connection.Execute(updateQuery, new { Status = newStatus, Order_Id = orderId });
+                    var updateQuery = "UPDATE orders_table SET Status = @Status WHERE Order_Number = @Order_Number";
+                    connection.Execute(updateQuery, new { Status = newStatus, Order_Number = orderNumber });
                 }
             }
             catch (SqlException ex)
             {
-                throw new Exception("An error has occured while updating the order status", ex);
+                throw new Exception("An error has occurred while updating the order status", ex);
             }
         }
+
+        public List<ProductOrderInfo> GetProductOrderInfo(string orderNumber)
+        {
+            try
+            {
+                using (var connection = _databaseConnection.GetConnection())
+                {
+                    var query = @"
+                SELECT 
+                    oi.Quantity,
+                    p.Product_Name
+                FROM 
+                    Order_Items_Table oi
+                JOIN 
+                    Products_Table p ON oi.Product_Id = p.Product_Id
+                JOIN 
+                    Orders_Table o ON oi.Order_Id = o.Order_Id
+                WHERE 
+                    oi.Quantity IS NOT NULL AND o.Order_Number = @Order_Number";
+
+                    // Fetch the data
+                    var productOrderInfos = connection.Query<ProductOrderInfo>(query, new { Order_Number = orderNumber }).ToList();
+
+                    // Debugging: Output the query and parameter
+                    Console.WriteLine($"Order_Number: {orderNumber}");
+
+                    // Debugging: Output the number of records retrieved
+                    Console.WriteLine($"Number of product order info records retrieved: {productOrderInfos.Count}");
+
+                    // Debugging: Output the details of each record
+                    foreach (var info in productOrderInfos)
+                    {
+                        Console.WriteLine($"Order Number: {orderNumber}, Product Name: {info.Product_Name}, Quantity: {info.Quantity}");
+                    }
+
+                    return productOrderInfos;
+                }
+            }
+            catch (SqlException ex)
+            {
+                // Debugging: Output the exception message
+                Console.WriteLine($"Exception: {ex.Message}");
+                throw new Exception("An error has occurred while accessing the database", ex);
+            }
+        }
+
+
     }
 }
