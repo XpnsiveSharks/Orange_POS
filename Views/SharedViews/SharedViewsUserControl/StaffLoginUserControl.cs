@@ -31,6 +31,7 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
             {
                 string username = StaffUsernameTextBox.Text;
                 string password = StaffPasswordTextBox.Text;
+                string confirmPassword = ConfirmPassword.Text;
 
                 if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {

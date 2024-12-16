@@ -54,6 +54,11 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                     return;
                 }
 
+                if (CreateUserRole.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select option from the dropdown.");
+                    return;
+                }
 
                 if (password != confirm_password)
                 {

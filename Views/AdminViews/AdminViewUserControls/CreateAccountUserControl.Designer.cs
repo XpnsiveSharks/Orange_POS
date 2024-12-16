@@ -57,7 +57,7 @@
             this.CreateUserRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CreateUserRole.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.CreateUserRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CreateUserRole.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CreateUserRole.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateUserRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.CreateUserRole.ItemHeight = 30;
             this.CreateUserRole.Items.AddRange(new object[] {
@@ -133,7 +133,7 @@
             this.ShowConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ShowConfirmPassword.Location = new System.Drawing.Point(604, 298);
             this.ShowConfirmPassword.Name = "ShowConfirmPassword";
-            this.ShowConfirmPassword.Size = new System.Drawing.Size(102, 17);
+            this.ShowConfirmPassword.Size = new System.Drawing.Size(148, 24);
             this.ShowConfirmPassword.TabIndex = 41;
             this.ShowConfirmPassword.Text = "Show Password";
             this.ShowConfirmPassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -232,7 +232,7 @@
             this.ShowPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ShowPassword.Location = new System.Drawing.Point(604, 228);
             this.ShowPassword.Name = "ShowPassword";
-            this.ShowPassword.Size = new System.Drawing.Size(102, 17);
+            this.ShowPassword.Size = new System.Drawing.Size(148, 24);
             this.ShowPassword.TabIndex = 47;
             this.ShowPassword.Text = "Show Password";
             this.ShowPassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
