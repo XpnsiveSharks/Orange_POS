@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.AddNoteForCustomerOrderButton = new Guna.UI2.WinForms.Guna2Button();
             this.OrderPriceLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.QuantityTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.QuantityTitleLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -48,6 +49,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.guna2Panel1.BorderRadius = 30;
             this.guna2Panel1.BorderThickness = 5;
+            this.guna2Panel1.Controls.Add(this.AddNoteForCustomerOrderButton);
             this.guna2Panel1.Controls.Add(this.OrderPriceLabel);
             this.guna2Panel1.Controls.Add(this.QuantityTextBox);
             this.guna2Panel1.Controls.Add(this.QuantityTitleLabel);
@@ -65,6 +67,28 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1178, 207);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // AddNoteForCustomerOrderButton
+            // 
+            this.AddNoteForCustomerOrderButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AddNoteForCustomerOrderButton.BorderRadius = 15;
+            this.AddNoteForCustomerOrderButton.BorderThickness = 2;
+            this.AddNoteForCustomerOrderButton.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AddNoteForCustomerOrderButton.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.AddNoteForCustomerOrderButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
+            this.AddNoteForCustomerOrderButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AddNoteForCustomerOrderButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.AddNoteForCustomerOrderButton.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddNoteForCustomerOrderButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AddNoteForCustomerOrderButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AddNoteForCustomerOrderButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AddNoteForCustomerOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
+            this.AddNoteForCustomerOrderButton.Location = new System.Drawing.Point(966, 155);
+            this.AddNoteForCustomerOrderButton.Name = "AddNoteForCustomerOrderButton";
+            this.AddNoteForCustomerOrderButton.Size = new System.Drawing.Size(121, 36);
+            this.AddNoteForCustomerOrderButton.TabIndex = 10;
+            this.AddNoteForCustomerOrderButton.Text = "Add note";
+            this.AddNoteForCustomerOrderButton.Click += new System.EventHandler(this.AddNoteForCustomerOrderButton_Click);
             // 
             // OrderPriceLabel
             // 
@@ -136,6 +160,7 @@
             this.DecreaseOrderButton.Size = new System.Drawing.Size(45, 36);
             this.DecreaseOrderButton.TabIndex = 6;
             this.DecreaseOrderButton.Text = "-";
+            this.DecreaseOrderButton.Click += new System.EventHandler(this.DecreaseOrderButton_Click);
             // 
             // IncreaseOrderButton
             // 
@@ -158,6 +183,7 @@
             this.IncreaseOrderButton.Size = new System.Drawing.Size(45, 36);
             this.IncreaseOrderButton.TabIndex = 5;
             this.IncreaseOrderButton.Text = "+";
+            this.IncreaseOrderButton.Click += new System.EventHandler(this.IncreaseOrderButton_Click);
             // 
             // RemoveOrderButton
             // 
@@ -179,6 +205,7 @@
             this.RemoveOrderButton.Size = new System.Drawing.Size(121, 36);
             this.RemoveOrderButton.TabIndex = 4;
             this.RemoveOrderButton.Text = "Remove";
+            this.RemoveOrderButton.Click += new System.EventHandler(this.RemoveOrderButton_Click);
             // 
             // OrderTotalLabel
             // 
@@ -257,5 +284,6 @@
         private Guna.UI2.WinForms.Guna2Button DecreaseOrderButton;
         private Guna.UI2.WinForms.Guna2TextBox QuantityTextBox;
         private Guna.UI2.WinForms.Guna2HtmlLabel OrderPriceLabel;
+        private Guna.UI2.WinForms.Guna2Button AddNoteForCustomerOrderButton;
     }
 }

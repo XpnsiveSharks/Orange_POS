@@ -47,12 +47,16 @@ namespace Orange_POS.Views.CustomerViews.CustomerOrderingUserControls
             get => double.TryParse(OrderPriceLabel.Text, out var price) ? price : 0;
             set => OrderPriceLabel.Text = value.ToString("F2");
         }
-
+        public string OrderNote 
+        {
+            get;
+            set;
+        }
         private void RemoveOrderButton_Click(object sender, EventArgs e)
         {
             ItemRemovedFromOrderList?.Invoke(this, EventArgs.Empty);
-        }
 
+        }
         private void DecreaseOrderButton_Click(object sender, EventArgs e)
         {
             if (QuantityOnTextBox > 1)
@@ -67,14 +71,18 @@ namespace Orange_POS.Views.CustomerViews.CustomerOrderingUserControls
                 ItemRemovedFromOrderList?.Invoke(this, EventArgs.Empty);
             }
         }
-
         private void IncreaseOrderButton_Click(object sender, EventArgs e)
         {
             QuantityOnTextBox++;
             Quantity = QuantityOnTextBox;
             TotalPrice = Quantity * (TotalPrice / (Quantity - 1));
             QuantityChanged?.Invoke(this, EventArgs.Empty);
+        }
 
+        private void AddNoteForCustomerOrderButton_Click(object sender, EventArgs e)
+        {
+            var customerNotesView = new CustomerNoteView(this, this.OrderNote);
+            customerNotesView.Show();
         }
     }
 }

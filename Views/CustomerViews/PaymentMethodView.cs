@@ -32,20 +32,6 @@ namespace Orange_POS.Views.CustomerViews
         {
             InitializeComponent();
         }
-
-        private void CashPaymentButton_Click(object sender, EventArgs e)
-        {
-            CreateOrder("Cash Payment");
-            string receiptContent = GenerateReceiptContent(OrderItems, "Cash Payment");
-            PrintReceipt(receiptContent);
-            RestartApplication();
-        }
-
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            PaymentMethodBackButton?.Invoke();
-            HideOrderList();
-        }
         private void HideOrderList()
         {
             this.Hide();
@@ -86,7 +72,7 @@ namespace Orange_POS.Views.CustomerViews
 
             foreach (var item in orderItems)
             {
-                receiptContent.AppendLine($"{item.Product} x{item.Quantity} - ${item.TotalPrice}");
+                receiptContent.AppendLine($"{item.Product} x{item.Quantity} - ${item.TotalPrice}\nnote: {item.OrderNote}");
                 totalAmount += item.TotalPrice;
             }
 
@@ -133,10 +119,25 @@ namespace Orange_POS.Views.CustomerViews
                     Order_Id = ordersRepository.GetOrderIdByOrderNumber(orderNumber),
                     Product_Id = orderItem.ProductId,
                     Quantity = orderItem.Quantity,
-                    Price = orderItem.TotalPrice
+                    Price = orderItem.TotalPrice,
+                    Order_Note = orderItem.OrderNote
                 };
                 orderingService.AddToCart(newOrderItems);
             }
+        }
+
+        private void CashPaymentButton_Click(object sender, EventArgs e)
+        {
+            CreateOrder("Cash Payment");
+            string receiptContent = GenerateReceiptContent(OrderItems, "Cash Payment");
+            PrintReceipt(receiptContent);
+            RestartApplication();
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            PaymentMethodBackButton?.Invoke();
+            HideOrderList();
         }
     }
 }
