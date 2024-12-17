@@ -99,7 +99,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
-        {           
+        {
             string price = ProductPriceTextBox.Text.Trim();
             if (!inputValidation.ValidatePrice(price))
             {
@@ -110,34 +110,33 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             {
                 MessageBox.Show("Please select option from the dropdown.");
                 return;
-            }            
+            }
             if (string.IsNullOrWhiteSpace(productViewModel.ProductName))
             {
                 MessageBox.Show("Please enter product name.");
                 return;
-            }  
+            }
             if (IsUpdate)
             {
                 productViewModel.UpdateProduct(ProductId);
                 MessageBox.Show("Product updated successfully");
             }
-                
-            if (inputValidation.ValidateProductName(productViewModel.ProductName))
-            {
-                MessageBox.Show("A product with this name already exists. Please choose another name.");
-                return;
-            }
             else
             {
-                productViewModel.AddingMenu();
-                MessageBox.Show("Product saved successfully");
-                ClearComponents();
+
+                if (inputValidation.ValidateProductName(productViewModel.ProductName))
+                {
+                    MessageBox.Show("A product with this name already exists. Please choose another name.");
+                    return;
+                }
+                else
+                {
+                    productViewModel.AddingMenu();
+                    MessageBox.Show("Product saved successfully");
+                    ClearComponents();
+                }
             }
             BackToMenuListEventHandler?.Invoke();
-
-
-
-          
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
