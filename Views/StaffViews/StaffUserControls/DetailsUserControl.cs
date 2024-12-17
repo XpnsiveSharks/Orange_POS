@@ -82,5 +82,15 @@ namespace Orange_POS.Views.StaffViews.StaffUserControls
 
             OrderCompleted?.Invoke(this, EventArgs.Empty);
         }
+
+        private void PrintButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public string GenerateReceiptContent(List<PendingOrderUserControl> orderItems)
+        {
+
+        }
     }
 }

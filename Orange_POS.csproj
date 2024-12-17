@@ -173,6 +173,7 @@
     <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Repositories\StaffRepository.cs" />
     <Compile Include="Repositories\UsersRepository.cs" />
+    <Compile Include="Services\OrderingService.cs" />
     <Compile Include="ViewModels\OrderDetailsViewModel.cs" />
     <Compile Include="ViewModels\OrdersViewModel.cs" />
     <Compile Include="ViewModels\ProductViewModel.cs" />
@@ -187,6 +188,60 @@
     </Compile>
     <Compile Include="Views\AdminViews\AdminViewUserControlContents\MenuUserControl.Designer.cs">
       <DependentUpon>MenuUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerViews\CustomerIndexView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerViews\CustomerIndexView.Designer.cs">
+      <DependentUpon>CustomerIndexView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerViews\CustomerOrderingUserControls\ItemUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerViews\CustomerOrderingUserControls\ItemUserControl.Designer.cs">
+      <DependentUpon>ItemUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerViews\CustomerOrderingUserControls\MenuUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerViews\CustomerOrderingUserControls\MenuUserControl.Designer.cs">
+      <DependentUpon>MenuUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerViews\CustomerOrderingUserControls\OrdersUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerViews\CustomerOrderingUserControls\OrdersUserControl.Designer.cs">
+      <DependentUpon>OrdersUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerViews\CustomerOrderingUserControls\OrderTypeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerViews\CustomerOrderingUserControls\OrderTypeUserControl.Designer.cs">
+      <DependentUpon>OrderTypeUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerViews\CustomerOrderingUserControls\PaymentMethodUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerViews\CustomerOrderingUserControls\PaymentMethodUserControl.Designer.cs">
+      <DependentUpon>PaymentMethodUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerViews\OrderListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerViews\OrderListView.Designer.cs">
+      <DependentUpon>OrderListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerViews\OrderTypeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerViews\OrderTypeView.Designer.cs">
+      <DependentUpon>OrderTypeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerViews\PaymentMethodView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerViews\PaymentMethodView.Designer.cs">
+      <DependentUpon>PaymentMethodView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\StaffViews\StaffIndexView.cs">
       <SubType>Form</SubType>
@@ -381,5 +436,6 @@
   <ItemGroup>
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -37,10 +37,10 @@
             this.ShowConfirmPassword = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -180,6 +180,7 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(732, 437);
             this.guna2Panel1.TabIndex = 50;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // ShowConfirmPassword
             // 
@@ -242,19 +243,6 @@
             this.ConfirmPassword.TabIndex = 53;
             this.ConfirmPassword.TextOffset = new System.Drawing.Point(10, 0);
             // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.AutoSize = false;
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(45, 213);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(251, 24);
-            this.guna2HtmlLabel3.TabIndex = 52;
-            this.guna2HtmlLabel3.Text = "Password:";
-            // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.AutoSize = false;
@@ -270,14 +258,14 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.BorderRadius = 25;
+            this.guna2Panel2.BorderRadius = 20;
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(732, 83);
+            this.guna2Panel2.Size = new System.Drawing.Size(732, 64);
             this.guna2Panel2.TabIndex = 50;
             // 
             // guna2HtmlLabel2
@@ -286,12 +274,25 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(28, 15);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(20, 14);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(743, 108);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(570, 37);
             this.guna2HtmlLabel2.TabIndex = 0;
             this.guna2HtmlLabel2.Text = "Delete Account";
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.AutoSize = false;
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(45, 213);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(251, 24);
+            this.guna2HtmlLabel3.TabIndex = 52;
+            this.guna2HtmlLabel3.Text = "Password:";
             // 
             // DeleteAccountUserControl
             // 

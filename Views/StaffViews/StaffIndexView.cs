@@ -1,11 +1,13 @@
 ﻿using Orange_POS.Models;
 using Orange_POS.Repositories;
 using Orange_POS.Views.AdminViews.AdminViewUserControlContents;
+using Orange_POS.Views.SharedViews;
 using Orange_POS.Views.StaffViews.StaffUserControls;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Web.Management;
 using System.Windows.Forms;
 
 namespace Orange_POS.Views.StaffViews
@@ -13,7 +15,10 @@ namespace Orange_POS.Views.StaffViews
     public partial class StaffIndexView : Form
     {
         private OrdersRepository ordersRepository;
-        private Label PendingOrdersCountLabel;
+        public event Action StaffIndexBackButton;
+        MainLoginView mainLoginView = new MainLoginView();
+
+
         public int Order_Count 
         {
             get => int.TryParse(OrderCount.Text, out var count) ? count : 0;
@@ -55,6 +60,17 @@ namespace Orange_POS.Views.StaffViews
         {
             Order_Count--;
             LoadPendingOrders();
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            StaffIndexBackButton?.Invoke();
+            HideOrderList();
+        }
+        private void HideOrderList()
+        {
+            this.Hide();
+            mainLoginView.Show();
         }
     }
 }
