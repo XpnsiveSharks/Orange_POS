@@ -14,14 +14,14 @@ namespace Orange_POS.Views.CustomerViews
 {
     public partial class CustomerIndexView : Form
     {
-        private readonly ProductViewModel _productViewModel;
+        private readonly CustomerViewModel _customerViewModel;
         private readonly OrderListView orderListView;
         public string OrderType { get; set; }
         public string ItemCount { get; set; }
         public CustomerIndexView()
         {
             InitializeComponent();
-            _productViewModel = new ProductViewModel();
+            _customerViewModel = new CustomerViewModel();
             orderListView = new OrderListView(OrderType);
             LoadMenus();
         }
@@ -58,12 +58,12 @@ namespace Orange_POS.Views.CustomerViews
 
         public void LoadMenus()
         {
-            _productViewModel.LoadProductsToUserControl();
+            _customerViewModel.LoadProductsToUserControl();
             UpdateProductPanel();
         }
         public void ReloadMenus()
         {
-            _productViewModel.LoadProducts();
+            _customerViewModel.LoadProducts();
             LoadMenus();
         }
 
@@ -77,7 +77,7 @@ namespace Orange_POS.Views.CustomerViews
                 return;
             }
 
-            var filteredControls = _productViewModel.ProductControls
+            var filteredControls = _customerViewModel.ProductControls
                 .Where(control => control.MenuCategory.ToLower().Contains(searchQuery))
                 .ToList();
 
@@ -86,7 +86,7 @@ namespace Orange_POS.Views.CustomerViews
 
         private void UpdateProductPanel()
         {
-            UpdateFlowLayoutPanel(MenuFLowLayoutPanel, _productViewModel.ProductControls);
+            UpdateFlowLayoutPanel(MenuFLowLayoutPanel, _customerViewModel.ProductControls);
         }
 
         private void UpdateFlowLayoutPanel(FlowLayoutPanel panel, IEnumerable<Control> controls)
@@ -96,7 +96,7 @@ namespace Orange_POS.Views.CustomerViews
 
             foreach (var control in controls)
             {
-                if (control is MenuUserControl menuControl)
+                if (control is MenuForCustomerUserControl menuControl)
                 {
                     menuControl.ProductClicked -= OnProductClicked;
                     menuControl.ProductClicked += OnProductClicked;
