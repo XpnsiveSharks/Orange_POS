@@ -48,12 +48,12 @@
             this.BackButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.BackButton.FillColor = System.Drawing.Color.Transparent;
             this.BackButton.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.BackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.BackButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.BackButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.BackButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.BackButton.Location = new System.Drawing.Point(125, 396);
-            this.BackButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(1);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(112, 34);
             this.BackButton.TabIndex = 9;
@@ -62,7 +62,7 @@
             // 
             // StaffPasswordTextBox
             // 
-            this.StaffPasswordTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.StaffPasswordTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.StaffPasswordTextBox.BorderRadius = 20;
             this.StaffPasswordTextBox.BorderThickness = 2;
             this.StaffPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -87,21 +87,21 @@
             // 
             // StaffLoginButton
             // 
-            this.StaffLoginButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.StaffLoginButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.StaffLoginButton.BorderRadius = 20;
             this.StaffLoginButton.BorderThickness = 2;
             this.StaffLoginButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.StaffLoginButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.StaffLoginButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.StaffLoginButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.StaffLoginButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.StaffLoginButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.StaffLoginButton.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StaffLoginButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.StaffLoginButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.StaffLoginButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.StaffLoginButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.StaffLoginButton.Location = new System.Drawing.Point(55, 351);
-            this.StaffLoginButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.StaffLoginButton.Margin = new System.Windows.Forms.Padding(1);
             this.StaffLoginButton.Name = "StaffLoginButton";
             this.StaffLoginButton.Size = new System.Drawing.Size(256, 42);
             this.StaffLoginButton.TabIndex = 7;
@@ -110,7 +110,7 @@
             // 
             // StaffUsernameTextBox
             // 
-            this.StaffUsernameTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.StaffUsernameTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.StaffUsernameTextBox.BorderRadius = 20;
             this.StaffUsernameTextBox.BorderThickness = 2;
             this.StaffUsernameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -138,11 +138,11 @@
             this.LoginLabel.AutoSize = false;
             this.LoginLabel.BackColor = System.Drawing.Color.Transparent;
             this.LoginLabel.Font = new System.Drawing.Font("Century Gothic", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.LoginLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.LoginLabel.Location = new System.Drawing.Point(55, 62);
-            this.LoginLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoginLabel.Margin = new System.Windows.Forms.Padding(2);
             this.LoginLabel.Name = "LoginLabel";
-            this.LoginLabel.Size = new System.Drawing.Size(256, 80);
+            this.LoginLabel.Size = new System.Drawing.Size(256, 71);
             this.LoginLabel.TabIndex = 5;
             this.LoginLabel.Text = "Staff";
             this.LoginLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -189,7 +189,7 @@
             // 
             // ConfirmPassword
             // 
-            this.ConfirmPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.ConfirmPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ConfirmPassword.BorderRadius = 20;
             this.ConfirmPassword.BorderThickness = 2;
             this.ConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -203,6 +203,7 @@
             this.ConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.ConfirmPassword.Location = new System.Drawing.Point(55, 278);
+            this.ConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ConfirmPassword.Name = "ConfirmPassword";
             this.ConfirmPassword.PasswordChar = '●';
             this.ConfirmPassword.PlaceholderText = "Confirm Password";
@@ -224,7 +225,7 @@
             this.Controls.Add(this.StaffLoginButton);
             this.Controls.Add(this.StaffUsernameTextBox);
             this.Controls.Add(this.LoginLabel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StaffLoginUserControl";
             this.Size = new System.Drawing.Size(368, 468);
             this.ResumeLayout(false);
