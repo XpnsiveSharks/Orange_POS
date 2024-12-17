@@ -32,8 +32,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             CreateUsername.Clear();
             CreatePassword.Clear();
             ConfirmPassword.Clear();
-            ShowPassword.Checked = false;
-            ShowConfirmPassword.Checked = false;
+           
         }
 
         private void CreateAccountButton_Click(object sender, EventArgs e)
@@ -85,8 +84,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                 CreateUsername.Clear();
                 CreatePassword.Clear();
                 ConfirmPassword.Clear();
-                ShowPassword.Checked = false;
-                ShowConfirmPassword.Checked = false;
+              
             }
             catch (Exception ex)
             {
@@ -98,26 +96,65 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
 
         private void ShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (ShowPassword.Checked)
+           /* if (ShowPassword.Checked)
             {
                 CreatePassword.PasswordChar = '\0';
             }
             else
             {
                 CreatePassword.PasswordChar = '●';
-            }
+            }*/
         }
 
       
 
         private void ShowConfirmPassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (ShowConfirmPassword.Checked)
+           /* if (ShowConfirmPassword.Checked)
             {
                 ConfirmPassword.PasswordChar = '\0';
             }
             else
             {
+                ConfirmPassword.PasswordChar = '●';
+            }*/
+        }
+
+        private void ShowPassword__Click(object sender, EventArgs e)
+        {
+            if (CreatePassword.PasswordChar == '●')
+            {
+                HidePassword_.BringToFront();
+                CreatePassword.PasswordChar = '\0';
+            }
+        }
+
+        private void HidePassword__Click(object sender, EventArgs e)
+        {
+            if (CreatePassword.PasswordChar == '\0')
+            {
+                ShowPassword_.BringToFront();
+                CreatePassword.PasswordChar = '●';
+            }
+
+        }
+
+     
+
+        private void ShowConfirmPassword__Click_1(object sender, EventArgs e)
+        {
+            if (ConfirmPassword.PasswordChar == '●')
+            {
+                HideConfirmPassword_.BringToFront();
+                ConfirmPassword.PasswordChar = '\0';
+            }
+        }
+
+        private void HideConfirmPassword__Click_1(object sender, EventArgs e)
+        {
+            if (ConfirmPassword.PasswordChar == '\0')
+            {
+                ShowConfirmPassword_.BringToFront();
                 ConfirmPassword.PasswordChar = '●';
             }
         }

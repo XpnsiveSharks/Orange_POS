@@ -46,7 +46,7 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
             {
                 string username = AdminUsernameTextBox.Text;
                 string password = AdminPasswordTextBox.Text;
-                string confirmPassword = ConfirmPassword.Text;
+              
 
                 if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
@@ -54,11 +54,7 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
                     return;
                 }
                 
-                if (password != confirmPassword)
-                {
-                    MessageBox.Show("New password and confirmation password do not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+             
                 if (validateCreds.validateCredentials(username, password, "admin"))
                 {
                     CurrentUser.UserRole = "admin";
@@ -79,25 +75,43 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
 
         private void ShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (ShowPassword.Checked)
+           /* if (ShowPassword.Checked)
             {
                 AdminPasswordTextBox.PasswordChar = '\0';
             }
             else
             {
                 AdminPasswordTextBox.PasswordChar = '●';
-            }
+            }*/
         }
 
         private void ShowConfirmPassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (ShowConfirmPassword.Checked)
+            /*if (ShowConfirmPassword.Checked)
             {
                 ConfirmPassword.PasswordChar = '\0';
             }
             else
             {
                 ConfirmPassword.PasswordChar = '●';
+            }*/
+        }
+
+        private void ShowPassword__Click(object sender, EventArgs e)
+        {
+            if (AdminPasswordTextBox.PasswordChar == '●')
+            {
+                HidePassword_.BringToFront();
+                AdminPasswordTextBox.PasswordChar = '\0';
+            }
+        }
+
+        private void HidePassword__Click(object sender, EventArgs e)
+        {
+            if (AdminPasswordTextBox.PasswordChar == '\0')
+            {
+                ShowPassword_.BringToFront();
+                AdminPasswordTextBox.PasswordChar = '●';
             }
         }
     }

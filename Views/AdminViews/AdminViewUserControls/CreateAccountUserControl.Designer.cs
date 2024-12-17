@@ -28,21 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccountUserControl));
             this.CreateUserRole = new Guna.UI2.WinForms.Guna2ComboBox();
             this.CreatePassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.CreateUsername = new Guna.UI2.WinForms.Guna2TextBox();
-            this.ShowConfirmPassword = new Guna.UI2.WinForms.Guna2CheckBox();
             this.BackButton = new Guna.UI2.WinForms.Guna2TileButton();
             this.CreateAccountButton = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.ShowPassword = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.HidePassword_ = new System.Windows.Forms.Button();
+            this.ShowPassword_ = new System.Windows.Forms.Button();
+            this.ShowConfirmPassword_ = new System.Windows.Forms.Button();
+            this.HideConfirmPassword_ = new System.Windows.Forms.Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +66,7 @@
             this.CreateUserRole.Items.AddRange(new object[] {
             "Admin",
             "Staff"});
-            this.CreateUserRole.Location = new System.Drawing.Point(328, 77);
+            this.CreateUserRole.Location = new System.Drawing.Point(385, 87);
             this.CreateUserRole.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CreateUserRole.Name = "CreateUserRole";
             this.CreateUserRole.Size = new System.Drawing.Size(267, 36);
@@ -84,7 +87,7 @@
             this.CreatePassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.CreatePassword.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.CreatePassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.CreatePassword.Location = new System.Drawing.Point(213, 215);
+            this.CreatePassword.Location = new System.Drawing.Point(270, 225);
             this.CreatePassword.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.CreatePassword.Name = "CreatePassword";
             this.CreatePassword.PasswordChar = '●';
@@ -110,7 +113,7 @@
             this.CreateUsername.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.CreateUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.CreateUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.CreateUsername.Location = new System.Drawing.Point(213, 155);
+            this.CreateUsername.Location = new System.Drawing.Point(270, 165);
             this.CreateUsername.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.CreateUsername.Name = "CreateUsername";
             this.CreateUsername.PasswordChar = '\0';
@@ -119,29 +122,6 @@
             this.CreateUsername.Size = new System.Drawing.Size(381, 40);
             this.CreateUsername.TabIndex = 38;
             this.CreateUsername.TextOffset = new System.Drawing.Point(8, 0);
-            // 
-            // ShowConfirmPassword
-            // 
-            this.ShowConfirmPassword.AutoSize = true;
-            this.ShowConfirmPassword.BackColor = System.Drawing.Color.Transparent;
-            this.ShowConfirmPassword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ShowConfirmPassword.CheckedState.BorderRadius = 0;
-            this.ShowConfirmPassword.CheckedState.BorderThickness = 0;
-            this.ShowConfirmPassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ShowConfirmPassword.CheckMarkColor = System.Drawing.Color.Black;
-            this.ShowConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.ShowConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ShowConfirmPassword.Location = new System.Drawing.Point(604, 298);
-            this.ShowConfirmPassword.Name = "ShowConfirmPassword";
-            this.ShowConfirmPassword.Size = new System.Drawing.Size(148, 24);
-            this.ShowConfirmPassword.TabIndex = 41;
-            this.ShowConfirmPassword.Text = "Show Password";
-            this.ShowConfirmPassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.ShowConfirmPassword.UncheckedState.BorderRadius = 0;
-            this.ShowConfirmPassword.UncheckedState.BorderThickness = 0;
-            this.ShowConfirmPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.ShowConfirmPassword.UseVisualStyleBackColor = false;
-            this.ShowConfirmPassword.CheckedChanged += new System.EventHandler(this.ShowConfirmPassword_CheckedChanged);
             // 
             // BackButton
             // 
@@ -189,19 +169,21 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BorderRadius = 25;
+            this.guna2Panel1.Controls.Add(this.ShowConfirmPassword_);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel5);
-            this.guna2Panel1.Controls.Add(this.CreatePassword);
-            this.guna2Panel1.Controls.Add(this.ShowPassword);
             this.guna2Panel1.Controls.Add(this.BackButton);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel4);
             this.guna2Panel1.Controls.Add(this.CreateAccountButton);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel3);
-            this.guna2Panel1.Controls.Add(this.ConfirmPassword);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.CreateUsername);
-            this.guna2Panel1.Controls.Add(this.ShowConfirmPassword);
             this.guna2Panel1.Controls.Add(this.CreateUserRole);
+            this.guna2Panel1.Controls.Add(this.ShowPassword_);
+            this.guna2Panel1.Controls.Add(this.HidePassword_);
+            this.guna2Panel1.Controls.Add(this.ConfirmPassword);
+            this.guna2Panel1.Controls.Add(this.HideConfirmPassword_);
+            this.guna2Panel1.Controls.Add(this.CreatePassword);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.guna2Panel1.Location = new System.Drawing.Point(16, 14);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -213,41 +195,18 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(214, 81);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(271, 91);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(71, 23);
             this.guna2HtmlLabel5.TabIndex = 48;
             this.guna2HtmlLabel5.Text = "User role:";
-            // 
-            // ShowPassword
-            // 
-            this.ShowPassword.AutoSize = true;
-            this.ShowPassword.BackColor = System.Drawing.Color.Transparent;
-            this.ShowPassword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ShowPassword.CheckedState.BorderRadius = 0;
-            this.ShowPassword.CheckedState.BorderThickness = 0;
-            this.ShowPassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ShowPassword.CheckMarkColor = System.Drawing.Color.Black;
-            this.ShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.ShowPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ShowPassword.Location = new System.Drawing.Point(604, 228);
-            this.ShowPassword.Name = "ShowPassword";
-            this.ShowPassword.Size = new System.Drawing.Size(148, 24);
-            this.ShowPassword.TabIndex = 47;
-            this.ShowPassword.Text = "Show Password";
-            this.ShowPassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.ShowPassword.UncheckedState.BorderRadius = 0;
-            this.ShowPassword.UncheckedState.BorderThickness = 0;
-            this.ShowPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.ShowPassword.UseVisualStyleBackColor = false;
-            this.ShowPassword.CheckedChanged += new System.EventHandler(this.ShowPassword_CheckedChanged);
             // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(31, 293);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(48, 306);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(169, 24);
             this.guna2HtmlLabel4.TabIndex = 46;
@@ -258,7 +217,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(31, 221);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(48, 234);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(93, 24);
             this.guna2HtmlLabel3.TabIndex = 45;
@@ -279,7 +238,7 @@
             this.ConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.ConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.ConfirmPassword.Location = new System.Drawing.Point(213, 285);
+            this.ConfirmPassword.Location = new System.Drawing.Point(270, 295);
             this.ConfirmPassword.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.ConfirmPassword.Name = "ConfirmPassword";
             this.ConfirmPassword.PasswordChar = '●';
@@ -294,7 +253,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(31, 165);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(48, 178);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(99, 24);
             this.guna2HtmlLabel1.TabIndex = 43;
@@ -322,6 +281,56 @@
             this.guna2HtmlLabel2.TabIndex = 0;
             this.guna2HtmlLabel2.Text = "Create Account";
             // 
+            // HidePassword_
+            // 
+            this.HidePassword_.FlatAppearance.BorderSize = 0;
+            this.HidePassword_.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HidePassword_.Image = ((System.Drawing.Image)(resources.GetObject("HidePassword_.Image")));
+            this.HidePassword_.Location = new System.Drawing.Point(599, 229);
+            this.HidePassword_.Name = "HidePassword_";
+            this.HidePassword_.Size = new System.Drawing.Size(40, 32);
+            this.HidePassword_.TabIndex = 58;
+            this.HidePassword_.UseVisualStyleBackColor = true;
+            this.HidePassword_.Click += new System.EventHandler(this.HidePassword__Click);
+            // 
+            // ShowPassword_
+            // 
+            this.ShowPassword_.FlatAppearance.BorderSize = 0;
+            this.ShowPassword_.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ShowPassword_.Image = ((System.Drawing.Image)(resources.GetObject("ShowPassword_.Image")));
+            this.ShowPassword_.Location = new System.Drawing.Point(599, 229);
+            this.ShowPassword_.Name = "ShowPassword_";
+            this.ShowPassword_.Size = new System.Drawing.Size(40, 32);
+            this.ShowPassword_.TabIndex = 59;
+            this.ShowPassword_.TabStop = false;
+            this.ShowPassword_.UseVisualStyleBackColor = true;
+            this.ShowPassword_.Click += new System.EventHandler(this.ShowPassword__Click);
+            // 
+            // ShowConfirmPassword_
+            // 
+            this.ShowConfirmPassword_.FlatAppearance.BorderSize = 0;
+            this.ShowConfirmPassword_.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ShowConfirmPassword_.Image = ((System.Drawing.Image)(resources.GetObject("ShowConfirmPassword_.Image")));
+            this.ShowConfirmPassword_.Location = new System.Drawing.Point(599, 299);
+            this.ShowConfirmPassword_.Name = "ShowConfirmPassword_";
+            this.ShowConfirmPassword_.Size = new System.Drawing.Size(40, 32);
+            this.ShowConfirmPassword_.TabIndex = 60;
+            this.ShowConfirmPassword_.TabStop = false;
+            this.ShowConfirmPassword_.UseVisualStyleBackColor = true;
+            this.ShowConfirmPassword_.Click += new System.EventHandler(this.ShowConfirmPassword__Click_1);
+            // 
+            // HideConfirmPassword_
+            // 
+            this.HideConfirmPassword_.FlatAppearance.BorderSize = 0;
+            this.HideConfirmPassword_.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HideConfirmPassword_.Image = ((System.Drawing.Image)(resources.GetObject("HideConfirmPassword_.Image")));
+            this.HideConfirmPassword_.Location = new System.Drawing.Point(599, 299);
+            this.HideConfirmPassword_.Name = "HideConfirmPassword_";
+            this.HideConfirmPassword_.Size = new System.Drawing.Size(40, 32);
+            this.HideConfirmPassword_.TabIndex = 61;
+            this.HideConfirmPassword_.UseVisualStyleBackColor = true;
+            this.HideConfirmPassword_.Click += new System.EventHandler(this.HideConfirmPassword__Click_1);
+            // 
             // CreateAccountUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -344,17 +353,19 @@
         private Guna.UI2.WinForms.Guna2ComboBox CreateUserRole;
         private Guna.UI2.WinForms.Guna2TextBox CreatePassword;
         private Guna.UI2.WinForms.Guna2TextBox CreateUsername;
-        private Guna.UI2.WinForms.Guna2CheckBox ShowConfirmPassword;
         private Guna.UI2.WinForms.Guna2TileButton BackButton;
         private Guna.UI2.WinForms.Guna2TileButton CreateAccountButton;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2CheckBox ShowPassword;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2TextBox ConfirmPassword;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private System.Windows.Forms.Button HidePassword_;
+        private System.Windows.Forms.Button ShowPassword_;
+        private System.Windows.Forms.Button HideConfirmPassword_;
+        private System.Windows.Forms.Button ShowConfirmPassword_;
     }
 }

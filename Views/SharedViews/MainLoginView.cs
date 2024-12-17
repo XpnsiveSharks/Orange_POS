@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ordering_System;
+using Ordering_System.Views;
 
 namespace Orange_POS.Views.SharedViews
 {
     public partial class MainLoginView : Form
     {
-
+       
         public MainLoginView()
         {
             InitializeComponent();
@@ -45,6 +47,33 @@ namespace Orange_POS.Views.SharedViews
         private void StaffLoginButton_Click(object sender, EventArgs e)
         {
             ShowLoginUserControl(new SharedViewsUserControl.StaffLoginUserControl("Staff"));
+        }
+
+        private void Customer_Click(object sender, EventArgs e)
+        {
+            OrderTypeView orderTypeView = new OrderTypeView();
+            this.Hide();
+            orderTypeView.Show();
+
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Exit?",
+             "Exit Program",
+              MessageBoxButtons.YesNo,
+              MessageBoxIcon.Question
+              );
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }
