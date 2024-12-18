@@ -41,24 +41,26 @@ namespace Orange_POS.ViewModels
             using (var connection = _databaseConnection.GetConnection())
             {
                 string query = @"
-            SELECT 
-                o.Order_Number AS OrderNumber,
-                DATE_FORMAT(o.Order_Date, '%Y-%m-%d %H:%i:%s') AS OrderDate,
-                o.Order_Type AS OrderType,
-                o.Total_Amount AS TotalAmount,
-                p.Product_Name AS ProductName,
-                oi.Quantity AS Quantity
-            FROM Orders_Table o
-            INNER JOIN Order_Items_Table oi ON o.Order_Id = oi.Order_Id
-            INNER JOIN Products_Table p ON oi.Product_Id = p.Product_Id
-            WHERE (@StartDate IS NULL OR o.Order_Date >= @StartDate)
-              AND (@EndDate IS NULL OR o.Order_Date <= @EndDate)
-            ORDER BY o.Order_Date DESC;
-        ";
+                    SELECT 
+                        o.Order_Number AS OrderNumber,
+                        DATE_FORMAT(o.Order_Date, '%Y-%m-%d %H:%i:%s') AS OrderDate,
+                        o.Order_Type AS OrderType,
+                        o.Total_Amount AS TotalAmount,
+                        p.Product_Name AS ProductName,
+                        oi.Quantity AS Quantity
+                    FROM Orders_Table o
+                    INNER JOIN Order_Items_Table oi ON o.Order_Id = oi.Order_Id
+                    INNER JOIN Products_Table p ON oi.Product_Id = p.Product_Id
+                    WHERE (@StartDate IS NULL OR o.Order_Date >= @StartDate)
+                      AND (@EndDate IS NULL OR o.Order_Date <= @EndDate)
+                      AND o.Status = 'Completed'
+                    ORDER BY o.Order_Date DESC;
+                ";
 
                 return connection.Query<OrderDetails>(query, new { StartDate = startDate, EndDate = endDate }).ToList();
             }
         }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string name)
