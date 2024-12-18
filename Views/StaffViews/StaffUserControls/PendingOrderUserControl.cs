@@ -26,5 +26,10 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControlContents
             get => int.TryParse(QuantityPendingOrder.Text, out var price) ? price : 0;
             set => QuantityPendingOrder.Text = value.ToString();
         }
+        public string OrderNote 
+        { 
+            get => OrderNoteLabel.Text; 
+            set => OrderNoteLabel.Text = value; 
+        }
     }
 }

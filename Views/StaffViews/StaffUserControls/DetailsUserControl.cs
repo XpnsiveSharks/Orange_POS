@@ -23,7 +23,7 @@ namespace Orange_POS.Views.StaffViews.StaffUserControls
             set
             {
                 OrderNumber.Text = value;
-                LoadProductOrderInfo(); // Load product info after setting the order number
+                LoadProductOrderInfo();
             }
         }
 
@@ -52,7 +52,8 @@ namespace Orange_POS.Views.StaffViews.StaffUserControls
                     PendingOrderUserControl pendingOrderUserControl = new PendingOrderUserControl
                     {
                         PendingOrder = productInfo.Product_Name,
-                        QuantityOrder = productInfo.Quantity
+                        QuantityOrder = productInfo.Quantity,
+                        OrderNote = productInfo.Order_Note
                     };
 
                     PendingOrderFlowLayout.Controls.Add(pendingOrderUserControl);
@@ -88,9 +89,5 @@ namespace Orange_POS.Views.StaffViews.StaffUserControls
 
         }
 
-        public string GenerateReceiptContent(List<PendingOrderUserControl> orderItems)
-        {
-
-        }
     }
 }

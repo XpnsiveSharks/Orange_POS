@@ -32,12 +32,14 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.QuantityPendingOrder = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.NamePendingOrder = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.OrderNoteLabel = new System.Windows.Forms.Label();
             this.PendingOrderPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // PendingOrderPanel
             // 
             this.PendingOrderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
+            this.PendingOrderPanel.Controls.Add(this.OrderNoteLabel);
             this.PendingOrderPanel.Controls.Add(this.guna2HtmlLabel1);
             this.PendingOrderPanel.Controls.Add(this.QuantityPendingOrder);
             this.PendingOrderPanel.Controls.Add(this.NamePendingOrder);
@@ -45,9 +47,8 @@
             this.PendingOrderPanel.Location = new System.Drawing.Point(0, 0);
             this.PendingOrderPanel.Margin = new System.Windows.Forms.Padding(2);
             this.PendingOrderPanel.Name = "PendingOrderPanel";
-            this.PendingOrderPanel.Size = new System.Drawing.Size(213, 38);
+            this.PendingOrderPanel.Size = new System.Drawing.Size(213, 78);
             this.PendingOrderPanel.TabIndex = 0;
-         //   this.PendingOrderPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.PendingOrderPanel_Paint);
             // 
             // guna2HtmlLabel1
             // 
@@ -85,6 +86,16 @@
             this.NamePendingOrder.TabIndex = 0;
             this.NamePendingOrder.Text = "Meal 1";
             // 
+            // OrderNoteLabel
+            // 
+            this.OrderNoteLabel.AutoSize = true;
+            this.OrderNoteLabel.Location = new System.Drawing.Point(4, 35);
+            this.OrderNoteLabel.MaximumSize = new System.Drawing.Size(100, 26);
+            this.OrderNoteLabel.Name = "OrderNoteLabel";
+            this.OrderNoteLabel.Size = new System.Drawing.Size(36, 13);
+            this.OrderNoteLabel.TabIndex = 3;
+            this.OrderNoteLabel.Text = "Note: ";
+            // 
             // PendingOrderUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -93,7 +104,7 @@
             this.Controls.Add(this.PendingOrderPanel);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PendingOrderUserControl";
-            this.Size = new System.Drawing.Size(213, 38);
+            this.Size = new System.Drawing.Size(213, 78);
             this.PendingOrderPanel.ResumeLayout(false);
             this.PendingOrderPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -106,5 +117,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel NamePendingOrder;
         private Guna.UI2.WinForms.Guna2HtmlLabel QuantityPendingOrder;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private System.Windows.Forms.Label OrderNoteLabel;
     }
 }
