@@ -45,11 +45,12 @@
             this.CashPaymentButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.CashPaymentButton.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.CashPaymentButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.CashPaymentButton.Location = new System.Drawing.Point(97, 294);
+            this.CashPaymentButton.Location = new System.Drawing.Point(87, 106);
             this.CashPaymentButton.Name = "CashPaymentButton";
-            this.CashPaymentButton.Size = new System.Drawing.Size(388, 114);
+            this.CashPaymentButton.Size = new System.Drawing.Size(306, 41);
             this.CashPaymentButton.TabIndex = 1;
             this.CashPaymentButton.Text = "Cash (Pay at the counter)";
+            this.CashPaymentButton.Click += new System.EventHandler(this.CashPaymentButton_Click);
             // 
             // BackButton
             // 
@@ -64,11 +65,13 @@
             this.BackButton.FillColor = System.Drawing.Color.Transparent;
             this.BackButton.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.BackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.BackButton.Location = new System.Drawing.Point(128, 429);
+            this.BackButton.Location = new System.Drawing.Point(137, 165);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(306, 45);
+            this.BackButton.Size = new System.Drawing.Size(203, 41);
             this.BackButton.TabIndex = 3;
             this.BackButton.Text = "Back";
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+
             // 
             // PaymentMethodUserControl
             // 
@@ -77,7 +80,7 @@
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.CashPaymentButton);
             this.Name = "PaymentMethodUserControl";
-            this.Size = new System.Drawing.Size(581, 707);
+            this.Size = new System.Drawing.Size(482, 323);
             this.ResumeLayout(false);
 
         }

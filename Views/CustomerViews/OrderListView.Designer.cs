@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.TotalLabel = new System.Windows.Forms.Label();
             this.ProceedToPaymentButton = new Guna.UI2.WinForms.Guna2Button();
             this.BackButton = new Guna.UI2.WinForms.Guna2Button();
             this.orderListFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.TotalLabel = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +48,17 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1280, 720);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // TotalLabel
+            // 
+            this.TotalLabel.AutoSize = true;
+            this.TotalLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.TotalLabel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalLabel.Location = new System.Drawing.Point(35, 653);
+            this.TotalLabel.Name = "TotalLabel";
+            this.TotalLabel.Size = new System.Drawing.Size(86, 30);
+            this.TotalLabel.TabIndex = 4;
+            this.TotalLabel.Text = "label1";
             // 
             // ProceedToPaymentButton
             // 
@@ -67,6 +78,7 @@
             this.ProceedToPaymentButton.Size = new System.Drawing.Size(180, 45);
             this.ProceedToPaymentButton.TabIndex = 3;
             this.ProceedToPaymentButton.Text = "Checkout";
+            this.ProceedToPaymentButton.Click += new System.EventHandler(this.ProceedToPaymentButton_Click);
             // 
             // BackButton
             // 
@@ -84,6 +96,7 @@
             this.BackButton.Size = new System.Drawing.Size(180, 45);
             this.BackButton.TabIndex = 2;
             this.BackButton.Text = "Back";
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // orderListFlowLayoutPanel
             // 
@@ -93,15 +106,6 @@
             this.orderListFlowLayoutPanel.Name = "orderListFlowLayoutPanel";
             this.orderListFlowLayoutPanel.Size = new System.Drawing.Size(1221, 591);
             this.orderListFlowLayoutPanel.TabIndex = 1;
-            // 
-            // TotalLabel
-            // 
-            this.TotalLabel.AutoSize = true;
-            this.TotalLabel.Location = new System.Drawing.Point(43, 673);
-            this.TotalLabel.Name = "TotalLabel";
-            this.TotalLabel.Size = new System.Drawing.Size(35, 13);
-            this.TotalLabel.TabIndex = 4;
-            this.TotalLabel.Text = "label1";
             // 
             // OrderListView
             // 

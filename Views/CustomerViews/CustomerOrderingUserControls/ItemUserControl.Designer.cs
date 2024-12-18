@@ -111,6 +111,7 @@
             this.DecreaseOrderButton.Size = new System.Drawing.Size(45, 36);
             this.DecreaseOrderButton.TabIndex = 14;
             this.DecreaseOrderButton.Text = "-";
+            this.DecreaseOrderButton.Click += new System.EventHandler(this.DecreaseOrderButton_Click);
             // 
             // IncreaseOrderButton
             // 
@@ -133,6 +134,8 @@
             this.IncreaseOrderButton.Size = new System.Drawing.Size(45, 36);
             this.IncreaseOrderButton.TabIndex = 15;
             this.IncreaseOrderButton.Text = "+";
+            this.IncreaseOrderButton.Click += new System.EventHandler(this.IncreaseOrderButton_Click);
+
             // 
             // guna2GradientPanel1
             // 
@@ -176,6 +179,8 @@
             this.CancelOrderButton.Size = new System.Drawing.Size(180, 45);
             this.CancelOrderButton.TabIndex = 18;
             this.CancelOrderButton.Text = "Cancel Order";
+            this.CancelOrderButton.Click += new System.EventHandler(this.CancelOrderButton_Click);
+
             // 
             // AddToOrderButton
             // 
@@ -192,6 +197,8 @@
             this.AddToOrderButton.Size = new System.Drawing.Size(180, 45);
             this.AddToOrderButton.TabIndex = 19;
             this.AddToOrderButton.Text = "Add to order";
+            this.AddToOrderButton.Click += new System.EventHandler(this.AddToOrderButton_Click);
+
             // 
             // ViewOrdersButton
             // 
@@ -208,6 +215,8 @@
             this.ViewOrdersButton.Size = new System.Drawing.Size(180, 45);
             this.ViewOrdersButton.TabIndex = 20;
             this.ViewOrdersButton.Text = "View orders";
+            this.ViewOrdersButton.Click += new System.EventHandler(this.ViewOrdersButton_Click);
+
             // 
             // ItemUserControl
             // 

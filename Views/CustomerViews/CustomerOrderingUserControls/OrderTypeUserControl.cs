@@ -35,5 +35,7 @@ namespace Orange_POS.Views.CustomerViews.CustomerOrderingUserControls
             };
             customerIndexView.Show();
         }
+
+
     }
 }

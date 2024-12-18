@@ -13,7 +13,7 @@ namespace Orange_POS.Configurations
         public ConfigurationLoader()
         {
             Configuration = new ConfigurationBuilder()
-                .SetBasePath("D:\\Orange_POS\\Configurations")
+                .SetBasePath("C:\\Users\\Arriane Gonzales\\source\\repos\\Orange_POS\\Configurations")
                 .AddJsonFile("AppSettings.json", optional: false, reloadOnChange: true)
                 .Build();
         }

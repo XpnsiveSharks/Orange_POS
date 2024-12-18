@@ -45,11 +45,12 @@
             this.CashPaymentButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.CashPaymentButton.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.CashPaymentButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.CashPaymentButton.Location = new System.Drawing.Point(278, 152);
+            this.CashPaymentButton.Location = new System.Drawing.Point(130, 100);
             this.CashPaymentButton.Name = "CashPaymentButton";
             this.CashPaymentButton.Size = new System.Drawing.Size(262, 45);
             this.CashPaymentButton.TabIndex = 1;
             this.CashPaymentButton.Text = "Cash (Pay at the counter)";
+            this.CashPaymentButton.Click += new System.EventHandler(this.CashPaymentButton_Click);
             // 
             // BackButton
             // 
@@ -64,17 +65,18 @@
             this.BackButton.FillColor = System.Drawing.Color.Transparent;
             this.BackButton.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.BackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.BackButton.Location = new System.Drawing.Point(316, 257);
+            this.BackButton.Location = new System.Drawing.Point(167, 172);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(180, 45);
             this.BackButton.TabIndex = 3;
             this.BackButton.Text = "Back";
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // PaymentMethodView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 474);
+            this.ClientSize = new System.Drawing.Size(508, 318);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.CashPaymentButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

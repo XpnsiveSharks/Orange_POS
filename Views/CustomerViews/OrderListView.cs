@@ -135,5 +135,6 @@ namespace Orange_POS.Views.CustomerViews
             paymentMethodView.Show();
             HideOrderList();
         }
+
     }
 }

@@ -90,7 +90,7 @@
             this.ExitButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.ExitButton.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.ExitButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.ExitButton.Image = ((System.Drawing.Image)(resources.GetObject("ExitButton.Image")));
+            //this.ExitButton.Image = ((System.Drawing.Image)(resources.GetObject("ExitButton.Image")));
             this.ExitButton.ImageSize = new System.Drawing.Size(80, 80);
             this.ExitButton.Location = new System.Drawing.Point(22, 638);
             this.ExitButton.Margin = new System.Windows.Forms.Padding(2);

@@ -131,5 +131,8 @@ namespace Orange_POS.Views.CustomerViews.CustomerOrderingUserControls
         {
             orderListView.ShowOrderListView();
         }
+
+      
+ 
     }
 }

@@ -36,7 +36,7 @@ namespace Orange_POS.Views.CustomerViews.CustomerOrderingUserControls
         }
         private void BackButton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
         private void CreateOrder(string paymentMethod)
         {
@@ -74,5 +74,6 @@ namespace Orange_POS.Views.CustomerViews.CustomerOrderingUserControls
                 orderingService.AddToCart(newOrderItems);
             }
         }
+
     }
 }

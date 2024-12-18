@@ -48,13 +48,13 @@
             this.DineInButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.DineInButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DineInButton.ForeColor = System.Drawing.Color.White;
-            //this.DineInButton.Image = global::Ordering_System.Properties.Resources._467160534_1321977452505204_6918045834630060149_n;
             this.DineInButton.ImageOffset = new System.Drawing.Point(0, 30);
             this.DineInButton.ImageSize = new System.Drawing.Size(200, 200);
             this.DineInButton.Location = new System.Drawing.Point(91, 333);
             this.DineInButton.Name = "DineInButton";
             this.DineInButton.Size = new System.Drawing.Size(230, 273);
             this.DineInButton.TabIndex = 0;
+            this.DineInButton.Click += new System.EventHandler(this.DineInButton_Click);
             // 
             // TakeOutButton
             // 
@@ -65,19 +65,19 @@
             this.TakeOutButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.TakeOutButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TakeOutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            //this.TakeOutButton.Image = global::Ordering_System.Properties.Resources._462562620_471658808891420_5174261257357160711_n;
             this.TakeOutButton.ImageOffset = new System.Drawing.Point(0, 30);
             this.TakeOutButton.ImageSize = new System.Drawing.Size(200, 200);
             this.TakeOutButton.Location = new System.Drawing.Point(339, 333);
             this.TakeOutButton.Name = "TakeOutButton";
             this.TakeOutButton.Size = new System.Drawing.Size(230, 273);
             this.TakeOutButton.TabIndex = 1;
+            this.TakeOutButton.Click += new System.EventHandler(this.TakeOutButton_Click);
+
             // 
             // LogoPictureBox1
             // 
             this.LogoPictureBox1.BackColor = System.Drawing.Color.White;
             this.LogoPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            //this.LogoPictureBox1.Image = global::Ordering_System.Properties.Resources.Logo_OOP__pos___1_;
             this.LogoPictureBox1.Location = new System.Drawing.Point(200, 0);
             this.LogoPictureBox1.Name = "LogoPictureBox1";
             this.LogoPictureBox1.Size = new System.Drawing.Size(264, 253);

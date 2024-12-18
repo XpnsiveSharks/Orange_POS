@@ -66,6 +66,9 @@
     <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Configuration.Abstractions.9.0.0\lib\net462\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.Binder.9.0.0\lib\net462\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Extensions.Configuration.FileExtensions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Configuration.FileExtensions.9.0.0\lib\net462\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
     </Reference>
@@ -174,6 +177,7 @@
     <Compile Include="Repositories\StaffRepository.cs" />
     <Compile Include="Repositories\UsersRepository.cs" />
     <Compile Include="Services\OrderingService.cs" />
+    <Compile Include="ViewModels\CustomerViewModel.cs" />
     <Compile Include="ViewModels\OrderDetailsViewModel.cs" />
     <Compile Include="ViewModels\OrdersViewModel.cs" />
     <Compile Include="ViewModels\ProductViewModel.cs" />
@@ -195,11 +199,23 @@
     <Compile Include="Views\CustomerViews\CustomerIndexView.Designer.cs">
       <DependentUpon>CustomerIndexView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\CustomerViews\CustomerNoteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerViews\CustomerNoteView.Designer.cs">
+      <DependentUpon>CustomerNoteView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CustomerViews\CustomerOrderingUserControls\ItemUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\CustomerViews\CustomerOrderingUserControls\ItemUserControl.Designer.cs">
       <DependentUpon>ItemUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerViews\CustomerOrderingUserControls\MenuForCustomerUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerViews\CustomerOrderingUserControls\MenuForCustomerUserControl.Designer.cs">
+      <DependentUpon>MenuForCustomerUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\CustomerViews\CustomerOrderingUserControls\MenuUserControl.cs">
       <SubType>UserControl</SubType>
@@ -254,18 +270,6 @@
     </Compile>
     <Compile Include="Views\StaffViews\StaffUserControls\DetailsUserControl.Designer.cs">
       <DependentUpon>DetailsUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\StaffViews\StaffUserControls\dummy.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\StaffViews\StaffUserControls\dummy.Designer.cs">
-      <DependentUpon>dummy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\StaffViews\StaffUserControls\OrderDetailsUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\StaffViews\StaffUserControls\OrderDetailsUserControl.Designer.cs">
-      <DependentUpon>OrderDetailsUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\StaffViews\StaffUserControls\PendingOrderUserControl.cs">
       <SubType>UserControl</SubType>
@@ -355,17 +359,32 @@
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControlContents\MenuUserControl.resx">
       <DependentUpon>MenuUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerViews\CustomerNoteView.resx">
+      <DependentUpon>CustomerNoteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerViews\CustomerOrderingUserControls\ItemUserControl.resx">
+      <DependentUpon>ItemUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerViews\CustomerOrderingUserControls\MenuForCustomerUserControl.resx">
+      <DependentUpon>MenuForCustomerUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerViews\CustomerOrderingUserControls\OrderTypeUserControl.resx">
+      <DependentUpon>OrderTypeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerViews\CustomerOrderingUserControls\PaymentMethodUserControl.resx">
+      <DependentUpon>PaymentMethodUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerViews\OrderListView.resx">
+      <DependentUpon>OrderListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerViews\PaymentMethodView.resx">
+      <DependentUpon>PaymentMethodView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\StaffViews\StaffIndexView.resx">
       <DependentUpon>StaffIndexView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\StaffViews\StaffUserControls\DetailsUserControl.resx">
       <DependentUpon>DetailsUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\StaffViews\StaffUserControls\dummy.resx">
-      <DependentUpon>dummy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\StaffViews\StaffUserControls\OrderDetailsUserControl.resx">
-      <DependentUpon>OrderDetailsUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\StaffViews\StaffUserControls\PendingOrderUserControl.resx">
       <DependentUpon>PendingOrderUserControl.cs</DependentUpon>
