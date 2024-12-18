@@ -24,8 +24,8 @@ namespace Orange_POS.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
-        public List<OrderDetailsUserControl> _orderControls;
-        public List<OrderDetailsUserControl> OrderControls
+        public List<DetailsUserControl> _orderControls;
+        public List<DetailsUserControl> OrderControls
         {
             get => _orderControls;
             set
@@ -39,10 +39,10 @@ namespace Orange_POS.ViewModels
         }
         public void LoadOrdersToUserControl()
         {
-            List<OrderDetailsUserControl> orderDetailsUserControls = new List<OrderDetailsUserControl>();
+            List<DetailsUserControl> orderDetailsUserControls = new List<DetailsUserControl>();
             foreach (var item in _orderDetailsRepository.GetOrderDetails())
             {
-                OrderDetailsUserControl orderDetailsUserControl = new OrderDetailsUserControl()
+                DetailsUserControl orderDetailsUserControl = new DetailsUserControl()
                 {
                     Order_Number = item.OrderNumber,
                     Order_Date = item.OrderDate,
