@@ -34,27 +34,6 @@ namespace Orange_POS.Views.CustomerViews
             OrderType = orderType;
         }
 
-        private void ProceedToPaymentButton_Click(object sender, EventArgs e)
-        {
-            string orderType = GetUniqueOrderType();
-            var paymentMethodView = new PaymentMethodView
-            {
-                OrderType = orderType,
-                OrderItems = this.OrderItems
-            };
-            paymentMethodView.OrderListViewReference = this;
-            paymentMethodView.Show();
-            HideOrderList();
-        }
-
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine(OrderType);
-            OrderListBackButton?.Invoke();
-            OrderListItemCount?.Invoke(ItemCount);
-            HideOrderList();
-        }
-
         private void HideOrderList()
         {
             this.Hide();
@@ -84,7 +63,6 @@ namespace Orange_POS.Views.CustomerViews
                 orderItem.ItemRemovedFromOrderList += OnItemRemoved;
                 orderItem.QuantityChanged -= OnQuantityChanged;
                 orderItem.QuantityChanged += OnQuantityChanged;
-
             }
 
             ItemCount = OrderItems.Count;
@@ -138,14 +116,24 @@ namespace Orange_POS.Views.CustomerViews
             }
         }
 
-        private void TotalLabel_Click(object sender, EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
-
+            OrderListBackButton?.Invoke();
+            OrderListItemCount?.Invoke(ItemCount);
+            HideOrderList();
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        private void ProceedToPaymentButton_Click(object sender, EventArgs e)
         {
-
+            string orderType = GetUniqueOrderType();
+            var paymentMethodView = new PaymentMethodView
+            {
+                OrderType = orderType,
+                OrderItems = this.OrderItems
+            };
+            paymentMethodView.OrderListViewReference = this;
+            paymentMethodView.Show();
+            HideOrderList();
         }
     }
 }

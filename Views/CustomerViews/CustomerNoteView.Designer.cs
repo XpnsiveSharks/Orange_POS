@@ -38,7 +38,7 @@
             this.NoteTextBox.Name = "NoteTextBox";
             this.NoteTextBox.Size = new System.Drawing.Size(439, 185);
             this.NoteTextBox.TabIndex = 1;
-            this.NoteTextBox.Text = "Add note here";
+            this.NoteTextBox.Text = "Add note here.";
             // 
             // SubmitNoteButton
             // 
