@@ -30,8 +30,8 @@
         {
             this.OrdersFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.OrderCount = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.BackButton = new Guna.UI2.WinForms.Guna2TileButton();
+            this.OrderCount = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,25 +52,12 @@
             this.guna2Panel1.Controls.Add(this.BackButton);
             this.guna2Panel1.Controls.Add(this.OrderCount);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(853, 62);
             this.guna2Panel1.TabIndex = 1;
-            // 
-            // OrderCount
-            // 
-            this.OrderCount.AutoSize = false;
-            this.OrderCount.BackColor = System.Drawing.Color.Transparent;
-            this.OrderCount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.OrderCount.Location = new System.Drawing.Point(17, 16);
-            this.OrderCount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.OrderCount.Name = "OrderCount";
-            this.OrderCount.Size = new System.Drawing.Size(232, 40);
-            this.OrderCount.TabIndex = 1;
-            this.OrderCount.Text = "Pending orders: 2";
             // 
             // BackButton
             // 
@@ -86,13 +73,26 @@
             this.BackButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.BackButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.BackButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.BackButton.Location = new System.Drawing.Point(752, 5);
+            this.BackButton.Location = new System.Drawing.Point(754, 20);
             this.BackButton.Margin = new System.Windows.Forms.Padding(1);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(91, 52);
+            this.BackButton.Size = new System.Drawing.Size(82, 28);
             this.BackButton.TabIndex = 15;
             this.BackButton.Text = "back";
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
+            // OrderCount
+            // 
+            this.OrderCount.AutoSize = false;
+            this.OrderCount.BackColor = System.Drawing.Color.Transparent;
+            this.OrderCount.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.OrderCount.Location = new System.Drawing.Point(21, 20);
+            this.OrderCount.Margin = new System.Windows.Forms.Padding(2);
+            this.OrderCount.Name = "OrderCount";
+            this.OrderCount.Size = new System.Drawing.Size(172, 22);
+            this.OrderCount.TabIndex = 1;
+            this.OrderCount.Text = "Pending orders:  2";
             // 
             // StaffIndexView
             // 

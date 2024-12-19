@@ -110,6 +110,7 @@
             // 
             // AdminUsernameTextBox
             // 
+            this.AdminUsernameTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.AdminUsernameTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.AdminUsernameTextBox.BorderRadius = 20;
             this.AdminUsernameTextBox.BorderThickness = 2;

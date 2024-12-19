@@ -59,7 +59,7 @@
             this.DeleteUsername.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.DeleteUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.DeleteUsername.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.DeleteUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.DeleteUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.DeleteUsername.Location = new System.Drawing.Point(213, 110);
             this.DeleteUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DeleteUsername.Name = "DeleteUsername";
@@ -84,7 +84,7 @@
             this.DeletePassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.DeletePassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.DeletePassword.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.DeletePassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.DeletePassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.DeletePassword.Location = new System.Drawing.Point(213, 197);
             this.DeletePassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DeletePassword.Name = "DeletePassword";
@@ -129,9 +129,9 @@
             this.DeleteAccount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.DeleteAccount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.DeleteAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.DeleteAccount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.DeleteAccount.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
-            this.DeleteAccount.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.DeleteAccount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.DeleteAccount.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.DeleteAccount.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.DeleteAccount.Location = new System.Drawing.Point(260, 349);
             this.DeleteAccount.Margin = new System.Windows.Forms.Padding(2);
             this.DeleteAccount.Name = "DeleteAccount";
@@ -232,7 +232,7 @@
             this.ConfirmPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.ConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.ConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.ConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ConfirmPassword.Location = new System.Drawing.Point(213, 285);
             this.ConfirmPassword.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ConfirmPassword.Name = "ConfirmPassword";

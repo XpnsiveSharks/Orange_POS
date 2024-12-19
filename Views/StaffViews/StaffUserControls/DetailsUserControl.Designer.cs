@@ -194,10 +194,10 @@
             this.CompleteOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
             this.CompleteOrderButton.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.CompleteOrderButton.IndicateFocus = true;
-            this.CompleteOrderButton.Location = new System.Drawing.Point(57, 259);
+            this.CompleteOrderButton.Location = new System.Drawing.Point(9, 259);
             this.CompleteOrderButton.Margin = new System.Windows.Forms.Padding(2);
             this.CompleteOrderButton.Name = "CompleteOrderButton";
-            this.CompleteOrderButton.Size = new System.Drawing.Size(105, 29);
+            this.CompleteOrderButton.Size = new System.Drawing.Size(200, 29);
             this.CompleteOrderButton.TabIndex = 7;
             this.CompleteOrderButton.Text = "Complete";
             this.CompleteOrderButton.Click += new System.EventHandler(this.CompleteOrderButton_Click);

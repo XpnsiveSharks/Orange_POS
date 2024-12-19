@@ -83,7 +83,7 @@
             this.CreatePassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.CreatePassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.CreatePassword.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.CreatePassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.CreatePassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CreatePassword.Location = new System.Drawing.Point(213, 197);
             this.CreatePassword.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.CreatePassword.Name = "CreatePassword";
@@ -109,7 +109,7 @@
             this.CreateUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.CreateUsername.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.CreateUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.CreateUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.CreateUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CreateUsername.Location = new System.Drawing.Point(213, 110);
             this.CreateUsername.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.CreateUsername.Name = "CreateUsername";
@@ -176,9 +176,9 @@
             this.CreateAccountButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CreateAccountButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.CreateAccountButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.CreateAccountButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.CreateAccountButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
-            this.CreateAccountButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.CreateAccountButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CreateAccountButton.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.CreateAccountButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CreateAccountButton.Location = new System.Drawing.Point(260, 349);
             this.CreateAccountButton.Name = "CreateAccountButton";
             this.CreateAccountButton.Size = new System.Drawing.Size(228, 36);
@@ -280,7 +280,7 @@
             this.ConfirmPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.ConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.ConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.ConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ConfirmPassword.Location = new System.Drawing.Point(213, 285);
             this.ConfirmPassword.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.ConfirmPassword.Name = "ConfirmPassword";

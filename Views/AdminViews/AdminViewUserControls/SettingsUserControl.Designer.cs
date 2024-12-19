@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.SettingsIndexPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.Logout = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.Logout = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteAccount = new Guna.UI2.WinForms.Guna2Button();
             this.CreateAccount = new Guna.UI2.WinForms.Guna2Button();
             this.ChangePassword = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.CurrentUsernameSettings = new System.Windows.Forms.Label();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.SettingsIndexPanel.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +63,30 @@
             this.SettingsIndexPanel.Size = new System.Drawing.Size(732, 437);
             this.SettingsIndexPanel.TabIndex = 41;
             // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BorderRadius = 25;
+            this.guna2Panel2.Controls.Add(this.label1);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(732, 54);
+            this.guna2Panel2.TabIndex = 51;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(24, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(177, 32);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "User Settings";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Logout
             // 
             this.Logout.BorderRadius = 18;
@@ -82,18 +106,6 @@
             this.Logout.Text = "Logout";
             this.Logout.Click += new System.EventHandler(this.Logout_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(24, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 32);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "User Settings";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // DeleteAccount
             // 
             this.DeleteAccount.BorderRadius = 18;
@@ -104,8 +116,8 @@
             this.DeleteAccount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.DeleteAccount.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.DeleteAccount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.DeleteAccount.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.DeleteAccount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.DeleteAccount.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.DeleteAccount.Location = new System.Drawing.Point(253, 308);
             this.DeleteAccount.Name = "DeleteAccount";
             this.DeleteAccount.Size = new System.Drawing.Size(219, 39);
@@ -123,8 +135,8 @@
             this.CreateAccount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CreateAccount.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.CreateAccount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.CreateAccount.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.CreateAccount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CreateAccount.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CreateAccount.Location = new System.Drawing.Point(253, 205);
             this.CreateAccount.Name = "CreateAccount";
             this.CreateAccount.Size = new System.Drawing.Size(219, 39);
@@ -142,8 +154,8 @@
             this.ChangePassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ChangePassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChangePassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.ChangePassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.ChangePassword.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.ChangePassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ChangePassword.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ChangePassword.Location = new System.Drawing.Point(253, 257);
             this.ChangePassword.Name = "ChangePassword";
             this.ChangePassword.Size = new System.Drawing.Size(219, 39);
@@ -178,7 +190,7 @@
             // CurrentUsernameSettings
             // 
             this.CurrentUsernameSettings.AutoSize = true;
-            this.CurrentUsernameSettings.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentUsernameSettings.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CurrentUsernameSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CurrentUsernameSettings.Location = new System.Drawing.Point(328, 99);
             this.CurrentUsernameSettings.Name = "CurrentUsernameSettings";
@@ -186,18 +198,6 @@
             this.CurrentUsernameSettings.TabIndex = 37;
             this.CurrentUsernameSettings.Text = "Username";
             this.CurrentUsernameSettings.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BorderRadius = 25;
-            this.guna2Panel2.Controls.Add(this.label1);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(732, 54);
-            this.guna2Panel2.TabIndex = 51;
             // 
             // SettingsUserControl
             // 
