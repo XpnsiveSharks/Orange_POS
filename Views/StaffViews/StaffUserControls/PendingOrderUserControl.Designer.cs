@@ -37,7 +37,7 @@
             // 
             // PendingOrderPanel
             // 
-            this.PendingOrderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
+            this.PendingOrderPanel.BackColor = System.Drawing.Color.AntiqueWhite;
             this.PendingOrderPanel.Controls.Add(this.guna2HtmlLabel1);
             this.PendingOrderPanel.Controls.Add(this.QuantityPendingOrder);
             this.PendingOrderPanel.Controls.Add(this.NamePendingOrder);
@@ -47,14 +47,13 @@
             this.PendingOrderPanel.Name = "PendingOrderPanel";
             this.PendingOrderPanel.Size = new System.Drawing.Size(213, 38);
             this.PendingOrderPanel.TabIndex = 0;
-         //   this.PendingOrderPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.PendingOrderPanel_Paint);
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(152, 8);
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(152, 6);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(19, 25);
@@ -65,7 +64,7 @@
             // 
             this.QuantityPendingOrder.BackColor = System.Drawing.Color.Transparent;
             this.QuantityPendingOrder.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.QuantityPendingOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.QuantityPendingOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.QuantityPendingOrder.Location = new System.Drawing.Point(184, 8);
             this.QuantityPendingOrder.Margin = new System.Windows.Forms.Padding(2);
             this.QuantityPendingOrder.Name = "QuantityPendingOrder";
@@ -77,8 +76,8 @@
             // 
             this.NamePendingOrder.BackColor = System.Drawing.Color.Transparent;
             this.NamePendingOrder.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NamePendingOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.NamePendingOrder.Location = new System.Drawing.Point(7, 8);
+            this.NamePendingOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.NamePendingOrder.Location = new System.Drawing.Point(7, 7);
             this.NamePendingOrder.Margin = new System.Windows.Forms.Padding(2);
             this.NamePendingOrder.Name = "NamePendingOrder";
             this.NamePendingOrder.Size = new System.Drawing.Size(66, 25);

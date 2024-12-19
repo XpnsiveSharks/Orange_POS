@@ -76,42 +76,44 @@
             // 
             // PrintButton
             // 
-            this.PrintButton.BorderRadius = 20;
+            this.PrintButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PrintButton.BorderRadius = 15;
             this.PrintButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.PrintButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.PrintButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.PrintButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.PrintButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.PrintButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.PrintButton.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrintButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.PrintButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
             this.PrintButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.PrintButton.Location = new System.Drawing.Point(2, 9);
+            this.PrintButton.Location = new System.Drawing.Point(11, 9);
             this.PrintButton.Margin = new System.Windows.Forms.Padding(2);
             this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(107, 29);
+            this.PrintButton.Size = new System.Drawing.Size(99, 29);
             this.PrintButton.TabIndex = 4;
             this.PrintButton.Text = "Print";
             this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
             // 
             // CompleteOrderButton
             // 
-            this.CompleteOrderButton.BorderRadius = 20;
+            this.CompleteOrderButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CompleteOrderButton.BorderRadius = 15;
             this.CompleteOrderButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.CompleteOrderButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.CompleteOrderButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.CompleteOrderButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.CompleteOrderButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.CompleteOrderButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CompleteOrderButton.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CompleteOrderButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.CompleteOrderButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
             this.CompleteOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
             this.CompleteOrderButton.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.CompleteOrderButton.IndicateFocus = true;
-            this.CompleteOrderButton.Location = new System.Drawing.Point(121, 9);
+            this.CompleteOrderButton.Location = new System.Drawing.Point(113, 9);
             this.CompleteOrderButton.Margin = new System.Windows.Forms.Padding(2);
             this.CompleteOrderButton.Name = "CompleteOrderButton";
-            this.CompleteOrderButton.Size = new System.Drawing.Size(105, 29);
+            this.CompleteOrderButton.Size = new System.Drawing.Size(99, 29);
             this.CompleteOrderButton.TabIndex = 5;
             this.CompleteOrderButton.Text = "Complete";
             this.CompleteOrderButton.Click += new System.EventHandler(this.CompleteOrderButton_Click);
@@ -149,7 +151,7 @@
             this.guna2Panel1.Controls.Add(this.OrderDateLabel);
             this.guna2Panel1.Controls.Add(this.OrderNumberLabel);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -161,7 +163,7 @@
             this.OrderType.BackColor = System.Drawing.Color.Transparent;
             this.OrderType.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.OrderType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.OrderType.Location = new System.Drawing.Point(98, 67);
+            this.OrderType.Location = new System.Drawing.Point(101, 63);
             this.OrderType.Margin = new System.Windows.Forms.Padding(2);
             this.OrderType.Name = "OrderType";
             this.OrderType.Size = new System.Drawing.Size(67, 22);
@@ -173,7 +175,7 @@
             this.OrderDate.BackColor = System.Drawing.Color.Transparent;
             this.OrderDate.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.OrderDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.OrderDate.Location = new System.Drawing.Point(53, 41);
+            this.OrderDate.Location = new System.Drawing.Point(56, 37);
             this.OrderDate.Margin = new System.Windows.Forms.Padding(2);
             this.OrderDate.Name = "OrderDate";
             this.OrderDate.Size = new System.Drawing.Size(86, 22);
@@ -185,7 +187,7 @@
             this.OrderNumber.BackColor = System.Drawing.Color.Transparent;
             this.OrderNumber.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.OrderNumber.Location = new System.Drawing.Point(83, 15);
+            this.OrderNumber.Location = new System.Drawing.Point(86, 11);
             this.OrderNumber.Margin = new System.Windows.Forms.Padding(2);
             this.OrderNumber.Name = "OrderNumber";
             this.OrderNumber.Size = new System.Drawing.Size(43, 22);
@@ -197,7 +199,7 @@
             this.OrderTypeLabel.BackColor = System.Drawing.Color.Transparent;
             this.OrderTypeLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderTypeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.OrderTypeLabel.Location = new System.Drawing.Point(9, 66);
+            this.OrderTypeLabel.Location = new System.Drawing.Point(12, 62);
             this.OrderTypeLabel.Margin = new System.Windows.Forms.Padding(2);
             this.OrderTypeLabel.Name = "OrderTypeLabel";
             this.OrderTypeLabel.Size = new System.Drawing.Size(89, 20);
@@ -209,7 +211,7 @@
             this.OrderDateLabel.BackColor = System.Drawing.Color.Transparent;
             this.OrderDateLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.OrderDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.OrderDateLabel.Location = new System.Drawing.Point(9, 41);
+            this.OrderDateLabel.Location = new System.Drawing.Point(12, 37);
             this.OrderDateLabel.Margin = new System.Windows.Forms.Padding(2);
             this.OrderDateLabel.Name = "OrderDateLabel";
             this.OrderDateLabel.Size = new System.Drawing.Size(42, 20);
@@ -221,7 +223,7 @@
             this.OrderNumberLabel.BackColor = System.Drawing.Color.Transparent;
             this.OrderNumberLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.OrderNumberLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.OrderNumberLabel.Location = new System.Drawing.Point(9, 15);
+            this.OrderNumberLabel.Location = new System.Drawing.Point(12, 11);
             this.OrderNumberLabel.Margin = new System.Windows.Forms.Padding(2);
             this.OrderNumberLabel.Name = "OrderNumberLabel";
             this.OrderNumberLabel.Size = new System.Drawing.Size(75, 20);
