@@ -50,7 +50,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                 return;
             }
 
-            bool isUpdated = usersRepository.UpdateUsers(currentPassword, newPassword);
+            bool isUpdated = usersRepository.UpdateUserPassword(currentPassword, newPassword);
 
             if (isUpdated)
             {
@@ -58,8 +58,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                 CurrentPassword.Clear();
                 NewPassword.Clear();
                 ConfirmPassword.Clear();
-                ShowNewPassword.Checked = false; 
-                ShowConfirmPassword.Checked = false;
+               
             }
             else
             {
@@ -75,30 +74,41 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             CurrentPassword.Clear();
             NewPassword.Clear();
             ConfirmPassword.Clear();
-            ShowNewPassword.Checked = false;
-            ShowConfirmPassword.Checked = false;
+           
         }
 
-        private void ShowNewPassword_CheckedChanged(object sender, EventArgs e)
+        private void ShowNewPassword__Click(object sender, EventArgs e)
         {
-            if (ShowNewPassword.Checked)
+            if (NewPassword.PasswordChar == '●')
             {
+                HideNewPassword_.BringToFront();
                 NewPassword.PasswordChar = '\0';
             }
-            else
+        }
+
+        private void HideNewPassword__Click(object sender, EventArgs e)
+        {
+            if (NewPassword.PasswordChar == '\0')
             {
+                ShowNewPassword_.BringToFront();
                 NewPassword.PasswordChar = '●';
             }
         }
 
-        private void ShowConfirmPassword_CheckedChanged(object sender, EventArgs e)
+        private void ShowConfirmPassword__Click(object sender, EventArgs e)
         {
-            if (ShowConfirmPassword.Checked)
+            if (ConfirmPassword.PasswordChar == '●')
             {
+                HideConfirmPassword_.BringToFront();
                 ConfirmPassword.PasswordChar = '\0';
             }
-            else
+        }
+
+        private void HideConfirmPassword__Click(object sender, EventArgs e)
+        {
+            if (ConfirmPassword.PasswordChar == '\0')
             {
+                ShowConfirmPassword_.BringToFront();
                 ConfirmPassword.PasswordChar = '●';
             }
         }

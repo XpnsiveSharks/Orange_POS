@@ -141,8 +141,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="ZstdSharp, Version=0.8.3.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
-      <HintPath>packages\ZstdSharp.Port.0.8.3\lib\net462\ZstdSharp.dll</HintPath>
+    <Reference Include="ZstdSharp, Version=0.8.4.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>..\Ordering-System\packages\ZstdSharp.Port.0.8.4\lib\net462\ZstdSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -193,7 +193,15 @@
     <Compile Include="Views\AdminViews\AdminViewUserControlContents\MenuUserControl.Designer.cs">
       <DependentUpon>MenuUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\CustomerViews\CustomerIndexView.cs">
+
+    <Compile Include="Views\AdminViews\AdminViewUserControls\EditAccountUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminViewUserControls\EditAccountUserControl.Designer.cs">
+      <DependentUpon>EditAccountUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StaffViews\StaffIndexView.cs">
+
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\CustomerViews\CustomerIndexView.Designer.cs">
@@ -359,26 +367,10 @@
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControlContents\MenuUserControl.resx">
       <DependentUpon>MenuUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\CustomerViews\CustomerNoteView.resx">
-      <DependentUpon>CustomerNoteView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\CustomerViews\CustomerOrderingUserControls\ItemUserControl.resx">
-      <DependentUpon>ItemUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\CustomerViews\CustomerOrderingUserControls\MenuForCustomerUserControl.resx">
-      <DependentUpon>MenuForCustomerUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\CustomerViews\CustomerOrderingUserControls\OrderTypeUserControl.resx">
-      <DependentUpon>OrderTypeUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\CustomerViews\CustomerOrderingUserControls\PaymentMethodUserControl.resx">
-      <DependentUpon>PaymentMethodUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\CustomerViews\OrderListView.resx">
-      <DependentUpon>OrderListView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\CustomerViews\PaymentMethodView.resx">
-      <DependentUpon>PaymentMethodView.cs</DependentUpon>
+
+    <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\EditAccountUserControl.resx">
+      <DependentUpon>EditAccountUserControl.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Views\StaffViews\StaffIndexView.resx">
       <DependentUpon>StaffIndexView.cs</DependentUpon>
@@ -455,6 +447,13 @@
   <ItemGroup>
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
   </ItemGroup>
-  <ItemGroup />
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ordering-System\Ordering System.csproj">
+      <Project>{f88eae0b-c185-47ab-a7fc-73cca0eaa1e9}</Project>
+      <Name>Ordering System</Name>
+    </ProjectReference>
+  </ItemGroup>
+
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

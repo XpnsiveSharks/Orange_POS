@@ -121,12 +121,14 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                 productViewModel.UpdateProduct(ProductId);
                 MessageBox.Show("Product updated successfully");
             }
-                
-            if (inputValidation.ValidateProductName(productViewModel.ProductName))
+
+            if (!IsUpdate && inputValidation.ValidateProductName(productViewModel.ProductName))
+
             {
-                MessageBox.Show("A product with this name already exists. Please choose another name.");
+                MessageBox.Show("Product Already Exist");
                 return;
             }
+
             else
             {
                 productViewModel.AddingMenu();

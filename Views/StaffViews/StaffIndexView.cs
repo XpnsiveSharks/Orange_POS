@@ -15,9 +15,8 @@ namespace Orange_POS.Views.StaffViews
     public partial class StaffIndexView : Form
     {
         private OrdersRepository ordersRepository;
-        public event Action StaffIndexBackButton;
-        MainLoginView mainLoginView = new MainLoginView();
-
+        private Label PendingOrdersCountLabel;
+        private readonly MainLoginView mainLoginView = new MainLoginView();
 
         public int Order_Count 
         {
@@ -64,11 +63,8 @@ namespace Orange_POS.Views.StaffViews
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            StaffIndexBackButton?.Invoke();
-            HideOrderList();
-        }
-        private void HideOrderList()
-        {
+
+
             this.Hide();
             mainLoginView.Show();
         }

@@ -21,6 +21,7 @@ namespace Orange_POS.Views.AdminViews
             InitializeControls();
             ChangeUserControl();
             LoadUserControl(AdminViewControl.Dashboard);
+           
         }
         private void InitializeControls()
         {
@@ -33,7 +34,8 @@ namespace Orange_POS.Views.AdminViews
                 { AdminViewControl.DeleteAccount, new DeleteAccountUserControl() },
                 { AdminViewControl.InsertProduct, new InsertProductUserControl() },
                 { AdminViewControl.Dashboard, new DashboardUserControl() },
-                { AdminViewControl.OrderList, new OrderListUserControl() }
+                { AdminViewControl.OrderList, new OrderListUserControl() },
+                { AdminViewControl.EditAccount, new EditAccountUserControl() }
             };
         }
 
@@ -58,11 +60,11 @@ namespace Orange_POS.Views.AdminViews
                 { AdminViewControl.InsertProduct, SubscribeInsertProductUserEvents },
 
                 { AdminViewControl.DeleteAccount, SubscribeDeleteAccountEvents },
-
+                
                 { AdminViewControl.Dashboard, SubscribeDashboardUserEvents },
-                { AdminViewControl.OrderList, SubscribeOrderListUserEvents }
+                { AdminViewControl.OrderList, SubscribeOrderListUserEvents },
 
-
+                { AdminViewControl.EditAccount, SubscribeEditAccountEvents }
             };
 
             foreach (var controlKey in _controls.Keys)
@@ -139,7 +141,46 @@ namespace Orange_POS.Views.AdminViews
                 settingsControl.DeleteAccountEventHandler -= OnDeleteAccount;
                 settingsControl.DeleteAccountEventHandler += OnDeleteAccount;
 
+                settingsControl.EditAccountEventHandler -= OnEditAccount;
+                settingsControl.EditAccountEventHandler += OnEditAccount;
             }
+        }
+
+        private void SubscribeEditAccountEvents(UserControl control)
+        {
+            if (control is EditAccountUserControl editAccountControl)
+            {
+                
+                editAccountControl.BackToSettingsEventHandler -= OnBackToSettings;
+                editAccountControl.BackToSettingsEventHandler += OnBackToSettings;
+               
+                editAccountControl.UserUpdatedEventHandler -= OnUserUpdated;
+                editAccountControl.UserUpdatedEventHandler += OnUserUpdated;
+            }
+        }
+
+
+        private void OnUserUpdated()
+        {
+           
+            if (_controls.TryGetValue(AdminViewControl.Settings, out var control) && control is SettingsUserControl settingsControl)
+            {
+                settingsControl.UpdateLoggedInUser();
+            }
+        }
+        private void OnEditAccount()
+        {
+            LoadUserControl(AdminViewControl.EditAccount);
+            if (_controls.TryGetValue(AdminViewControl.EditAccount, out var control) &&
+                control is EditAccountUserControl editAccountControl)
+            {
+                editAccountControl.SetUserDetails();
+            }
+        }
+
+        private void EditAccountButton_Click(object sender, EventArgs e)
+        {
+            LoadUserControl(AdminViewControl.EditAccount);  
         }
 
 
@@ -221,6 +262,7 @@ namespace Orange_POS.Views.AdminViews
               control is SettingsUserControl settingsControl)
             {
                 settingsControl.UpdateLoggedInUser();
+                
             }
         }
 

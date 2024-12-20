@@ -81,16 +81,18 @@
             this.BackButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.BackButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.BackButton.FillColor = System.Drawing.Color.Transparent;
-            this.BackButton.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackButton.Font = new System.Drawing.Font("Century Gothic", 14F);
+
             this.BackButton.ForeColor = System.Drawing.Color.White;
             this.BackButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.BackButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.BackButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.BackButton.Location = new System.Drawing.Point(752, 5);
+            this.BackButton.Location = new System.Drawing.Point(722, 16);
             this.BackButton.Margin = new System.Windows.Forms.Padding(1);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(91, 52);
-            this.BackButton.TabIndex = 15;
+            this.BackButton.Size = new System.Drawing.Size(112, 34);
+            this.BackButton.TabIndex = 10;
+
             this.BackButton.Text = "back";
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 

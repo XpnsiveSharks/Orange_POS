@@ -1,4 +1,5 @@
 ﻿using Orange_POS.Helpers;
+using Orange_POS.Models;
 using Orange_POS.Repositories;
 using Orange_POS.Views.SharedViews;
 using System;
@@ -19,10 +20,14 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         public event Action BackToSettingsEventHandler;
         private readonly UsersRepository usersRepository = new UsersRepository();
         private readonly MainLoginView mainLoginView = new MainLoginView();
+        private List<Users> allUsers; 
+
 
         public DeleteAccountUserControl()
         {
             InitializeComponent();
+            LoadUsersIntoGridView();
+            UserSearchBox.TextChanged += UserSearchBox_TextChanged;
         }
 
 
@@ -33,93 +38,123 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
 
         private void DeleteAccount_Click(object sender, EventArgs e)
         {
-            string username = DeleteUsername.Text;
-            string password = DeletePassword.Text;
-            string confirmPassword = ConfirmPassword.Text;
-
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
+            try
             {
-                MessageBox.Show("Username and Password are required to delete an account.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            DialogResult confirmation = MessageBox.Show(
-                $"Are you sure you want to delete the account for '{username}'?",
-                "Confirm Deletion",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning
-            );
-
-            if (password != confirmPassword)
-            {
-                MessageBox.Show("Password Doesnt match try again!", "Error" ,MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-
-            if (confirmation == DialogResult.Yes)
-            {
-                try
+               
+                if (UsersDataGridView.SelectedRows.Count > 0)
                 {
-                    bool isDeleted = usersRepository.DeleteUser(username, password);
-
-                    if (isDeleted)
+                    
+                    string username = UsersDataGridView.SelectedRows[0].Cells["Username"].Value.ToString();
+                    DialogResult confirmResult = MessageBox.Show($"Are you sure you want to delete the user '{username}'?", "Confirm Delete", MessageBoxButtons.YesNo);
+                    if (confirmResult == DialogResult.Yes)
                     {
-                        MessageBox.Show("Account deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                       
-                        if (username == CurrentUser.Username)
+                      
+                        UsersRepository usersRepository = new UsersRepository();
+                        bool isDeleted = usersRepository.DeleteUser(username); 
+
+                        if (isDeleted)
                         {
-                            CurrentUser.Username = null;
-                            CurrentUser.UserRole = null;
-                            mainLoginView.Show();
+                            MessageBox.Show($"User '{username}' deleted successfully.");
+                            LoadUsersIntoGridView();
                         }
                         else
                         {
-                            DeleteUsername.Clear();
-                            DeletePassword.Clear();
-                            ConfirmPassword.Clear();
-                            BackToSettingsEventHandler?.Invoke();
+                            MessageBox.Show($"Failed to delete the user '{username}'.");
                         }
-                     
                     }
-                    else
-                    {
-                        MessageBox.Show("Invalid username or password. Deletion failed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-
-                 
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please select a user to delete.");
                 }
             }
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+
         }
 
-        private void ShowPassword_CheckedChanged(object sender, EventArgs e)
+     
+
+        public void LoadUsersIntoGridView()
         {
-            if (ShowPassword.Checked)
+           
+            try
             {
-                DeletePassword.PasswordChar = '\0';
+
+                allUsers = usersRepository.GetAllUsers();
+                if (allUsers == null || allUsers.Count == 0)
+                {
+                    MessageBox.Show("No users found.");
+                    return;
+                }
+
+                UsersDataGridView.DataSource = allUsers;
+                if (UsersDataGridView.Columns.Contains("Password"))
+                {
+                    UsersDataGridView.Columns["Password"].Visible = false;
+                }
+                if (UsersDataGridView.Columns.Contains("MiddleName"))
+                {
+                    UsersDataGridView.Columns["MiddleName"].Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+        }
+
+
+        private void UserSearchBox_TextChanged(object sender, EventArgs e)
+        {
+            ApplySearchFilter(UserSearchBox.Text);
+        }
+
+
+        private void ApplySearchFilter(string searchQuery)
+        {
+            if (string.IsNullOrWhiteSpace(searchQuery))
+            {
+                UsersDataGridView.DataSource = allUsers; 
             }
             else
             {
-                DeletePassword.PasswordChar = '●';
+                List<Users> filteredUsers = new List<Users>();
+                foreach (var user in allUsers)
+                {
+                    if (
+                        (user.Username != null && user.Username.ToLower().Contains(searchQuery.ToLower())) ||
+                        (user.FirstName != null && user.FirstName.ToLower().Contains(searchQuery.ToLower())) ||
+                        (user.LastName != null && user.LastName.ToLower().Contains(searchQuery.ToLower())) ||
+                        (user.Email != null && user.Email.ToLower().Contains(searchQuery.ToLower())) ||
+                        (user.Contactnumber != null && user.Contactnumber.ToLower().Contains(searchQuery.ToLower())) ||
+                        (user.User_Role != null && user.User_Role.ToLower().Contains(searchQuery.ToLower())) ||
+                        (user.Middlename != null && user.Middlename.ToLower().Contains(searchQuery.ToLower()))
+                    )
+                    {
+                        filteredUsers.Add(user);
+                    }
+                }
+                UsersDataGridView.DataSource = filteredUsers;
+            }
+
+            if (UsersDataGridView.Columns.Contains("Password"))
+            {
+                UsersDataGridView.Columns["Password"].Visible = false;
+            }
+            if (UsersDataGridView.Columns.Contains("MiddleName"))
+            {
+                UsersDataGridView.Columns["MiddleName"].Visible = false;
             }
         }
 
-        private void ShowConfirmPassword_CheckedChanged(object sender, EventArgs e)
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
         {
-            if (ShowConfirmPassword.Checked)
-            {
-                ConfirmPassword.PasswordChar = '\0';
-            }
-            else
-            {
-                ConfirmPassword.PasswordChar = '●';
-            }
+            LoadUsersIntoGridView();
 
+          
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)

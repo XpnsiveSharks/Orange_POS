@@ -54,7 +54,12 @@ namespace Orange_POS.Helpers
             string pattern = @"^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&_])[A-Za-z\d@$!%*?&_]{8,}$";
             return Regex.IsMatch(password, pattern);
         }
-        
+
+        public bool ContainsInvalidCharacters(string input)
+        {
+            string pattern = @"[^a-zA-Z\s]";  
+            return Regex.IsMatch(input, pattern);
+        }
 
         public bool ValidatePrice(string price)
         {
@@ -70,11 +75,12 @@ namespace Orange_POS.Helpers
         {
             using (var connection = _databaseConnection.GetConnection())
             {
-                string query = "SELECT COUNT(1) FROM products_table WHERE Product_Name = @ProductName";
-                int count = connection.Execute(query, new { ProductName = product });
+
+                string query = "SELECT COUNT(1) FROM products_table WHERE TRIM(LOWER(Product_Name)) = TRIM(LOWER(@ProductName))";
+                int count = connection.QuerySingle<int>(query, new { ProductName = product.Trim() });
                 return count > 0;
             }
-           
+
         }
 
     }

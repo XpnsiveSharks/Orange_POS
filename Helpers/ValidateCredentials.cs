@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Dapper;
+using Microsoft.SqlServer.Server;
+using System.Windows.Forms;
 
 
 namespace Orange_POS.Helpers
@@ -27,11 +29,11 @@ namespace Orange_POS.Helpers
             {
                 using (var connection = _databaseConnection.GetConnection())
                 {
-                    var selectQuery = "SELECT Password FROM users_table WHERE Username = @username AND User_Role = @userRole";
+                    var selectQuery = "SELECT Password FROM users_table WHERE Username = @Username AND User_Role = @UserRole";
                     string storedPasswordHash = connection.QuerySingleOrDefault<string>(selectQuery, new
                     {
-                        username = username,
-                        userRole = userRole
+                        @Username = username,
+                        @UserRole = userRole
                     });
 
                     if (string.IsNullOrEmpty(storedPasswordHash))
@@ -51,4 +53,5 @@ namespace Orange_POS.Helpers
         }
 
     }
+
 }
