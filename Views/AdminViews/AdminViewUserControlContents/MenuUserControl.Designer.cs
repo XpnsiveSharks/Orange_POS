@@ -50,10 +50,10 @@
             this.ProductPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.ProductPanel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.ProductPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(251)))));
-            this.ProductPanel.Location = new System.Drawing.Point(22, 15);
-            this.ProductPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.ProductPanel.Location = new System.Drawing.Point(15, 10);
+            this.ProductPanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.ProductPanel.Name = "ProductPanel";
-            this.ProductPanel.Size = new System.Drawing.Size(228, 285);
+            this.ProductPanel.Size = new System.Drawing.Size(152, 185);
             this.ProductPanel.TabIndex = 0;
             this.ProductPanel.MouseEnter += new System.EventHandler(this.ProductPanel_MouseEnter);
             this.ProductPanel.MouseLeave += new System.EventHandler(this.ProductPanel_MouseLeave);
@@ -63,11 +63,11 @@
             // 
             this.MenuCategoryLabel.BackColor = System.Drawing.Color.Transparent;
             this.MenuCategoryLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenuCategoryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.MenuCategoryLabel.Location = new System.Drawing.Point(16, 245);
-            this.MenuCategoryLabel.Margin = new System.Windows.Forms.Padding(2);
+            this.MenuCategoryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.MenuCategoryLabel.Location = new System.Drawing.Point(11, 159);
+            this.MenuCategoryLabel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.MenuCategoryLabel.Name = "MenuCategoryLabel";
-            this.MenuCategoryLabel.Size = new System.Drawing.Size(156, 25);
+            this.MenuCategoryLabel.Size = new System.Drawing.Size(103, 19);
             this.MenuCategoryLabel.TabIndex = 4;
             this.MenuCategoryLabel.Text = "Menu Category";
             // 
@@ -76,9 +76,10 @@
             this.ProductButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
             this.ProductButton.BorderRadius = 15;
             this.ProductButton.ImageRotate = 0F;
-            this.ProductButton.Location = new System.Drawing.Point(16, 11);
+            this.ProductButton.Location = new System.Drawing.Point(11, 7);
+            this.ProductButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ProductButton.Name = "ProductButton";
-            this.ProductButton.Size = new System.Drawing.Size(197, 162);
+            this.ProductButton.Size = new System.Drawing.Size(131, 105);
             this.ProductButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ProductButton.TabIndex = 3;
             this.ProductButton.TabStop = false;
@@ -87,11 +88,11 @@
             // 
             this.PriceLabel.BackColor = System.Drawing.Color.Transparent;
             this.PriceLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PriceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.PriceLabel.Location = new System.Drawing.Point(16, 216);
-            this.PriceLabel.Margin = new System.Windows.Forms.Padding(2);
+            this.PriceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PriceLabel.Location = new System.Drawing.Point(11, 140);
+            this.PriceLabel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.PriceLabel.Name = "PriceLabel";
-            this.PriceLabel.Size = new System.Drawing.Size(84, 25);
+            this.PriceLabel.Size = new System.Drawing.Size(56, 19);
             this.PriceLabel.TabIndex = 2;
             this.PriceLabel.Text = "₱ 100.00";
             // 
@@ -99,23 +100,23 @@
             // 
             this.ProductNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.ProductNameLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.ProductNameLabel.Location = new System.Drawing.Point(16, 178);
-            this.ProductNameLabel.Margin = new System.Windows.Forms.Padding(2);
+            this.ProductNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ProductNameLabel.Location = new System.Drawing.Point(11, 116);
+            this.ProductNameLabel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.ProductNameLabel.Name = "ProductNameLabel";
-            this.ProductNameLabel.Size = new System.Drawing.Size(176, 32);
+            this.ProductNameLabel.Size = new System.Drawing.Size(117, 23);
             this.ProductNameLabel.TabIndex = 1;
             this.ProductNameLabel.Text = "Product Name";
             // 
             // MenuUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.ProductPanel);
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "MenuUserControl";
-            this.Size = new System.Drawing.Size(257, 302);
+            this.Size = new System.Drawing.Size(171, 196);
             this.Load += new System.EventHandler(this.MenuUserControl_Load);
             this.ProductPanel.ResumeLayout(false);
             this.ProductPanel.PerformLayout();

@@ -43,7 +43,7 @@
             this.ProductSearchTextBox.BorderRadius = 15;
             this.ProductSearchTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ProductSearchTextBox.DefaultText = "";
-            this.ProductSearchTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ProductSearchTextBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductSearchTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ProductSearchTextBox.Location = new System.Drawing.Point(529, 22);
             this.ProductSearchTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -61,7 +61,7 @@
             this.MenuListFlowLayoutPanel.AutoScroll = true;
             this.MenuListFlowLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.MenuListFlowLayoutPanel.Location = new System.Drawing.Point(25, 61);
-            this.MenuListFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MenuListFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
             this.MenuListFlowLayoutPanel.Name = "MenuListFlowLayoutPanel";
             this.MenuListFlowLayoutPanel.Size = new System.Drawing.Size(717, 386);
             this.MenuListFlowLayoutPanel.TabIndex = 16;
@@ -115,7 +115,7 @@
             this.AddMenuButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.AddMenuButton.ImageOffset = new System.Drawing.Point(0, 10);
             this.AddMenuButton.Location = new System.Drawing.Point(15, 22);
-            this.AddMenuButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddMenuButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddMenuButton.Name = "AddMenuButton";
             this.AddMenuButton.Size = new System.Drawing.Size(123, 36);
             this.AddMenuButton.TabIndex = 12;
@@ -131,7 +131,7 @@
             this.Controls.Add(this.MenuListFlowLayoutPanel);
             this.Controls.Add(this.ProductSearchTextBox);
             this.Controls.Add(this.AddMenuButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuListUserControl";
             this.Size = new System.Drawing.Size(769, 468);
             this.Load += new System.EventHandler(this.MenuListUserControl_Load);
