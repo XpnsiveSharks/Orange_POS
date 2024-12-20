@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Web.Management;
 using System.Windows.Forms;
 
 namespace Orange_POS.Views.StaffViews
@@ -16,6 +17,7 @@ namespace Orange_POS.Views.StaffViews
         private OrdersRepository ordersRepository;
         private Label PendingOrdersCountLabel;
         private readonly MainLoginView mainLoginView = new MainLoginView();
+
         public int Order_Count 
         {
             get => int.TryParse(OrderCount.Text, out var count) ? count : 0;
@@ -61,6 +63,7 @@ namespace Orange_POS.Views.StaffViews
 
         private void BackButton_Click(object sender, EventArgs e)
         {
+
 
             this.Hide();
             mainLoginView.Show();

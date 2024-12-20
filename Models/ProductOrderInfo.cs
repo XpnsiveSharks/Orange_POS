@@ -10,6 +10,7 @@ namespace Orange_POS.Models
     {
         public int Quantity { get; set; }
         public string Product_Name { get; set; }
+        public string Order_Note { get; set; }
     }
 }
 

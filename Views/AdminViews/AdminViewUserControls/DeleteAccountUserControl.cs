@@ -156,5 +156,10 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
 
           
         }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

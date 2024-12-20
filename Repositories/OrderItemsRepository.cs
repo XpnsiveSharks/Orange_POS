@@ -25,13 +25,14 @@ namespace Orange_POS.Repositories
             {
                 using (var connection = _databaseConnection.GetConnection())
                 {
-                    var insertQuery = "INSERT INTO Order_Items_Table (Order_Id, Product_Id, Quantity, Price) VALUES (@Order_Id, @Product_Id, @Quantity, @Price)";
+                    var insertQuery = "INSERT INTO Order_Items_Table (Order_Id, Product_Id, Quantity, Price, Order_Note) VALUES (@Order_Id, @Product_Id, @Quantity, @Price, @Order_Note)";
                     connection.Execute(insertQuery, new
                     {
                         Order_Id = orderItems.Order_Id,
                         Product_Id = orderItems.Product_Id,
                         Quantity = orderItems.Quantity,
-                        Price = orderItems.Price
+                        Price = orderItems.Price,
+                        Order_Note = orderItems.Order_Note
                     });
                 }
             }

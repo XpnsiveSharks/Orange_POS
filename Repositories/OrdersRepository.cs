@@ -120,7 +120,8 @@ namespace Orange_POS.Repositories
                     var query = @"
                 SELECT 
                     oi.Quantity,
-                    p.Product_Name
+                    p.Product_Name,
+                    oi.Order_Note
                 FROM 
                     Order_Items_Table oi
                 JOIN 
@@ -130,28 +131,11 @@ namespace Orange_POS.Repositories
                 WHERE 
                     oi.Quantity IS NOT NULL AND o.Order_Number = @Order_Number";
 
-                    // Fetch the data
-                    var productOrderInfos = connection.Query<ProductOrderInfo>(query, new { Order_Number = orderNumber }).ToList();
-
-                    // Debugging: Output the query and parameter
-                    Console.WriteLine($"Order_Number: {orderNumber}");
-
-                    // Debugging: Output the number of records retrieved
-                    Console.WriteLine($"Number of product order info records retrieved: {productOrderInfos.Count}");
-
-                    // Debugging: Output the details of each record
-                    foreach (var info in productOrderInfos)
-                    {
-                        Console.WriteLine($"Order Number: {orderNumber}, Product Name: {info.Product_Name}, Quantity: {info.Quantity}");
-                    }
-
-                    return productOrderInfos;
+                    return connection.Query<ProductOrderInfo>(query, new { Order_Number = orderNumber }).ToList();
                 }
             }
             catch (SqlException ex)
             {
-                // Debugging: Output the exception message
-                Console.WriteLine($"Exception: {ex.Message}");
                 throw new Exception("An error has occurred while accessing the database", ex);
             }
         }

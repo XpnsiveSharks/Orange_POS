@@ -13,6 +13,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
 
+
+
 namespace Orange_POS.Views.AdminViews.AdminViewUserControls
 {
     public partial class InsertProductUserControl : UserControl
@@ -121,6 +123,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             }
 
             if (!IsUpdate && inputValidation.ValidateProductName(productViewModel.ProductName))
+
             {
                 MessageBox.Show("Product Already Exist");
                 return;
@@ -181,6 +184,11 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             ProductPriceTextBox.Text = string.Empty;
             ProductMenuComboBox.SelectedIndex = -1;
             ProductPreviewPictureBox.Image = null;
+        }
+
+        private void AddMenuPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

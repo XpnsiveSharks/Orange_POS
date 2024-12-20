@@ -48,7 +48,7 @@
             this.BackButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.BackButton.FillColor = System.Drawing.Color.Transparent;
             this.BackButton.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.BackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.BackButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.BackButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.BackButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
@@ -56,13 +56,14 @@
             this.BackButton.Margin = new System.Windows.Forms.Padding(1);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(91, 52);
+
             this.BackButton.TabIndex = 14;
             this.BackButton.Text = "back";
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click_1);
             // 
             // AdminPasswordTextBox
             // 
-            this.AdminPasswordTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AdminPasswordTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.AdminPasswordTextBox.BorderRadius = 20;
             this.AdminPasswordTextBox.BorderThickness = 2;
             this.AdminPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -87,20 +88,21 @@
             // 
             // AdminLoginButton
             // 
-            this.AdminLoginButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AdminLoginButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.AdminLoginButton.BorderRadius = 20;
             this.AdminLoginButton.BorderThickness = 2;
             this.AdminLoginButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.AdminLoginButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.AdminLoginButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.AdminLoginButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.AdminLoginButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AdminLoginButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.AdminLoginButton.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminLoginButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.AdminLoginButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.AdminLoginButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.AdminLoginButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.AdminLoginButton.Location = new System.Drawing.Point(55, 351);
+
             this.AdminLoginButton.Margin = new System.Windows.Forms.Padding(1);
             this.AdminLoginButton.Name = "AdminLoginButton";
             this.AdminLoginButton.Size = new System.Drawing.Size(256, 42);
@@ -110,7 +112,7 @@
             // 
             // AdminUsernameTextBox
             // 
-            this.AdminUsernameTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AdminUsernameTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.AdminUsernameTextBox.BorderRadius = 20;
             this.AdminUsernameTextBox.BorderThickness = 2;
             this.AdminUsernameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -143,6 +145,7 @@
             this.LoginLabel.Margin = new System.Windows.Forms.Padding(1);
             this.LoginLabel.Name = "LoginLabel";
             this.LoginLabel.Size = new System.Drawing.Size(256, 70);
+
             this.LoginLabel.TabIndex = 10;
             this.LoginLabel.Text = "Admin";
             this.LoginLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -171,6 +174,7 @@
             this.HidePassword_.TabIndex = 56;
             this.HidePassword_.UseVisualStyleBackColor = true;
             this.HidePassword_.Click += new System.EventHandler(this.HidePassword__Click);
+
             // 
             // AdminLoginUserControl
             // 
@@ -184,6 +188,7 @@
             this.Controls.Add(this.LoginLabel);
             this.Controls.Add(this.HidePassword_);
             this.Controls.Add(this.AdminPasswordTextBox);
+
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "AdminLoginUserControl";
             this.Size = new System.Drawing.Size(368, 468);

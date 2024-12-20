@@ -17,9 +17,10 @@ namespace Orange_POS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Views.SharedViews.MainLoginView());
+            //Application.Run(new Views.SharedViews.MainLoginView());
             //Application.Run(new Views.StaffViews.StaffIndexView());
-            //Application.Run(new Views.AdminViews.AdminIndexView());   
+            //Application.Run(new Views.AdminViews.AdminIndexView());
+            Application.Run(new Views.CustomerViews.OrderTypeView());
         }
     }
 }

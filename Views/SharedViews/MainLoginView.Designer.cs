@@ -41,14 +41,14 @@
             // 
             // AdminLoginButton
             // 
-            this.AdminLoginButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AdminLoginButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.AdminLoginButton.BorderRadius = 20;
             this.AdminLoginButton.BorderThickness = 2;
             this.AdminLoginButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.AdminLoginButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.AdminLoginButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.AdminLoginButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.AdminLoginButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AdminLoginButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.AdminLoginButton.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminLoginButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.AdminLoginButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
@@ -56,6 +56,7 @@
             this.AdminLoginButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.AdminLoginButton.Location = new System.Drawing.Point(64, 195);
             this.AdminLoginButton.Margin = new System.Windows.Forms.Padding(2);
+
             this.AdminLoginButton.Name = "AdminLoginButton";
             this.AdminLoginButton.Size = new System.Drawing.Size(256, 42);
             this.AdminLoginButton.TabIndex = 0;
@@ -64,14 +65,14 @@
             // 
             // StaffLoginButton
             // 
-            this.StaffLoginButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.StaffLoginButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.StaffLoginButton.BorderRadius = 20;
             this.StaffLoginButton.BorderThickness = 2;
             this.StaffLoginButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.StaffLoginButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.StaffLoginButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.StaffLoginButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.StaffLoginButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.StaffLoginButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.StaffLoginButton.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StaffLoginButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.StaffLoginButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
@@ -79,6 +80,7 @@
             this.StaffLoginButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.StaffLoginButton.Location = new System.Drawing.Point(64, 245);
             this.StaffLoginButton.Margin = new System.Windows.Forms.Padding(2);
+
             this.StaffLoginButton.Name = "StaffLoginButton";
             this.StaffLoginButton.Size = new System.Drawing.Size(256, 42);
             this.StaffLoginButton.TabIndex = 2;
@@ -93,6 +95,7 @@
             this.LoginAsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.LoginAsLabel.Location = new System.Drawing.Point(4, 129);
             this.LoginAsLabel.Margin = new System.Windows.Forms.Padding(2);
+
             this.LoginAsLabel.Name = "LoginAsLabel";
             this.LoginAsLabel.Size = new System.Drawing.Size(362, 55);
             this.LoginAsLabel.TabIndex = 3;
@@ -102,12 +105,14 @@
             // LoginPanel
             // 
             this.LoginPanel.Controls.Add(this.button1);
+
             this.LoginPanel.Controls.Add(this.LoginAsLabel);
             this.LoginPanel.Controls.Add(this.StaffLoginButton);
             this.LoginPanel.Controls.Add(this.AdminLoginButton);
             this.LoginPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.LoginPanel.Location = new System.Drawing.Point(485, 0);
             this.LoginPanel.Margin = new System.Windows.Forms.Padding(2);
+
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(368, 468);
             this.LoginPanel.TabIndex = 4;
@@ -149,6 +154,7 @@
             this.Controls.Add(this.LoginPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
+
             this.Name = "MainLoginView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainLogin";
