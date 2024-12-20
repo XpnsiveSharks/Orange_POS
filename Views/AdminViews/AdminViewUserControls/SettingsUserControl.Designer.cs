@@ -108,7 +108,9 @@
             // 
             // DeleteAccount
             // 
+            this.DeleteAccount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.DeleteAccount.BorderRadius = 18;
+            this.DeleteAccount.BorderThickness = 2;
             this.DeleteAccount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.DeleteAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.DeleteAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -117,6 +119,7 @@
             this.DeleteAccount.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.DeleteAccount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.DeleteAccount.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.DeleteAccount.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.DeleteAccount.Location = new System.Drawing.Point(253, 308);
             this.DeleteAccount.Name = "DeleteAccount";
@@ -127,7 +130,9 @@
             // 
             // CreateAccount
             // 
+            this.CreateAccount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CreateAccount.BorderRadius = 18;
+            this.CreateAccount.BorderThickness = 2;
             this.CreateAccount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.CreateAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.CreateAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -136,6 +141,7 @@
             this.CreateAccount.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.CreateAccount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CreateAccount.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.CreateAccount.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CreateAccount.Location = new System.Drawing.Point(253, 205);
             this.CreateAccount.Name = "CreateAccount";
@@ -146,7 +152,9 @@
             // 
             // ChangePassword
             // 
+            this.ChangePassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ChangePassword.BorderRadius = 18;
+            this.ChangePassword.BorderThickness = 2;
             this.ChangePassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ChangePassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ChangePassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -155,6 +163,7 @@
             this.ChangePassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChangePassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.ChangePassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ChangePassword.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.ChangePassword.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ChangePassword.Location = new System.Drawing.Point(253, 257);
             this.ChangePassword.Name = "ChangePassword";
