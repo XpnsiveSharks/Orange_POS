@@ -92,7 +92,7 @@
             this.EditAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.EditAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.EditAccount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.EditAccount.FillColor = System.Drawing.Color.Transparent;
+            this.EditAccount.FillColor = System.Drawing.Color.LightGray;
             this.EditAccount.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.EditAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.EditAccount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
@@ -197,7 +197,7 @@
             this.DeleteAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.DeleteAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.DeleteAccount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.DeleteAccount.FillColor = System.Drawing.Color.Transparent;
+            this.DeleteAccount.FillColor = System.Drawing.Color.LightGray;
             this.DeleteAccount.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.DeleteAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.DeleteAccount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
@@ -218,7 +218,7 @@
             this.ChangePassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ChangePassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ChangePassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ChangePassword.FillColor = System.Drawing.Color.Transparent;
+            this.ChangePassword.FillColor = System.Drawing.Color.LightGray;
             this.ChangePassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.ChangePassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.ChangePassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
@@ -239,7 +239,7 @@
             this.CreateAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.CreateAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.CreateAccount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.CreateAccount.FillColor = System.Drawing.Color.Transparent;
+            this.CreateAccount.FillColor = System.Drawing.Color.LightGray;
             this.CreateAccount.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.CreateAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.CreateAccount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
