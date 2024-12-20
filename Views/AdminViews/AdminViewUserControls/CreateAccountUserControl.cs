@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,7 +20,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         public event Action BackToSettingsEventHandler;
         private readonly Users users = new Users();
         InputValidation inputValidation = new InputValidation();
-
+        private readonly DeleteAccountUserControl deleteAccountUserControl = new DeleteAccountUserControl();
 
         public CreateAccountUserControl()
         {
@@ -32,7 +33,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             CreateUsername.Clear();
             CreatePassword.Clear();
             ConfirmPassword.Clear();
-           
+    
         }
 
         private void CreateAccountButton_Click(object sender, EventArgs e)
@@ -42,6 +43,12 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             string password = CreatePassword.Text.Trim();
             string user_role = CreateUserRole.Text;
             string confirm_password = ConfirmPassword.Text.Trim();
+            string firstname = FirstName.Text;
+            string lastname = LastName.Text;
+            string middlename = MiddleName.Text;
+            string contactnumber = ContactNumber.Text;
+            string email = Email.Text;
+
 
             PasswordHashing passwordHashing = new PasswordHashing();
 
@@ -79,11 +86,21 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                 }
 
                 string hashedpassword = passwordHashing.hashPassword(password);
-                passwordHashing.SaveToDatabase(username, hashedpassword, user_role);
+
+                passwordHashing.SaveToDatabase(username, hashedpassword, user_role, firstname, lastname, middlename, contactnumber, email);
+
                 MessageBox.Show("Account Has Been Created");
+
+               
+
                 CreateUsername.Clear();
                 CreatePassword.Clear();
                 ConfirmPassword.Clear();
+                FirstName.Clear(); 
+                LastName.Clear();
+                MiddleName.Clear();
+                ContactNumber.Clear();
+                Email.Clear();
               
             }
             catch (Exception ex)
@@ -91,34 +108,8 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                 throw new Exception("An error has occured while accessing the database", ex);
             }
             BackToSettingsEventHandler?.Invoke();
-         
         }
 
-        private void ShowPassword_CheckedChanged(object sender, EventArgs e)
-        {
-           /* if (ShowPassword.Checked)
-            {
-                CreatePassword.PasswordChar = '\0';
-            }
-            else
-            {
-                CreatePassword.PasswordChar = '●';
-            }*/
-        }
-
-      
-
-        private void ShowConfirmPassword_CheckedChanged(object sender, EventArgs e)
-        {
-           /* if (ShowConfirmPassword.Checked)
-            {
-                ConfirmPassword.PasswordChar = '\0';
-            }
-            else
-            {
-                ConfirmPassword.PasswordChar = '●';
-            }*/
-        }
 
         private void ShowPassword__Click(object sender, EventArgs e)
         {

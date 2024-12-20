@@ -50,7 +50,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                 return;
             }
 
-            bool isUpdated = usersRepository.UpdateUsers(currentPassword, newPassword);
+            bool isUpdated = usersRepository.UpdateUserPassword(currentPassword, newPassword);
 
             if (isUpdated)
             {
@@ -76,30 +76,6 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             ConfirmPassword.Clear();
            
         }
-
-       /* private void ShowNewPassword_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ShowNewPassword.Checked)
-            {
-                NewPassword.PasswordChar = '\0';
-            }
-            else
-            {
-                NewPassword.PasswordChar = '●';
-            }
-        }*/
-
-       /* private void ShowConfirmPassword_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ShowConfirmPassword.Checked)
-            {
-                ConfirmPassword.PasswordChar = '\0';
-            }
-            else
-            {
-                ConfirmPassword.PasswordChar = '●';
-            }
-        }*/
 
         private void ShowNewPassword__Click(object sender, EventArgs e)
         {

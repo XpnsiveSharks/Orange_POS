@@ -54,7 +54,12 @@ namespace Orange_POS.Helpers
             string pattern = @"^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&_])[A-Za-z\d@$!%*?&_]{8,}$";
             return Regex.IsMatch(password, pattern);
         }
-        
+
+        public bool ContainsInvalidCharacters(string input)
+        {
+            string pattern = @"[^a-zA-Z\s]";  
+            return Regex.IsMatch(input, pattern);
+        }
 
         public bool ValidatePrice(string price)
         {

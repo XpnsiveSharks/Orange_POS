@@ -1,4 +1,5 @@
 ﻿using Orange_POS.Helpers;
+using Orange_POS.Models;
 using Orange_POS.Views.AdminViews;
 using Orange_POS.Views.StaffViews;
 using System;
@@ -31,7 +32,6 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
             {
                 string username = StaffUsernameTextBox.Text;
                 string password = StaffPasswordTextBox.Text;
-               /* string confirmPassword = ConfirmPassword.Text;*/
 
                 if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
@@ -41,8 +41,8 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
                 if (validateCreds.validateCredentials(username, password, "Staff"))
                 {
 
-                    CurrentUser.UserRole = "Staff";
-                    CurrentUser.Username = username;
+                    GetUser.User_Role = "Staff";
+                    GetUser.Username = username;
                     StaffIndexView.Show();
                 }
             }
@@ -60,30 +60,6 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
             }
         }
 
-        private void ShowPassword_CheckedChanged(object sender, EventArgs e)
-        {
-           /* if (ShowPassword.Checked)
-            {
-                StaffPasswordTextBox.PasswordChar = '\0';
-            }
-            else
-            {
-                StaffPasswordTextBox.PasswordChar = '●';
-            }*/
-        }
-
-        private void ShowConfirmPassword_CheckedChanged(object sender, EventArgs e)
-        {
-
-           /* if (ShowConfirmPassword.Checked)
-            {
-                ConfirmPassword.PasswordChar = '\0';
-            }
-            else
-            {
-                ConfirmPassword.PasswordChar = '●';
-            }*/
-        }
 
         private void StaffLoginButton_Click_2(object sender, EventArgs e)
         {
@@ -101,8 +77,8 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
                 if (validateCreds.validateCredentials(username, password, "Staff"))
                 {
 
-                    CurrentUser.UserRole = "Staff";
-                    CurrentUser.Username = username;
+                    GetUser.User_Role = "Staff";
+                    GetUser.Username = username;
                     StaffIndexView.Show();
                 }
                 else

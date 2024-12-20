@@ -1,5 +1,9 @@
-﻿using Orange_POS.Helpers;
+﻿using Orange_POS.Configurations;
+using Orange_POS.Helpers;
+using Orange_POS.Models;
+using Orange_POS.Repositories;
 using Orange_POS.Views.AdminViews;
+using Orange_POS.Views.AdminViews.AdminViewUserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,23 +19,13 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
     public partial class AdminLoginUserControl : UserControl
     {
         private readonly AdminIndexView adminIndexView = new AdminIndexView();
-
-        public string UserRole { get; set; }
+        UsersRepository UsersRepository = new UsersRepository();
         ValidateCredentials validateCreds = new ValidateCredentials();
 
         public AdminLoginUserControl(string userRole)
         {
             InitializeComponent();
-            UserRole = userRole;
         }
-
-
-        public class CurrentUser
-        {
-            public static string Username { get; set; }
-            public static string UserRole { get; set; }
-        }
-
         private void BackButton_Click_1(object sender, EventArgs e)
         {
             if (this.Parent is Panel panel && panel.FindForm() is MainLoginView mainLogin)
@@ -46,57 +40,58 @@ namespace Orange_POS.Views.SharedViews.SharedViewsUserControl
             {
                 string username = AdminUsernameTextBox.Text;
                 string password = AdminPasswordTextBox.Text;
-              
 
                 if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
-                    MessageBox.Show("Username and Password cannot be empty.");
-                    return;
+                     MessageBox.Show("Username and Password cannot be empty.");
+                     return;
                 }
-                
-             
-                if (validateCreds.validateCredentials(username, password, "admin"))
+
+                Users user = UsersRepository.getCredentials(username,password, "Admin");
+
+                if (validateCreds.validateCredentials(username, password, "Admin"))
                 {
-                    CurrentUser.UserRole = "admin";
-                    CurrentUser.Username = username;
+                  
+                       
+                    if (user == null)
+                    {
+                          MessageBox.Show("Invalid username, password, or role. Please try again.");
+                          return;
+                    }
+
+                    GetUser.Username = user.Username; 
+                    GetUser.User_Role = user.User_Role;
+                    GetUser.FirstName = user.FirstName;
+                    GetUser.MiddleName = user.Middlename;
+                    GetUser.LastName = user.LastName;
+                    GetUser.ContactNumber = user.Contactnumber;
+                    GetUser.Email = user.Email;
+
+                    this.Hide();
                     adminIndexView.Show();
+
                 }
-                else
+
+
+                else if (!validateCreds.validateCredentials(username, password, "admin"))
                 {
-                    MessageBox.Show("Invalid Username and password", "Error");
+                    MessageBox.Show("User is Not Existing!");
+
                 }
+
+               
 
             }
             catch (Exception ex)
             {
                 throw new Exception("An error has occurred while accessing the database", ex);
             }
+
+
+
         }
 
-        private void ShowPassword_CheckedChanged(object sender, EventArgs e)
-        {
-           /* if (ShowPassword.Checked)
-            {
-                AdminPasswordTextBox.PasswordChar = '\0';
-            }
-            else
-            {
-                AdminPasswordTextBox.PasswordChar = '●';
-            }*/
-        }
-
-        private void ShowConfirmPassword_CheckedChanged(object sender, EventArgs e)
-        {
-            /*if (ShowConfirmPassword.Checked)
-            {
-                ConfirmPassword.PasswordChar = '\0';
-            }
-            else
-            {
-                ConfirmPassword.PasswordChar = '●';
-            }*/
-        }
-
+     
         private void ShowPassword__Click(object sender, EventArgs e)
         {
             if (AdminPasswordTextBox.PasswordChar == '●')

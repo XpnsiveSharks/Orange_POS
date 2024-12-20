@@ -1,4 +1,7 @@
-﻿using Orange_POS.Views.SharedViews;
+﻿using Orange_POS.Helpers;
+using Orange_POS.Models;
+using Orange_POS.Repositories;
+using Orange_POS.Views.SharedViews;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Orange_POS.Views.SharedViews.SharedViewsUserControl.AdminLoginUserControl;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Orange_POS.Views.AdminViews.AdminViewUserControls
 {
@@ -17,18 +21,26 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         public event Action CreateAccountEventHandler;
         public event Action ChangePasswordEventHandler;
         public event Action DeleteAccountEventHandler;
-        public readonly MainLoginView mainLoginView = new MainLoginView();
-        public string username { get; set; }
+        public event Action EditAccountEventHandler;
+        private readonly MainLoginView mainLoginView = new MainLoginView();
+        private readonly DeleteAccountUserControl deleteAccountView = new DeleteAccountUserControl();
+        private readonly EditAccountUserControl editAccountView = new EditAccountUserControl();
+        
         public SettingsUserControl()
         {
             InitializeComponent();
-            username = CurrentUsernameSettings.Text;
-            CurrentUsernameSettings.Text = CurrentUser.Username ?? "Not Logged In";
+            editAccountView.SetUserDetails();
         }
 
-           public void UpdateLoggedInUser()
+        public void UpdateLoggedInUser()
         {
-            CurrentUsernameSettings.Text = CurrentUser.Username ?? "Not Logged In";
+
+            Fullname.Text = $"{GetUser.FirstName} {GetUser.MiddleName} {GetUser.LastName}" ?? "Not Logged In";
+            CurrentUsernameSettings.Text = GetUser.Username ?? "Not Logged In";
+            Role.Text = GetUser.User_Role ?? "Not Logged In";
+            Email.Text = GetUser.Email ?? "Not Logged In";
+            ContactNumber.Text = GetUser.ContactNumber ?? "Not Logged In";
+
         }
         private void CreateAccount_Click(object sender, EventArgs e)
         {
@@ -43,8 +55,11 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         private void DeleteAccount_Click(object sender, EventArgs e)
         {
             DeleteAccountEventHandler?.Invoke();
+            deleteAccountView.LoadUsersIntoGridView();
+
         }
 
+     
         private void Logout_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to Logout?", "Logout", MessageBoxButtons.YesNo);
@@ -57,6 +72,15 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             {
                 return;
             }
+            
+        }
+
+       
+      
+        private void EditAccount_Click(object sender, EventArgs e)
+        {
+            EditAccountEventHandler?.Invoke();
+            editAccountView.SetUserDetails();
             
         }
     }

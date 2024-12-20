@@ -9,9 +9,10 @@ namespace Orange_POS.Repositories
 {
     internal interface IUsersRepository
     {
-        bool UpdateUsers(string currentPassword, string newPassword);
-        List<Users> GetUser(string usersPassword);
-        bool DeleteUser(string username, string password);
+        bool UpdateUserPassword(string currentPassword, string newPassword);
+        List<Users> GetAllUsers();
+        bool DeleteUser(string username);
+        bool UpdateUserAccount(string currentuser,string username, string firstName, string lastName, string middleName, string contactNumber, string email);
 
     }
 }

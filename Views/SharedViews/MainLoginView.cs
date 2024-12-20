@@ -49,14 +49,6 @@ namespace Orange_POS.Views.SharedViews
             ShowLoginUserControl(new SharedViewsUserControl.StaffLoginUserControl("Staff"));
         }
 
-        private void Customer_Click(object sender, EventArgs e)
-        {
-            OrderTypeView orderTypeView = new OrderTypeView();
-            this.Hide();
-            orderTypeView.Show();
-
-            
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {

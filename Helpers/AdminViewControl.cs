@@ -15,7 +15,9 @@ namespace Orange_POS.Helpers
         CreateAccount,
         UpdatePassword,
         DeleteAccount,
-        InsertProduct
+        InsertProduct,
+        EditAccount
+        
     }
 
 }

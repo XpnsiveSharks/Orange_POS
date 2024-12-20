@@ -188,6 +188,12 @@
     <Compile Include="Views\AdminViews\AdminViewUserControlContents\MenuUserControl.Designer.cs">
       <DependentUpon>MenuUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\AdminViews\AdminViewUserControls\EditAccountUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminViewUserControls\EditAccountUserControl.Designer.cs">
+      <DependentUpon>EditAccountUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\StaffViews\StaffIndexView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControlContents\MenuUserControl.resx">
       <DependentUpon>MenuUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\EditAccountUserControl.resx">
+      <DependentUpon>EditAccountUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\StaffViews\StaffIndexView.resx">
       <DependentUpon>StaffIndexView.cs</DependentUpon>
