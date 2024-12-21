@@ -26,36 +26,8 @@ namespace Orange_POS.Views.CustomerViews
             LoadMenus();
         }
 
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
-        private void MainCourseButton_Click(object sender, EventArgs e)
-        {
-            FilterProducts("Main Course");
-        }
-
-        private void SnacksButton_Click(object sender, EventArgs e)
-        {
-            FilterProducts("Snacks");
-        }
-
-        private void DessertsButton_Click(object sender, EventArgs e)
-        {
-            FilterProducts("Desserts");
-        }
-
-        private void BeveragesButton_Click(object sender, EventArgs e)
-        {
-            FilterProducts("Beverages");
-        }
-
-        private void ShowAllProductsButton_Click(object sender, EventArgs e)
-        {
-            UpdateProductPanel();
-        }
-
+     
         public void LoadMenus()
         {
             _customerViewModel.LoadProductsToUserControl();
@@ -156,10 +128,6 @@ namespace Orange_POS.Views.CustomerViews
             }
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void ExitButton_Click_1(object sender, EventArgs e)
         {
@@ -179,5 +147,58 @@ namespace Orange_POS.Views.CustomerViews
             }
 
         }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            
+            Application.Exit();
+            
+        }
+
+        private void MainCourseButton_Click(object sender, EventArgs e)
+        {
+            FilterAndHighlightButton(MainCourseButton);
+            FilterProducts("Main Course");
+        }
+
+        private void ShowAllProductsButton_Click(object sender, EventArgs e)
+        {
+            FilterAndHighlightButton(ShowAllProductsButton);
+            UpdateProductPanel();
+        }
+
+        private void BeveragesButton_Click(object sender, EventArgs e)
+        {
+            FilterAndHighlightButton(BeveragesButton);
+            FilterProducts("Beverages");
+        }
+
+        private void SnacksButton_Click(object sender, EventArgs e)
+        {
+            FilterAndHighlightButton(SnacksButton);
+            FilterProducts("Snacks");
+        }
+
+        private void DessertsButton_Click(object sender, EventArgs e)
+        {
+            FilterAndHighlightButton(DessertsButton);
+            FilterProducts("Desserts");
+        }
+        private void FilterAndHighlightButton(Guna.UI2.WinForms.Guna2Button clickedButton)
+        {
+
+            clickedButton.FillColor = ColorTranslator.FromHtml("#f5e8d0");
+            clickedButton.ForeColor = Color.Maroon;
+
+            foreach (Guna.UI2.WinForms.Guna2Button button in new[] { MainCourseButton, SnacksButton, DessertsButton, BeveragesButton, ShowAllProductsButton })
+            {
+                if (button != clickedButton)
+                {
+                    button.FillColor = Color.Transparent;
+                    button.ForeColor = Color.White;
+                }
+            }
+        }
+
     }
 }
