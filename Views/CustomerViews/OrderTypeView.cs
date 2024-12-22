@@ -32,9 +32,6 @@ namespace Orange_POS.Views.CustomerViews
             OrderTypePanel.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

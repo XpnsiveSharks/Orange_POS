@@ -51,10 +51,9 @@
             this.TakeOutButton.Image = ((System.Drawing.Image)(resources.GetObject("TakeOutButton.Image")));
             this.TakeOutButton.ImageOffset = new System.Drawing.Point(0, 30);
             this.TakeOutButton.ImageSize = new System.Drawing.Size(150, 150);
-            this.TakeOutButton.Location = new System.Drawing.Point(1063, 387);
-            this.TakeOutButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TakeOutButton.Location = new System.Drawing.Point(709, 252);
             this.TakeOutButton.Name = "TakeOutButton";
-            this.TakeOutButton.Size = new System.Drawing.Size(345, 420);
+            this.TakeOutButton.Size = new System.Drawing.Size(230, 273);
             this.TakeOutButton.TabIndex = 1;
             this.TakeOutButton.Text = "Take-out";
             this.TakeOutButton.Click += new System.EventHandler(this.TakeOutButton_Click);
@@ -78,10 +77,9 @@
             this.DineInButton.Image = ((System.Drawing.Image)(resources.GetObject("DineInButton.Image")));
             this.DineInButton.ImageOffset = new System.Drawing.Point(0, 30);
             this.DineInButton.ImageSize = new System.Drawing.Size(150, 150);
-            this.DineInButton.Location = new System.Drawing.Point(657, 387);
-            this.DineInButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DineInButton.Location = new System.Drawing.Point(438, 252);
             this.DineInButton.Name = "DineInButton";
-            this.DineInButton.Size = new System.Drawing.Size(345, 420);
+            this.DineInButton.Size = new System.Drawing.Size(230, 273);
             this.DineInButton.TabIndex = 0;
             this.DineInButton.Text = "Dine-in";
             this.DineInButton.Click += new System.EventHandler(this.DineInButton_Click);
@@ -106,22 +104,24 @@
             this.ExitButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
             this.ExitButton.Image = ((System.Drawing.Image)(resources.GetObject("ExitButton.Image")));
             this.ExitButton.ImageSize = new System.Drawing.Size(40, 40);
-            this.ExitButton.Location = new System.Drawing.Point(30, 986);
+            this.ExitButton.Location = new System.Drawing.Point(20, 641);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(118, 97);
+            this.ExitButton.Size = new System.Drawing.Size(79, 63);
             this.ExitButton.TabIndex = 19;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // OrderTypeUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.TakeOutButton);
             this.Controls.Add(this.DineInButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "OrderTypeUserControl";
-            this.Size = new System.Drawing.Size(1920, 1106);
+            this.Size = new System.Drawing.Size(1280, 719);
             this.ResumeLayout(false);
 
         }

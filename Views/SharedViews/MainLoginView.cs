@@ -13,7 +13,7 @@ namespace Orange_POS.Views.SharedViews
 {
     public partial class MainLoginView : Form
     {
-       
+
         public MainLoginView()
         {
             InitializeComponent();
@@ -41,11 +41,13 @@ namespace Orange_POS.Views.SharedViews
         private void AdminLoginButton_Click(object sender, EventArgs e)
         {
             ShowLoginUserControl(new SharedViewsUserControl.AdminLoginUserControl("Admin"));
+
         }
 
         private void StaffLoginButton_Click(object sender, EventArgs e)
         {
             ShowLoginUserControl(new SharedViewsUserControl.StaffLoginUserControl("Staff"));
+
         }
 
 
@@ -71,6 +73,8 @@ namespace Orange_POS.Views.SharedViews
         {
             var orderType = new OrderTypeView();
             orderType.Show();
+            this.Hide();
+
         }
     }
 }

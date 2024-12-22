@@ -151,12 +151,6 @@ namespace Orange_POS.Views.CustomerViews
 
         }
 
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-
-            Application.Exit();
-
-        }
 
         private void MainCourseButton_Click(object sender, EventArgs e)
         {

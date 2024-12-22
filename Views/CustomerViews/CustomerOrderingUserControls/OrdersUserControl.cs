@@ -79,7 +79,8 @@ namespace Orange_POS.Views.CustomerViews.CustomerOrderingUserControls
             QuantityChanged?.Invoke(this, EventArgs.Empty);
         }
 
-        private void AddNoteForCustomerOrderButton_Click(object sender, EventArgs e)
+
+        private void AddNote_Click(object sender, EventArgs e)
         {
             var customerNotesView = new CustomerNoteView(this, this.OrderNote);
             customerNotesView.Show();

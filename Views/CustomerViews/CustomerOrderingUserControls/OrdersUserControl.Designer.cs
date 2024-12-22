@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.AddNote = new Guna.UI2.WinForms.Guna2Button();
             this.OrderPriceLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.QuantityTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.QuantityTitleLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -48,6 +49,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.guna2Panel1.BorderRadius = 30;
             this.guna2Panel1.BorderThickness = 5;
+            this.guna2Panel1.Controls.Add(this.AddNote);
             this.guna2Panel1.Controls.Add(this.OrderPriceLabel);
             this.guna2Panel1.Controls.Add(this.QuantityTextBox);
             this.guna2Panel1.Controls.Add(this.QuantityTitleLabel);
@@ -65,6 +67,28 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1178, 207);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // AddNote
+            // 
+            this.AddNote.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AddNote.BorderRadius = 15;
+            this.AddNote.BorderThickness = 2;
+            this.AddNote.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AddNote.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.AddNote.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
+            this.AddNote.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AddNote.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.AddNote.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddNote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.AddNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AddNote.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.AddNote.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
+            this.AddNote.Location = new System.Drawing.Point(976, 152);
+            this.AddNote.Name = "AddNote";
+            this.AddNote.Size = new System.Drawing.Size(121, 36);
+            this.AddNote.TabIndex = 10;
+            this.AddNote.Text = "Add Note";
+            this.AddNote.Click += new System.EventHandler(this.AddNote_Click);
             // 
             // OrderPriceLabel
             // 
@@ -260,5 +284,6 @@
         private Guna.UI2.WinForms.Guna2Button DecreaseOrderButton;
         private Guna.UI2.WinForms.Guna2TextBox QuantityTextBox;
         private Guna.UI2.WinForms.Guna2HtmlLabel OrderPriceLabel;
+        private Guna.UI2.WinForms.Guna2Button AddNote;
     }
 }

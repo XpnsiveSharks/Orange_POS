@@ -14,10 +14,6 @@ namespace Orange_POS.Views.CustomerViews.CustomerOrderingUserControls
     public partial class OrderTypeUserControl : UserControl
     {
         private CustomerIndexView customerIndexView;
-        private readonly MainLoginView mainLoginView = new MainLoginView();
-        private readonly OrderTypeView orderTypeView = new OrderTypeView();
-
-
         public OrderTypeUserControl()
         {
             InitializeComponent();
@@ -29,6 +25,11 @@ namespace Orange_POS.Views.CustomerViews.CustomerOrderingUserControls
             {
                 OrderType = "Dine In"
             };
+            var parentForm = this.FindForm();
+            if (parentForm != null)
+            {
+                parentForm.Hide();
+            }
             customerIndexView.Show();
         }
 
@@ -38,27 +39,36 @@ namespace Orange_POS.Views.CustomerViews.CustomerOrderingUserControls
             {
                 OrderType = "Take Out"
             };
+            var parentForm = this.FindForm();
+            if (parentForm != null)
+            {
+                parentForm.Hide();
+            }
             customerIndexView.Show();
+
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(
-                "Exit?",
-                "Exit Program",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question
-            );
+            DialogResult result = MessageBox.Show("Exit?", "Exit program", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
             if (result == DialogResult.Yes)
             {
-                
+                MainLoginView mainLoginView = new MainLoginView();
+
                 mainLoginView.Show();
-                this.Hide();
+                var parentForm = this.FindForm();
+                if (parentForm != null)
+                {
+                    parentForm.Hide();
+                }
+                
             }
-            else if (result == DialogResult.No)
+            else
             {
                 return;
             }
         }
+
     }
 }
