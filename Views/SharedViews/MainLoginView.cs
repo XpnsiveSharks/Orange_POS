@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Ordering_System;
-using Ordering_System.Views;
 
 namespace Orange_POS.Views.SharedViews
 {

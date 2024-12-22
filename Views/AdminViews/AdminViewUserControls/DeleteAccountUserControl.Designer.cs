@@ -39,7 +39,7 @@
             this.UsersDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+           // this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -211,7 +211,7 @@
             // 
             // guna2HtmlLabel3
             // 
-            this.guna2HtmlLabel3.AutoSize = false;
+      /*      this.guna2HtmlLabel3.AutoSize = false;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
@@ -220,7 +220,7 @@
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(251, 24);
             this.guna2HtmlLabel3.TabIndex = 52;
-            this.guna2HtmlLabel3.Text = "Password:";
+            this.guna2HtmlLabel3.Text = "Password:";*/
             // 
             // DeleteAccountUserControl
             // 

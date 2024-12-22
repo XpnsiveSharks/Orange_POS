@@ -19,7 +19,6 @@
             }
             base.Dispose(disposing);
         }
-
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -39,13 +38,13 @@
             this.CashPaymentButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.CashPaymentButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.CashPaymentButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.CashPaymentButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.CashPaymentButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CashPaymentButton.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.CashPaymentButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.CashPaymentButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.CashPaymentButton.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.CashPaymentButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.CashPaymentButton.Location = new System.Drawing.Point(130, 100);
+            this.CashPaymentButton.Location = new System.Drawing.Point(278, 206);
             this.CashPaymentButton.Name = "CashPaymentButton";
             this.CashPaymentButton.Size = new System.Drawing.Size(262, 45);
             this.CashPaymentButton.TabIndex = 1;
@@ -55,7 +54,7 @@
             // BackButton
             // 
             this.BackButton.BackColor = System.Drawing.Color.Transparent;
-            this.BackButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.BackButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.BackButton.BorderRadius = 18;
             this.BackButton.BorderThickness = 1;
             this.BackButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -64,10 +63,10 @@
             this.BackButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.BackButton.FillColor = System.Drawing.Color.Transparent;
             this.BackButton.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.BackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.BackButton.Location = new System.Drawing.Point(167, 172);
+            this.BackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BackButton.Location = new System.Drawing.Point(316, 257);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(180, 45);
+            this.BackButton.Size = new System.Drawing.Size(180, 43);
             this.BackButton.TabIndex = 3;
             this.BackButton.Text = "Back";
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
@@ -76,7 +75,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 318);
+            this.ClientSize = new System.Drawing.Size(820, 474);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.CashPaymentButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

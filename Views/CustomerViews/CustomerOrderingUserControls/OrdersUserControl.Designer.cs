@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.AddNoteForCustomerOrderButton = new Guna.UI2.WinForms.Guna2Button();
             this.OrderPriceLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.QuantityTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.QuantityTitleLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -49,7 +48,6 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.guna2Panel1.BorderRadius = 30;
             this.guna2Panel1.BorderThickness = 5;
-            this.guna2Panel1.Controls.Add(this.AddNoteForCustomerOrderButton);
             this.guna2Panel1.Controls.Add(this.OrderPriceLabel);
             this.guna2Panel1.Controls.Add(this.QuantityTextBox);
             this.guna2Panel1.Controls.Add(this.QuantityTitleLabel);
@@ -68,33 +66,11 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1178, 207);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // AddNoteForCustomerOrderButton
-            // 
-            this.AddNoteForCustomerOrderButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.AddNoteForCustomerOrderButton.BorderRadius = 15;
-            this.AddNoteForCustomerOrderButton.BorderThickness = 2;
-            this.AddNoteForCustomerOrderButton.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.AddNoteForCustomerOrderButton.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.AddNoteForCustomerOrderButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
-            this.AddNoteForCustomerOrderButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.AddNoteForCustomerOrderButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.AddNoteForCustomerOrderButton.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddNoteForCustomerOrderButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.AddNoteForCustomerOrderButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.AddNoteForCustomerOrderButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.AddNoteForCustomerOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
-            this.AddNoteForCustomerOrderButton.Location = new System.Drawing.Point(966, 155);
-            this.AddNoteForCustomerOrderButton.Name = "AddNoteForCustomerOrderButton";
-            this.AddNoteForCustomerOrderButton.Size = new System.Drawing.Size(121, 36);
-            this.AddNoteForCustomerOrderButton.TabIndex = 10;
-            this.AddNoteForCustomerOrderButton.Text = "Add note";
-            this.AddNoteForCustomerOrderButton.Click += new System.EventHandler(this.AddNoteForCustomerOrderButton_Click);
-            // 
             // OrderPriceLabel
             // 
             this.OrderPriceLabel.BackColor = System.Drawing.Color.Transparent;
             this.OrderPriceLabel.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderPriceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.OrderPriceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.OrderPriceLabel.Location = new System.Drawing.Point(70, 43);
             this.OrderPriceLabel.Margin = new System.Windows.Forms.Padding(2);
             this.OrderPriceLabel.Name = "OrderPriceLabel";
@@ -104,7 +80,7 @@
             // 
             // QuantityTextBox
             // 
-            this.QuantityTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.QuantityTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.QuantityTextBox.BorderRadius = 18;
             this.QuantityTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.QuantityTextBox.DefaultText = "2";
@@ -115,9 +91,9 @@
             this.QuantityTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.QuantityTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.QuantityTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuantityTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.QuantityTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.QuantityTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.QuantityTextBox.Location = new System.Drawing.Point(582, 155);
+            this.QuantityTextBox.Location = new System.Drawing.Point(582, 152);
             this.QuantityTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.QuantityTextBox.Name = "QuantityTextBox";
             this.QuantityTextBox.PasswordChar = '\0';
@@ -131,8 +107,8 @@
             // 
             this.QuantityTitleLabel.BackColor = System.Drawing.Color.Transparent;
             this.QuantityTitleLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuantityTitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.QuantityTitleLabel.Location = new System.Drawing.Point(582, 120);
+            this.QuantityTitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.QuantityTitleLabel.Location = new System.Drawing.Point(582, 117);
             this.QuantityTitleLabel.Margin = new System.Windows.Forms.Padding(2);
             this.QuantityTitleLabel.Name = "QuantityTitleLabel";
             this.QuantityTitleLabel.Size = new System.Drawing.Size(73, 23);
@@ -142,7 +118,7 @@
             // DecreaseOrderButton
             // 
             this.DecreaseOrderButton.BackColor = System.Drawing.Color.Transparent;
-            this.DecreaseOrderButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(166)))), ((int)(((byte)(110)))));
+            this.DecreaseOrderButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.DecreaseOrderButton.BorderRadius = 17;
             this.DecreaseOrderButton.BorderThickness = 2;
             this.DecreaseOrderButton.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(166)))), ((int)(((byte)(110)))));
@@ -151,11 +127,11 @@
             this.DecreaseOrderButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
             this.DecreaseOrderButton.FillColor = System.Drawing.Color.Transparent;
             this.DecreaseOrderButton.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DecreaseOrderButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
+            this.DecreaseOrderButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.DecreaseOrderButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(166)))), ((int)(((byte)(110)))));
             this.DecreaseOrderButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(166)))), ((int)(((byte)(110)))));
             this.DecreaseOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.DecreaseOrderButton.Location = new System.Drawing.Point(530, 155);
+            this.DecreaseOrderButton.Location = new System.Drawing.Point(530, 152);
             this.DecreaseOrderButton.Name = "DecreaseOrderButton";
             this.DecreaseOrderButton.Size = new System.Drawing.Size(45, 36);
             this.DecreaseOrderButton.TabIndex = 6;
@@ -165,7 +141,7 @@
             // IncreaseOrderButton
             // 
             this.IncreaseOrderButton.BackColor = System.Drawing.Color.Transparent;
-            this.IncreaseOrderButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(166)))), ((int)(((byte)(110)))));
+            this.IncreaseOrderButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.IncreaseOrderButton.BorderRadius = 17;
             this.IncreaseOrderButton.BorderThickness = 2;
             this.IncreaseOrderButton.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(166)))), ((int)(((byte)(110)))));
@@ -178,7 +154,7 @@
             this.IncreaseOrderButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(166)))), ((int)(((byte)(110)))));
             this.IncreaseOrderButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(166)))), ((int)(((byte)(110)))));
             this.IncreaseOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.IncreaseOrderButton.Location = new System.Drawing.Point(658, 155);
+            this.IncreaseOrderButton.Location = new System.Drawing.Point(658, 152);
             this.IncreaseOrderButton.Name = "IncreaseOrderButton";
             this.IncreaseOrderButton.Size = new System.Drawing.Size(45, 36);
             this.IncreaseOrderButton.TabIndex = 5;
@@ -196,11 +172,11 @@
             this.RemoveOrderButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.RemoveOrderButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
             this.RemoveOrderButton.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemoveOrderButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.RemoveOrderButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.RemoveOrderButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.RemoveOrderButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.RemoveOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(223)))), ((int)(((byte)(206)))));
-            this.RemoveOrderButton.Location = new System.Drawing.Point(58, 149);
+            this.RemoveOrderButton.Location = new System.Drawing.Point(58, 146);
             this.RemoveOrderButton.Name = "RemoveOrderButton";
             this.RemoveOrderButton.Size = new System.Drawing.Size(121, 36);
             this.RemoveOrderButton.TabIndex = 4;
@@ -211,7 +187,7 @@
             // 
             this.OrderTotalLabel.BackColor = System.Drawing.Color.Transparent;
             this.OrderTotalLabel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderTotalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.OrderTotalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.OrderTotalLabel.Location = new System.Drawing.Point(960, 13);
             this.OrderTotalLabel.Margin = new System.Windows.Forms.Padding(2);
             this.OrderTotalLabel.Name = "OrderTotalLabel";
@@ -223,7 +199,7 @@
             // 
             this.OrderQuantityLabel.BackColor = System.Drawing.Color.Transparent;
             this.OrderQuantityLabel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderQuantityLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.OrderQuantityLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.OrderQuantityLabel.Location = new System.Drawing.Point(598, 13);
             this.OrderQuantityLabel.Margin = new System.Windows.Forms.Padding(2);
             this.OrderQuantityLabel.Name = "OrderQuantityLabel";
@@ -235,7 +211,7 @@
             // 
             this.OrderNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.OrderNameLabel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.OrderNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.OrderNameLabel.Location = new System.Drawing.Point(70, 13);
             this.OrderNameLabel.Margin = new System.Windows.Forms.Padding(2);
             this.OrderNameLabel.Name = "OrderNameLabel";
@@ -284,6 +260,5 @@
         private Guna.UI2.WinForms.Guna2Button DecreaseOrderButton;
         private Guna.UI2.WinForms.Guna2TextBox QuantityTextBox;
         private Guna.UI2.WinForms.Guna2HtmlLabel OrderPriceLabel;
-        private Guna.UI2.WinForms.Guna2Button AddNoteForCustomerOrderButton;
     }
 }

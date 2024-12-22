@@ -25,14 +25,21 @@ namespace Orange_POS.Views.CustomerViews
             get => OrderNote; 
             set => NoteTextBox.Text = value; 
         }
-        private void SubmitNoteButton_Click(object sender, EventArgs e)
+
+        private void AddNoteButton_Click(object sender, EventArgs e)
         {
-            if(ordersUserControl != null)
+            if (ordersUserControl != null)
             {
                 ordersUserControl.OrderNote = NoteTextBox.Text;
                 Console.WriteLine("Test for note view " + ordersUserControl.OrderNote);
             }
             this.Hide();
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
         }
     }
 }

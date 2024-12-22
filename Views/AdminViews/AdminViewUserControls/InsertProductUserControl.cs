@@ -93,7 +93,6 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     productViewModel.ProductImageFilePath = openFileDialog.FileName;
-                    MessageBox.Show("File Selected!");
                 }
             }
         }
@@ -108,7 +107,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
             }
             if (ProductMenuComboBox.SelectedIndex == -1)
             {
-                MessageBox.Show("Please select option from the dropdown.");
+                MessageBox.Show("Please select option from the category.");
                 return;
             }            
             if (string.IsNullOrWhiteSpace(productViewModel.ProductName))
@@ -136,10 +135,7 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                 ClearComponents();
             }
             BackToMenuListEventHandler?.Invoke();
-
-
-
-          
+    
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -180,15 +176,13 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
         }
         public void ClearComponents()
         {
+            ResetForm();
             ProductNameTextBox.Text = string.Empty;
             ProductPriceTextBox.Text = string.Empty;
             ProductMenuComboBox.SelectedIndex = -1;
             ProductPreviewPictureBox.Image = null;
         }
+       
 
-        private void AddMenuPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

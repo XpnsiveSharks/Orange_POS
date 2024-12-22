@@ -55,7 +55,6 @@
             this.ProductPanel.Name = "ProductPanel";
             this.ProductPanel.Size = new System.Drawing.Size(210, 250);
             this.ProductPanel.TabIndex = 0;
-            this.ProductPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ProductPanel_Paint);
             // 
             // MenuCategoryLabel
             // 
