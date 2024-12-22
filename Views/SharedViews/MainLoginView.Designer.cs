@@ -35,6 +35,7 @@
             this.LoginPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.CustomerButton = new Guna.UI2.WinForms.Guna2TileButton();
             this.LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +57,6 @@
             this.AdminLoginButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.AdminLoginButton.Location = new System.Drawing.Point(64, 195);
             this.AdminLoginButton.Margin = new System.Windows.Forms.Padding(2);
-
             this.AdminLoginButton.Name = "AdminLoginButton";
             this.AdminLoginButton.Size = new System.Drawing.Size(256, 42);
             this.AdminLoginButton.TabIndex = 0;
@@ -80,7 +80,6 @@
             this.StaffLoginButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.StaffLoginButton.Location = new System.Drawing.Point(64, 245);
             this.StaffLoginButton.Margin = new System.Windows.Forms.Padding(2);
-
             this.StaffLoginButton.Name = "StaffLoginButton";
             this.StaffLoginButton.Size = new System.Drawing.Size(256, 42);
             this.StaffLoginButton.TabIndex = 2;
@@ -95,7 +94,6 @@
             this.LoginAsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.LoginAsLabel.Location = new System.Drawing.Point(4, 129);
             this.LoginAsLabel.Margin = new System.Windows.Forms.Padding(2);
-
             this.LoginAsLabel.Name = "LoginAsLabel";
             this.LoginAsLabel.Size = new System.Drawing.Size(362, 55);
             this.LoginAsLabel.TabIndex = 3;
@@ -104,15 +102,14 @@
             // 
             // LoginPanel
             // 
+            this.LoginPanel.Controls.Add(this.CustomerButton);
             this.LoginPanel.Controls.Add(this.button1);
-
             this.LoginPanel.Controls.Add(this.LoginAsLabel);
             this.LoginPanel.Controls.Add(this.StaffLoginButton);
             this.LoginPanel.Controls.Add(this.AdminLoginButton);
             this.LoginPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.LoginPanel.Location = new System.Drawing.Point(485, 0);
             this.LoginPanel.Margin = new System.Windows.Forms.Padding(2);
-
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(368, 468);
             this.LoginPanel.TabIndex = 4;
@@ -144,6 +141,29 @@
             this.guna2PictureBox1.TabIndex = 5;
             this.guna2PictureBox1.TabStop = false;
             // 
+            // CustomerButton
+            // 
+            this.CustomerButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CustomerButton.BorderRadius = 20;
+            this.CustomerButton.BorderThickness = 2;
+            this.CustomerButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CustomerButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CustomerButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CustomerButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CustomerButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CustomerButton.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.CustomerButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.CustomerButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
+            this.CustomerButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.CustomerButton.Location = new System.Drawing.Point(64, 295);
+            this.CustomerButton.Margin = new System.Windows.Forms.Padding(2);
+            this.CustomerButton.Name = "CustomerButton";
+            this.CustomerButton.Size = new System.Drawing.Size(256, 42);
+            this.CustomerButton.TabIndex = 6;
+            this.CustomerButton.Text = "Customer";
+            this.CustomerButton.Click += new System.EventHandler(this.CustomerButton_Click);
+            // 
             // MainLoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,7 +174,6 @@
             this.Controls.Add(this.LoginPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-
             this.Name = "MainLoginView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainLogin";
@@ -172,5 +191,6 @@
         private Guna.UI2.WinForms.Guna2Panel LoginPanel;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Button button1;
+        private Guna.UI2.WinForms.Guna2TileButton CustomerButton;
     }
 }

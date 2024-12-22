@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Orange_POS.Views.CustomerViews;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -64,6 +65,12 @@ namespace Orange_POS.Views.SharedViews
             {
                 return;
             }
+        }
+
+        private void CustomerButton_Click(object sender, EventArgs e)
+        {
+            var orderType = new OrderTypeView();
+            orderType.Show();
         }
     }
 }

@@ -149,5 +149,10 @@ namespace Orange_POS.Views.AdminViews.AdminViewUserControls
                 ConfirmPassword.PasswordChar = '●';
             }
         }
+
+        private void CreatePassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
