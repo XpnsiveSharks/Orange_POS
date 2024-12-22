@@ -193,19 +193,20 @@
     <Compile Include="Views\AdminViews\AdminViewUserControlContents\MenuUserControl.Designer.cs">
       <DependentUpon>MenuUserControl.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Views\AdminViews\AdminViewUserControls\EditAccountUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\AdminViews\AdminViewUserControls\EditAccountUserControl.Designer.cs">
       <DependentUpon>EditAccountUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\StaffViews\StaffIndexView.cs">
-
+    <Compile Include="Views\CustomerViews\CustomerIndexView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\CustomerViews\CustomerIndexView.Designer.cs">
       <DependentUpon>CustomerIndexView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StaffViews\StaffIndexView.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\CustomerViews\CustomerNoteView.cs">
       <SubType>Form</SubType>
@@ -367,10 +368,14 @@
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControlContents\MenuUserControl.resx">
       <DependentUpon>MenuUserControl.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Views\AdminViews\AdminViewUserControls\EditAccountUserControl.resx">
       <DependentUpon>EditAccountUserControl.cs</DependentUpon>
-
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerViews\CustomerOrderingUserControls\MenuForCustomerUserControl.resx">
+      <DependentUpon>MenuForCustomerUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerViews\CustomerOrderingUserControls\OrderTypeUserControl.resx">
+      <DependentUpon>OrderTypeUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\StaffViews\StaffIndexView.resx">
       <DependentUpon>StaffIndexView.cs</DependentUpon>
@@ -430,30 +435,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\271.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\272.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\28.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Logo OOP %28pos%29 %281%29.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Ordering-System\Ordering System.csproj">
-      <Project>{f88eae0b-c185-47ab-a7fc-73cca0eaa1e9}</Project>
-      <Name>Ordering System</Name>
-    </ProjectReference>
-  </ItemGroup>
-
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

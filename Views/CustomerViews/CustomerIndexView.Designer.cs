@@ -202,7 +202,7 @@
             this.ExitButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.ExitButton.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
             this.ExitButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(225)))));
-            this.ExitButton.Image = global::Orange_POS.Properties.Resources.icons8_back_50__1_2;
+            //this.ExitButton.Image = global::Orange_POS.Properties.Resources.icons8_back_50__1_2;
             this.ExitButton.ImageSize = new System.Drawing.Size(50, 50);
             this.ExitButton.Location = new System.Drawing.Point(22, 636);
             this.ExitButton.Margin = new System.Windows.Forms.Padding(2);

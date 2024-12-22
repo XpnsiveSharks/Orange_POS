@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Orange_POS.Views.SharedViews;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,10 @@ namespace Orange_POS.Views.CustomerViews.CustomerOrderingUserControls
     public partial class OrderTypeUserControl : UserControl
     {
         private CustomerIndexView customerIndexView;
+        private readonly MainLoginView mainLoginView = new MainLoginView();
+        private readonly OrderTypeView orderTypeView = new OrderTypeView();
+
+
         public OrderTypeUserControl()
         {
             InitializeComponent();
@@ -36,6 +41,24 @@ namespace Orange_POS.Views.CustomerViews.CustomerOrderingUserControls
             customerIndexView.Show();
         }
 
-
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Exit?",
+                "Exit Program",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+            if (result == DialogResult.Yes)
+            {
+                
+                mainLoginView.Show();
+                this.Hide();
+            }
+            else if (result == DialogResult.No)
+            {
+                return;
+            }
+        }
     }
 }

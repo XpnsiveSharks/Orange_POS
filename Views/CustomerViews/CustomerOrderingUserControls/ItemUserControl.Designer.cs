@@ -121,7 +121,7 @@
             this.IncreaseOrderButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(166)))), ((int)(((byte)(110)))));
             this.IncreaseOrderButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(166)))), ((int)(((byte)(110)))));
             this.IncreaseOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.IncreaseOrderButton.Image = global::Orange_POS.Properties.Resources.icons8_plus_key_50__1_;
+           // this.IncreaseOrderButton.Image = global::Orange_POS.Properties.Resources.icons8_plus_key_50__1_;
             this.IncreaseOrderButton.ImageSize = new System.Drawing.Size(35, 35);
             this.IncreaseOrderButton.Location = new System.Drawing.Point(564, 4);
             this.IncreaseOrderButton.Name = "IncreaseOrderButton";
@@ -207,7 +207,7 @@
             this.DecreaseOrderButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(166)))), ((int)(((byte)(110)))));
             this.DecreaseOrderButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(166)))), ((int)(((byte)(110)))));
             this.DecreaseOrderButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(92)))), ((int)(((byte)(47)))));
-            this.DecreaseOrderButton.Image = global::Orange_POS.Properties.Resources.icons8_minus_key_50__1_1;
+          //  this.DecreaseOrderButton.Image = global::Orange_POS.Properties.Resources.icons8_minus_key_50__1_1;
             this.DecreaseOrderButton.ImageSize = new System.Drawing.Size(35, 35);
             this.DecreaseOrderButton.Location = new System.Drawing.Point(446, 5);
             this.DecreaseOrderButton.Name = "DecreaseOrderButton";

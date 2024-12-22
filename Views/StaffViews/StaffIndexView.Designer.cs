@@ -40,29 +40,27 @@
             this.OrdersFlowLayoutPanel.AutoScroll = true;
             this.OrdersFlowLayoutPanel.BackColor = System.Drawing.Color.Transparent;
             this.OrdersFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.OrdersFlowLayoutPanel.Location = new System.Drawing.Point(0, 61);
+            this.OrdersFlowLayoutPanel.Location = new System.Drawing.Point(0, 94);
+            this.OrdersFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OrdersFlowLayoutPanel.Name = "OrdersFlowLayoutPanel";
-            this.OrdersFlowLayoutPanel.Size = new System.Drawing.Size(853, 407);
+            this.OrdersFlowLayoutPanel.Size = new System.Drawing.Size(1280, 626);
             this.OrdersFlowLayoutPanel.TabIndex = 0;
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.BorderRadius = 20;
             this.guna2Panel1.Controls.Add(this.BackButton);
             this.guna2Panel1.Controls.Add(this.OrderCount);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(853, 62);
+            this.guna2Panel1.Size = new System.Drawing.Size(1280, 95);
             this.guna2Panel1.TabIndex = 1;
             // 
             // BackButton
             // 
             this.BackButton.BorderColor = System.Drawing.Color.Transparent;
-            this.BackButton.BorderRadius = 20;
             this.BackButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.BackButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.BackButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -70,13 +68,13 @@
             this.BackButton.FillColor = System.Drawing.Color.Transparent;
             this.BackButton.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.BackButton.ForeColor = System.Drawing.Color.White;
-            this.BackButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
+            this.BackButton.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.BackButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.BackButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(70)))), ((int)(((byte)(16)))));
-            this.BackButton.Location = new System.Drawing.Point(722, 16);
-            this.BackButton.Margin = new System.Windows.Forms.Padding(1);
+            this.BackButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BackButton.Location = new System.Drawing.Point(1090, 25);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(112, 34);
+            this.BackButton.Size = new System.Drawing.Size(168, 52);
             this.BackButton.TabIndex = 10;
             this.BackButton.Text = "back";
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
@@ -87,22 +85,22 @@
             this.OrderCount.BackColor = System.Drawing.Color.Transparent;
             this.OrderCount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.OrderCount.Location = new System.Drawing.Point(17, 16);
-            this.OrderCount.Margin = new System.Windows.Forms.Padding(2);
+            this.OrderCount.Location = new System.Drawing.Point(26, 25);
             this.OrderCount.Name = "OrderCount";
-            this.OrderCount.Size = new System.Drawing.Size(232, 40);
+            this.OrderCount.Size = new System.Drawing.Size(348, 62);
             this.OrderCount.TabIndex = 1;
             this.OrderCount.Text = "Pending orders: 2";
             // 
             // StaffIndexView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(853, 468);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.OrdersFlowLayoutPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "StaffIndexView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StaffIndexView";

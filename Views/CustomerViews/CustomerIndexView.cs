@@ -16,6 +16,8 @@ namespace Orange_POS.Views.CustomerViews
     {
         private readonly CustomerViewModel _customerViewModel;
         private readonly OrderListView orderListView;
+        OrderTypeView orderTypeView = new OrderTypeView();
+
         public string OrderType { get; set; }
         public string ItemCount { get; set; }
         public CustomerIndexView()
@@ -27,7 +29,7 @@ namespace Orange_POS.Views.CustomerViews
         }
 
 
-     
+
         public void LoadMenus()
         {
             _customerViewModel.LoadProductsToUserControl();
@@ -131,15 +133,16 @@ namespace Orange_POS.Views.CustomerViews
 
         private void ExitButton_Click_1(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Exit?",
-              "Exit Program",
+            DialogResult result = MessageBox.Show("Restart order?",
+              "Restart your order",
                MessageBoxButtons.YesNo,
                MessageBoxIcon.Question
                );
 
             if (result == DialogResult.Yes)
             {
-                Application.Exit();
+                orderTypeView.Show();
+                this.Hide();
             }
             else
             {
@@ -150,9 +153,9 @@ namespace Orange_POS.Views.CustomerViews
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            
+
             Application.Exit();
-            
+
         }
 
         private void MainCourseButton_Click(object sender, EventArgs e)
